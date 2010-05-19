@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%= @settings['site_name'] %></title>
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<link rel="author" href="http://nickcharlton.net/contact">
+	</head>
+	<body>
+		
+		<%= yield %>
+		
+		<section>
+			<aside>
+				<h1 id="header"><a href="/" class="logo">nickcharlton.net</a></h1>
+				<p>
+					<small><em>Ruby developer, designer<br>…and a CompSci student.</em></small>
+				</p>
+				<nav>
+					<ul class="nav">
+						<li class="nav"><a href="/articles">articles</a></li>
+						<li class="nav"><a href="/projects">projects</a></li>
+						<li class="nav"><a href="/devnotes">dev notes</a></li>
+						<li class="nav"><a href="/about">about</a></li>
+					</ul>
+				</nav>
+				<form action="/search" method="post" accept-charset="utf-8">
+					<input type="search" name="search" value="" id="searchbox" placeholder="search...">
+				</form>
+			</aside>
+			<div class="clear"></div>
+			<footer class="page">
+				<hr>
+				<p>
+					<small>Copyright <%= @settings['owner'] %> 2010. Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/" title="Creative Commons &mdash;
+					      Attribution-Non-Commercial-Share Alike 2.0 UK: England &amp; Wales">CC</a>. Powered by <a href="http://github.com/nickcharlton/sinba">Sinba</a>.</small>
+				</p>
+			</footer>
+		</section>
+	</body>
+</html>

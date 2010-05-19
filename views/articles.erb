@@ -1,0 +1,12 @@
+<div id="main">
+	<h1><a href="/articles">Articles</a></h1>
+	
+	<article>
+		<!-- this formatting is rather American, but it's simpler for the time being -->
+		<ul>
+		<% for article in @articles %>
+			<li><%= t = article.created_at; t.strftime("%B %d, %Y") %> &mdash; <a href="/post/<%= article.url %>"><%= article.title %></a></li>
+		<% end %>
+		</ul>
+	</article>
+</div>

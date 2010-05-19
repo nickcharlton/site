@@ -1,0 +1,8 @@
+site_name: nickcharlton.net
+owner: Nick Charlton
+about: none
+
+adaptor: sqlite3
+database: blog.sqlite3
+# user: none
+# password: none

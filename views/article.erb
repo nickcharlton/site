@@ -1,0 +1,13 @@
+<div id="main">
+	<% for post in @post %>
+	<article>
+		<h1><a href="/post/<%= post.url %>"><%= post.title %></a></h1>
+		<%= article = Maruku.new(post.content); article.to_html %>
+		<footer>
+			<p>
+				<small>By <%= lookup = @author.find(post.author); lookup.name %> on <time datetime="2010-05-13T19:19:07+01:00"><%= t = post.created_at; t.strftime("%B %d, %Y") %></time>. Tagged with x, y, z.</small>
+			</p>
+		</footer>
+	</article>
+	<% end %>
+</div>

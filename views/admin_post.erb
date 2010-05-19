@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Admin: Post</title>
+		<link rel="stylesheet" href="/stylesheets/main.css">
+	</head>
+	
+	<body>
+		<h1 id="add_a_new_tag">New Post</h1>
+		
+		<form action="/admin/post" method="post" accept-charset="utf-8">
+			<p>
+			<label for="text">Title: </label>
+			<input type="text" name="title" value=""></p>
+			
+			<label for="content">Content: </label><br>
+			<textarea name="content" rows="8" cols="40"></textarea>
+			
+			<input type="hidden" name="author" value="1">
+			
+			<p>
+			<label for="tags">Tags: </label>			
+			<input type="text" name="tags" value=""></p>
+			
+			<p>
+			<label for="url">URL: </label>			
+			<input type="text" name="url" value=""></p>
+			
+			<button type="submit">Submit</button>
+		</form>
+		
+	</body>
+
+</html>
