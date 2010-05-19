@@ -71,6 +71,11 @@ get '/post/:url' do
   # pull out all of our which have this url string, but limit it to one.
   @post = Post.find(:all, :conditions => { :url => params['url'] }, :limit => 1)
   
+  # check that our post exists.
+  if @post.empty?
+    raise not_found
+  end
+  
   # tell the template the author
   @author = Author
   # throw in the tags

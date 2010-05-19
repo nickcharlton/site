@@ -5,9 +5,20 @@
 		<meta charset="utf-8">
 		<title><%= @settings['site_name'] %></title>
 		<link rel="stylesheet" href="/stylesheets/main.css">
+		<link href="/javascript/prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="/javascript/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
 		<link rel="author" href="http://nickcharlton.net/contact">
+		
+		<script type="text/javascript" src="/javascript/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/javascript/facebox/facebox.js"></script>
+		<script type="text/javascript" src="/javascript/prettify/prettify.js"></script>
 	</head>
-	<body>
+	<body onload="prettyPrint()">
+		<script type="text/javascript" charset="utf-8">
+			jQuery(document).ready(function($) {
+			  $('a[rel*=facebox]').facebox() 
+			})
+		</script>
 		
 		<%= yield %>
 		
@@ -19,6 +30,7 @@
 				</p>
 				<nav>
 					<ul class="nav">
+						<li class="nav"><a href="/admin/post" rel="facebox">new post</a></li>
 						<li class="nav"><a href="/articles">articles</a></li>
 						<li class="nav"><a href="/projects">projects</a></li>
 						<li class="nav"><a href="/devnotes">dev notes</a></li>
