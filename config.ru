@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
  
-set :env,  :debug
+set :env, :production
 disable :run
 
 require 'app'
