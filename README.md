@@ -1,7 +1,6 @@
 # Sinba: A Blogging Engine in Ruby.
 
-Sinba is a handson* blogging engine inspired by [Tumblr](http://www.tumblr.com/ "Tumblr"), [Markdoc](http://markdoc.org/ "Markdoc Documentation » 
-        Index"), [Chirp](http://chyrp.net/ "Chyrp") & [Jekyll](http://jekyllrb.com/ "jekyll"). It's designed around short blogging, and blogging code. It's based upon Sinatra.
+Sinba is a handson* blogging engine inspired by [Tumblr](http://www.tumblr.com/ "Tumblr"), [Markdoc](http://markdoc.org/ "Markdoc"), [Chirp](http://chyrp.net/ "Chyrp") & [Jekyll](http://jekyllrb.com/ "jekyll"). It's designed around short blogging, and blogging code. It's based upon Sinatra.
 
 It uses erb for templating, ActiveRecord for storing posts (and SQLite, MySQL, Postgres, etc), Markdown for markup, Google's Code Prettify for syntax highlighting & Facebox for modal windows.
 

@@ -2,12 +2,12 @@
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
  
 set :application, "blog" # App name.
-set :domain,      "nickcharlton.net" # App domain.
-set :deploy_to,   "/var/apps/#{application}" # Directory to deploy to.
+set :domain,      "kubrick.nickcharlton.net" # App domain.
+set :deploy_to,   "/var/www/apps/#{application}" # Directory to deploy to.
 
 # what to deploy
 set :scm, :git
-set :repository, "git@github.com:nickcharlton/zefridge-api.git" # Where to get it via git.
+set :repository, "git@github.com:nickcharlton/nickcharlton.net.git" # Where to get it via git.
 set :branch, "master"
 
 # Here we use the server keyword to build a command of where to deploy to.
