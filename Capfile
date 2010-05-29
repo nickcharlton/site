@@ -40,8 +40,8 @@ namespace :db do
 	   require 'yaml'
 	   spec = { "production" => {
 	     "adapter" => "mysql",
-	     "database" => user,
-	     "username" => user,
+	     "database" => "blog",
+	     "username" => "blog",
 	     "password" => mysql_password } }
 	   put(spec.to_yaml, "#{shared_path}/database.yaml")
 	end

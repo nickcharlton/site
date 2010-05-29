@@ -11,8 +11,10 @@ database = YAML.load(File.read('database.yaml'))
 # database handling
 configure do
   ActiveRecord::Base.establish_connection(
-	          :adapter => settings['adaptor'],
-	          :database => settings['database']
+	          :adapter => database["production"]["adapter"],
+	          :database => database["production"]["database"]
+	          :username => database["production"]["username"]
+	          :password => database["production"]["password"]
 	)
 	begin
 		ActiveRecord::Schema.define do
@@ -75,8 +77,6 @@ get '/' do
   @author = Author
   # tell the view about a false set of tags
   @tags = ""
-  
-  @db_config = database
   erb :article
 end
 
