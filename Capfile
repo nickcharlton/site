@@ -25,9 +25,31 @@ set :runner, user
 set :admin_runner, user
 default_run_options[:pty] = true
  
-# What to do after deploying. (Specific to Passenger).
+# What to do after deploying.
 namespace :deploy do
+  # specific to passenger
   task :restart do
     run "touch #{current_path}/tmp/restart.txt" 
   end
 end
+
+namespace :db do
+  # setup the database
+  task :config do
+	   mysql_password = Capistrano::CLI.password_prompt("MySQL password: ")
+	   require 'yaml'
+	   spec = { "production" => {
+	     "adapter" => "mysql",
+	     "database" => user,
+	     "username" => user,
+	     "password" => mysql_password } }
+	   put(spec.to_yaml, "#{shared_path}/database.yaml")
+	end
+
+	task :copy do
+	   run "cp #{shared_path}/database.yaml #{release_path}/database.yaml"
+	end
+end
+
+before "deploy:restart", "db:config"
+after "db:config", "db:copy"

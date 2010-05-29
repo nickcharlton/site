@@ -5,6 +5,8 @@ require 'digest/sha1'
 
 # settings handling
 settings = YAML.load(File.read('config.yaml'))
+# database settings
+database = YAML.load(File.read('database.yaml'))
 
 # database handling
 configure do
@@ -73,6 +75,8 @@ get '/' do
   @author = Author
   # tell the view about a false set of tags
   @tags = ""
+  
+  @db_config = database
   erb :article
 end
 
