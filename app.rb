@@ -12,8 +12,8 @@ database = YAML.load(File.read('database.yaml'))
 configure do
   ActiveRecord::Base.establish_connection(
 	          :adapter => database["production"]["adapter"],
-	          :database => database["production"]["database"]
-	          :username => database["production"]["username"]
+	          :database => database["production"]["database"],
+	          :username => database["production"]["username"],
 	          :password => database["production"]["password"]
 	)
 	begin
