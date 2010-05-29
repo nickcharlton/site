@@ -220,14 +220,14 @@ post '/admin/post' do
 end
 
 # add a new author (similarly meant as a debug)
-get '/admin/author' do
-  author = Author.new(:name => "Nick Charlton", :username => "nickcharlton", :password => "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8")
-  if author.save
-    status(201)
-  else
-    status(412)
-  end
-end
+# get '/admin/author' do
+  #author = Author.new(:name => "Nick Charlton", :username => "nickcharlton", :password => "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8")
+  #if author.save
+   # status(201)
+  #else
+   # status(412)
+  #end
+# end
 
 
 # error handling
