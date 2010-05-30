@@ -6,7 +6,7 @@
 		<h2>GitHub Projects (Open Source Stuff)</h2>
 		<% for repo in @github %>
 		<ul>
-			<li><a href="<%= repo.url %>"><%= repo.name %></a> &mdash; <%= repo.description %></li>
+			<li><a href="<%= repo['url'] %>"><%= repo['name'] %></a> &mdash; <%= repo['description'] %></li>
 		</ul>
 		<% end %>
 	</article>
