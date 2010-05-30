@@ -1,8 +1,13 @@
 <div id="main">
 	<article>
 		<h1><a href="/projects">Projects</a></h1>
-		<p>
-			This is the project page.
-		</p>
+		<p>I wouldn't be much of a developer if I wasn't currently working on a few projects. Below is the list of projects I have currently open sourced on GitHub. I currently don't have anything else notable to show, but when I do, it'll be added to this page</p>
+		
+		<h2>GitHub Projects (Open Source Stuff)</h2>
+		<% for repo in @github %>
+		<ul>
+			<li><a href="<%= repo.url %>"><%= repo.name %></a> &mdash; <%= repo.description %></li>
+		</ul>
+		<% end %>
 	</article>
 </div>

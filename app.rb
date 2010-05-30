@@ -128,6 +128,11 @@ end
 
 get '/projects' do
   @settings = settings
+  
+  # github_repo_cache
+  # (this is handled by a nightly cron job, to bring in my most recent projects)
+  @github = YAML.load(File.read('github_repo_cache.yaml'))
+  
   erb :projects
 end
 
