@@ -171,7 +171,7 @@ get '/atom.xml' do
   # author data
   @author = Author
   
-  @last_modified @posts.first.updated_at
+  @last_modified = @posts.first.updated_at
   
   content_type 'text/plain'
   erb :atom
