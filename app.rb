@@ -166,7 +166,7 @@ end
 # atom feed
 get '/atom.xml' do
   # post data
-  @posts = Post.recent.all
+  @posts = Post.all
   
   # author data
   @author = Author
