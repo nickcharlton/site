@@ -174,7 +174,7 @@ get '/atom.xml' do
   @last_modified = @posts.first.updated_at
   
   #content_type 'text/plain'
-  erb :atom, layout => 'false'
+  erb :atom, :layout => false
 end
 
 # admin handling
