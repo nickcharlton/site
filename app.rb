@@ -28,6 +28,7 @@ configure do
 			create_table :authors do |t|
 			  t.integer :id
 			  t.text :name # for styled names, like "Nick Charlton", instead of "nickcharlton"
+			  t.text :email
 			  t.text :username
 			  t.text :password
 			end
@@ -160,6 +161,18 @@ get '/search/*' do
   
   @settings = settings
   erb :search
+end
+
+# atom feed
+get '/atom.xml' do
+  # post data
+  @posts = Post.recent.all
+  
+  # author data
+  @author = Author
+  
+  content_type 'text/plain'
+  erb :atom
 end
 
 # admin handling
