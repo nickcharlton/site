@@ -2,7 +2,7 @@
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
  
 set :application, "blog" # App name.
-set :domain,      "kubrick.nickcharlton.net" # App domain.
+set :domain,      "nickcharlton.net" # App domain.
 set :deploy_to,   "/var/www/apps/#{application}" # Directory to deploy to.
 
 # what to deploy
