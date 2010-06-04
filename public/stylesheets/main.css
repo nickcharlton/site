@@ -29,6 +29,9 @@ nav #nav_images {
 nav #nav_images img {
     padding: 5px;
 }
+nav #nav_images img:hover {
+    background-color: #CCCCCC;
+}
 footer {
     
 }
