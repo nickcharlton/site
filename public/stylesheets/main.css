@@ -23,6 +23,9 @@ aside {
 ul.nav, li.nav {
 	list-style-type: none;
 }
+nav #nav_images img {
+    padding: 5px;
+}
 footer {
     
 }
