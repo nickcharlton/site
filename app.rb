@@ -8,10 +8,8 @@ settings = YAML.load(File.read('config.yaml'))
 
 # configure dev & prod databases
 configure :development do
-  set :adapter, "sqlite3"
-  set :database, "blog.sqlite3"
-  set :username, ""
-  set :password, ""
+  set :adapter, 'sqlite3'
+  set :database, 'blog.sqlite3'
 end
 
 configure :production do
@@ -27,7 +25,10 @@ end
 # database handling
 configure do
   ActiveRecord::Base.establish_connection(
-	          :adapter, :database, :username, :password
+	          :adapter, 
+	          :database, 
+	          :username, 
+	          :password
 	)
 	begin
 		ActiveRecord::Schema.define do
