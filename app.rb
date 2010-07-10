@@ -82,7 +82,7 @@ get '/' do
 end
 
 # post handling (shows 1 post)
-get '/post/:url' do
+get '/post/:url/?' do
   # send in our settings
   @settings = settings
   # pull out all of our which have this url string, but limit it to one.
@@ -114,7 +114,7 @@ get '/post/:url' do
 end
 
 # page handling (pulls a page from page.erb)
-get '/articles' do
+get '/articles/?' do
   # send in our settings
   @settings = settings
   # pull out everything
@@ -122,12 +122,12 @@ get '/articles' do
   erb :articles
 end
 
-get '/about' do
+get '/about/?' do
   @settings = settings
   erb :about
 end
 
-get '/projects' do
+get '/projects/?' do
   @settings = settings
   
   # github_repo_cache
@@ -139,7 +139,7 @@ end
 
 # search
 # form query catch
-get '/search' do
+get '/search/?' do
   params[:q]
   
   redirect "/search/#{params[:q]}"
