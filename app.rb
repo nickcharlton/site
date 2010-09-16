@@ -5,30 +5,16 @@ require 'digest/sha1'
 
 # settings handling
 settings = YAML.load(File.read('config.yaml'))
-
-# configure dev & prod databases
-configure :development do
-  set :adapter, 'sqlite3'
-  set :database, 'blog.sqlite3'
-end
-
-configure :production do
-  # database settings
-  database = YAML.load(File.read('database.yaml'))
-  
-  set :adapter, database["production"]["adapter"]
-  set :database, database["production"]["database"]
-  set :username, database["production"]["username"]
-  set :password, database["production"]["password"]
-end
+# database settings
+database = YAML.load(File.read('database.yaml'))
 
 # database handling
 configure do
   ActiveRecord::Base.establish_connection(
-	          :adapter, 
-	          :database, 
-	          :username, 
-	          :password
+	          :adapter => database["production"]["adapter"],
+            :database => database["production"]["database"],
+            :username => database["production"]["username"],
+            :password => database["production"]["password"]
 	)
 	begin
 		ActiveRecord::Schema.define do
