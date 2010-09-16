@@ -11,10 +11,10 @@ database = YAML.load(File.read('database.yaml'))
 # database handling
 configure do
   ActiveRecord::Base.establish_connection(
-	          :adapter => database["production"]["adapter"],
-            :database => database["production"]["database"],
-            :username => database["production"]["username"],
-            :password => database["production"]["password"]
+	          :adapter => database[:env]["adapter"],
+            :database => database[:env]["database"],
+            :username => database[:env]["username"],
+            :password => database[:env]["password"]
 	)
 	begin
 		ActiveRecord::Schema.define do

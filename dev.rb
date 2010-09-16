@@ -3,6 +3,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
+puts :env
 set :env, :development
+puts :env
 
-require 'app'
+#require 'app'

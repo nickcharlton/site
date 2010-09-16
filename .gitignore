@@ -1,2 +1,4 @@
 .DS_Store
-favicon.icoblog.sqlite3
+favicon.ico
+*.sqlite3
+database.yaml
