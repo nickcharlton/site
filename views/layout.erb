@@ -1,71 +1,45 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
 
-<html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
 		<title><%= @settings['site_name'] %></title>
-		<link rel="stylesheet" href="/stylesheets/main.css">
-		<link href="/javascript/prettify/prettify.css" type="text/css" rel="stylesheet" />
-		<link href="/javascript/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="all" href="/stylesheets/styles.css"/>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<link rel="author" href="http://nickcharlton.net/contact">
 		<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
-		
-		<script type="text/javascript" src="/javascript/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="/javascript/facebox/facebox.js"></script>
-		<script type="text/javascript" src="/javascript/prettify/prettify.js"></script>
 	</head>
-	<body onload="prettyPrint()">
-		<script type="text/javascript" charset="utf-8">
-			jQuery(document).ready(function($) {
-			  $('a[rel*=facebox]').facebox() 
-			})
-		</script>
-		
+
+	<body>
+	
 		<%= yield %>
 		
-		<section>
-			<aside>
-				<h1 id="header"><a href="/" class="logo">nickcharlton.net</a></h1>
-				<p>
-					<small><em>Ruby developer, designer<br>…and a CompSci student.</em></small>
-				</p>
-				<nav>
-					<ul class="nav">
-						<li class="nav"><a href="/articles">articles</a></li>
-						<li class="nav"><a href="/projects">projects</a></li>
-						<!-- <li class="nav"><a href="/devnotes">dev notes</a></li> -->
-						<!-- ^ If you've seen that, it's a future project, keep an eye out. :) -->
-						<li class="nav"><a href="/about">about</a></li>
-					</ul>
-					
-					<div id="nav_images">
-						<a href="/atom.xml"><img src="/images/rss_500.png" alt="RSS" width="24px" height="24px"></a>
-						<a href="http://twitter.com/nickcharlton" title=""><img src="/images/twitter_500.png" alt="Twitter" width="24px" height="24px"></a>
-						<a href="mailto:&#x6E;&#x69;&#x63;&#x6B;&#x63;&#x68;&#x61;&#x72;&#x6C;&#x74;&#x6F;&#x6E;&#x39;&#x31;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"><img src="/images/email_500.png" alt="Email" width="24px" height="24px"></a>
-					</div>
-				</nav>
-				<form action="/search" method="get" accept-charset="utf-8">
-					<input type="search" name="q" value="" id="searchbox" placeholder="search...">
-				</form>
-			</aside>
+		<footer>
+			<div id="text">
+				<p><a href="/about">Nick Charlton</a> writes here. You can find <a href="/projects">projects here</a>, and <a href="/archives">archives here</a>.</p>
+				<p><em>Ruby developer, occasional designer &amp; Computer Science Student.</p>
+			</div>
+			
+			<div id="links">
+					<a href="/atom.xml"><img src="/images/rss_500.png" alt="RSS" width="24px" height="24px"></a>
+					<a href="http://twitter.com/nickcharlton" title=""><img src="/images/twitter_500.png" alt="Twitter" width="24px" height="24px"></a>
+					<a href="mailto:&#x6E;&#x69;&#x63;&#x6B;&#x63;&#x68;&#x61;&#x72;&#x6C;&#x74;&#x6F;&#x6E;&#x39;&#x31;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"><img src="/images/email_500.png" alt="Email" width="24px" height="24px"></a>
+			</div>
 			<div class="clear"></div>
-			<footer class="page">
-				<hr>
-				<p>
-					<small>&copy; <%= @settings['owner'] %> 2010. Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/" title="Creative Commons &mdash; Attribution-Non-Commercial-Share Alike 2.0 UK: England &amp; Wales">CC</a>. <!-- Powered by <a href="http://github.com/nickcharlton/sinba">Sinba</a>. --><% if auth! == false %><a href="/admin/login" rel="facebox">Login</a>.<% else %> <a href="/admin/post" rel="facebox">Post</a>. <a href="/admin/logout">Logout</a>. <% end %></small>
-				</p>
-			</footer>
-		</section>
+		</footer>
+		
 	</body>
 	
-	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	try {
-	var pageTracker = _gat._getTracker("UA-775110-4");
-	pageTracker._trackPageview();
-	} catch(err) {}</script>
-	
 </html>
+<!--
+<div id="search">
+	<div class="search">
+			<form action="/search" method="get" accept-charset="utf-8">
+				<input type="search" name="q" value="" id="searchbox" placeholder="search...">
+			</form>
+	</div>
+</div>-->

@@ -1,17 +1,18 @@
-<div id="main">
-	<% if !@post.empty? %>
-	<% for post in @post %>
-	<article>
-		<h1><a href="/post/<%= post.url %>"><%= post.title %></a></h1>
-		<%= article = Maruku.new(post.content); article.to_html %>
-		<footer>
-			<p>
-				<small>By <%= lookup = @author.find(post.author); lookup.name %> on <time datetime="<%= t = post.created_at; t.xmlschema %>"><%= t.strftime("%B %d, %Y") %></time>. <% if !@tags.empty? %> Tagged with <%= @tags %>. <% end %></small>					
-			</p>
-		</footer>
-	</article>
-	<% end %>
-	<% else %>
-		<h2>No content yet.</h2>
-	<% end %>
-</div>
+<% if !@post.empty? %>
+<% for post in @post %>
+<article>
+	<h2><a href="/post/<%= post.url %>"><%= post.title %></a></h2>
+	
+	<%= article = Maruku.new(post.content); article.to_html %>
+	
+	<footer>
+		<p>Posted by <%= lookup = @author.find(post.author); lookup.name %> on <time datetime="<%= t = post.created_at; t.xmlschema %>"><%= t.strftime("%B %d, %Y") %></time>. <% if !@tags.empty? %> Tagged with <%= @tags %>. <% end %></p>
+	</footer>
+</article>
+<hr>
+
+<% end %>
+<% else %>
+	<h2>No content yet.</h2>
+	<hr>
+<% end %>
