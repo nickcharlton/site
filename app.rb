@@ -3,18 +3,18 @@ require 'yaml'
 require 'maruku'
 require 'digest/sha1'
 
-# settings handling
-settings = YAML.load(File.read('config.yaml'))
-# database settings
+# config handling
+config = YAML.load(File.read('config.yaml'))
+# database config
 database = YAML.load(File.read('database.yaml'))
 
 # database handling
 configure do |settings|
   ActiveRecord::Base.establish_connection(
-	          :adapter => database[settings.env]["adapter"],
-            :database => database[settings.env]["database"],
-            :username => database[settings.env]["username"],
-            :password => database[settings.env]["password"]
+	          :adapter => database[settings.environment.to_s]["adapter"],
+            :database => database[settings.environment.to_s]["database"],
+            :username => database[settings.environment.to_s]["username"],
+            :password => database[settings.environment.to_s]["password"]
 	)
 	begin
 		ActiveRecord::Schema.define do
@@ -71,7 +71,7 @@ enable :sessions
 # homepage handling (shows 5 posts)
 get '/' do
   # send in our settings
-  @settings = settings
+  @settings = config
   # pull out all of our posts
   @post = Post.find(:all, :order => 'created_at DESC', :limit => 2)
   # tell the template the author
@@ -84,7 +84,7 @@ end
 # post handling (shows 1 post)
 get '/post/:url/?' do
   # send in our settings
-  @settings = settings
+  @settings = config
   # pull out all of our which have this url string, but limit it to one.
   @post = Post.find(:all, :conditions => { :url => params['url'] }, :limit => 1)
   
@@ -116,19 +116,19 @@ end
 # page handling (pulls a page from page.erb)
 get '/articles/?' do
   # send in our settings
-  @settings = settings
+  @settings = config
   # pull out everything
   @articles = Post.find(:all)
   erb :articles
 end
 
 get '/about/?' do
-  @settings = settings
+  @settings = config
   erb :about
 end
 
 get '/projects/?' do
-  @settings = settings
+  @settings = config
   
   # github_repo_cache
   # (this is handled by a nightly cron job, to bring in my most recent projects)
@@ -151,7 +151,7 @@ get '/search/tag::tag' do
   
   @result = Post.find(posts)
   
-  @settings = settings
+  @settings = config
   erb :search
 end
 
@@ -159,7 +159,7 @@ end
 get '/search/*' do
   @result = Post.find(:all, :conditions => ["title LIKE ?", "#{params['splat']}%"])
   
-  @settings = settings
+  @settings = config
   erb :search
 end
 
@@ -252,13 +252,13 @@ end
 
 # error handling
 not_found do
-  @settings = settings
+  @settings = config
   # tell the visitor that we couldn't find what they were looking for
   @error = 404
   erb :error
 end
 
 error do
-  @settings = settings
+  @settings = config
   erb :error
 end
