@@ -114,12 +114,12 @@ get '/post/:url/?' do
 end
 
 # page handling (pulls a page from page.erb)
-get '/articles/?' do
+get '/archives/?' do
   # send in our settings
   @settings = config
   # pull out everything
-  @articles = Post.find(:all)
-  erb :articles
+  @archives = Post.find(:all)
+  erb :archives
 end
 
 get '/about/?' do
