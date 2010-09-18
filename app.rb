@@ -50,6 +50,12 @@ helpers do
       return false
     end
   end
+  
+  def check_auth
+    if !self.auth!
+      redirect '/admin/login'
+    end
+  end
 end
 
 # initialise the tables
@@ -182,7 +188,9 @@ end
 
 # login
 get '/admin/login' do
-  erb :admin_login, :layout => false
+  
+  @settings = config
+  erb :'admin/login'
 end
 
 post '/admin/auth' do
@@ -192,7 +200,7 @@ post '/admin/auth' do
   
   # look for it in the db
   authed = Author.find(:all, :conditions => { :username => user, :password => hash })
-  
+  puts authed.to_s
   # if we found it
   if authed.empty?
     redirect '/admin/login'
@@ -211,8 +219,10 @@ end
 
 # add a new post
 get '/admin/post' do
-  auth!
-  erb :admin_post, :layout => false
+  check_auth
+  
+  @settings = config
+  erb :'admin/post'
 end
 
 post '/admin/post' do
@@ -241,14 +251,14 @@ post '/admin/post' do
 end
 
 # add a new author (similarly meant as a debug)
-# get '/admin/author' do
-  #author = Author.new(:name => "Nick Charlton", :username => "nickcharlton", :password => "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8")
-  #if author.save
-   # status(201)
-  #else
-   # status(412)
-  #end
-# end
+ get '/admin/author' do
+  author = Author.new(:name => "Nick Charlton", :username => "nickcharlton", :password => "48f312978084d0cda290879d2ce77927cb195557")
+  if author.save
+    status(201)
+  else
+    status(412)
+  end
+ end
 
 
 # error handling

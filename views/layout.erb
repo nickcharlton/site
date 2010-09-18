@@ -10,15 +10,30 @@
 		<link rel="stylesheet" media="all" href="/stylesheets/styles.css"/>
 		<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0"/>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<link href="/javascript/prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="/javascript/prettify/prettify.js"></script>
 		<link rel="author" href="http://nickcharlton.net/contact">
 		<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
+		<script type="text/javascript" charset="utf-8">
+			// add a class to each generated code/pre block
+			$(document).ready(function(){
+				$('pre').addClass('prettyprint');
+			});
+		</script>
+		
 	</head>
 
-	<body>
-		
+	<body onload="prettyPrint()">
 		<header>
 			<div id="icons">
 				<a href="/"><img src="/images/house_500.png" alt="Home" width="16px" height="16px"></a>
+				<% if auth! %>
+				&nbsp;
+				<a href="/admin/post"><img src="/images/pen_paper_500.png" alt="New Post" width="16px" height="16px"></a>
+				<a href="/admin/settings"><img src="/images/settings_500.png" alt="Settings" width="16px" height="16px"></a>
+				&nbsp;&nbsp;
+				<a href="/admin/logout"><img src="/images/logout_500.png" alt="Logout" width="16px" height="16px"></a>
+				<% end %>
 			</div>
 			<div id="search">
 				<form action="/search" method="get" accept-charset="utf-8">
@@ -47,4 +62,7 @@
 		
 	</body>
 	
+	<% if !auth! %>
+	<!-- insert google analytics stuff -->
+	<% end %>
 </html>

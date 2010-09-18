@@ -138,7 +138,49 @@ article footer a:hover {
 ::selection 	 {background: #e6e9eb;}
 ::-moz-selection {background: #e6e9eb;}
 
+/*
+    Form Styles
+*/
 
+form fieldset li {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+form label {
+    width: 75px;
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
+}
+form input {
+    font-size: 14px;
+}
+form textarea {
+    font-family: Monaco, monospace;
+    font-size: 14px;
+}
+form input.post, textarea.post {
+    width: 420px;
+}
+
+/* 
+    Code Styles
+*/
+
+code {
+    background: #dfe4e5;
+    font: 12px Monaco, monospace;
+}
+
+pre {
+    background: #dfe4e5;
+    padding: 10px;
+    width: 75%;
+    margin: 10px auto;
+    overflow: auto;
+    font: 12px Monaco, monospace;
+}
 
 /*
 	Default 5-column, 768 px layout for iPads, netbooks, and IE
@@ -203,6 +245,10 @@ article footer {
 	body {
 		padding: 5px 10px 0;
 		width: 300px;
+	}
+	
+	pre {
+	    width: 85%;
 	}
 	
 	footer #text {
