@@ -142,15 +142,28 @@ article footer a:hover {
 
 body {
 	background: #AFBDC0;
-	padding: 36px 36px 0;
+	/*padding: 36px 36px 0;*/
+	padding: 16px 36px 0;
 	margin: 0 auto;
 	width: 696px;
 }
 
-article {
-	height: 400px;
+header {
+    background: #4E5963;
+	color: #AFBDC0;
+	padding: 3px 5px 2px 5px;
 }
-
+header #icons {
+    float: left;
+}
+header #search {
+    float: right;
+}
+/*
+article {
+	min-height: 400px;
+}
+*/
 footer {
 	background: #4E5963;
 	color: #AFBDC0;
@@ -189,10 +202,11 @@ article footer {
 		width: 300px;
 	}
 	
-	footer .text {
+	footer #text {
         float:none;
+        text-align: center;
     }
-    footer .links {
+    footer #links {
         float:none;
         text-align: center;
     }
