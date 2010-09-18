@@ -74,12 +74,12 @@ end
 
 enable :sessions
 
-# homepage handling (shows 5 posts)
+# homepage handling (shows 3 posts)
 get '/' do
   # send in our settings
   @settings = config
   # pull out all of our posts
-  @post = Post.find(:all, :order => 'created_at DESC', :limit => 2)
+  @post = Post.find(:all, :order => 'created_at DESC', :limit => 3)
   # tell the template the author
   @author = Author
   # tell the view about a false set of tags
@@ -93,6 +93,8 @@ get '/post/:url/?' do
   @settings = config
   # pull out all of our which have this url string, but limit it to one.
   @post = Post.find(:all, :conditions => { :url => params['url'] }, :limit => 1)
+  # make up the page title
+  @settings.store('title', @post[0].title)
   
   # check that our post exists.
   if @post.empty?
@@ -124,17 +126,23 @@ get '/archives/?' do
   # send in our settings
   @settings = config
   # pull out everything
-  @archives = Post.find(:all)
+  @archives = Post.find(:all, :order => 'created_at DESC')
+  # make up the page title
+  @settings.store('title', 'Archives')
   erb :archives
 end
 
 get '/about/?' do
   @settings = config
+  # make up the page title
+  @settings.store('title', 'About')
   erb :about
 end
 
 get '/projects/?' do
   @settings = config
+  # make up the page title
+  @settings.store('title', 'Projects')
   
   # github_repo_cache
   # (this is handled by a nightly cron job, to bring in my most recent projects)
@@ -159,6 +167,8 @@ get '/search/tag::tag' do
   @result = Post.find(posts)
   
   @settings = config
+  # make up the page title
+  @settings.store('title', 'Search')
   erb :search
 end
 
@@ -167,6 +177,8 @@ get '/search/*' do
   @result = Post.find(:all, :conditions => ["title LIKE ?", "#{params['splat']}%"])
   
   @settings = config
+  # make up the page title
+  @settings.store('title', 'Search')
   erb :search
 end
 
@@ -188,8 +200,9 @@ end
 
 # login
 get '/admin/login' do
-  
   @settings = config
+  # make up the page title
+  @settings.store('title', 'Login')
   erb :'admin/login'
 end
 
@@ -222,6 +235,8 @@ get '/admin/post' do
   check_auth
   
   @settings = config
+  # make up the page title
+  @settings.store('title', 'New Post')
   erb :'admin/post'
 end
 
@@ -250,26 +265,24 @@ post '/admin/post' do
   end
 end
 
-# add a new author (similarly meant as a debug)
- get '/admin/author' do
-  author = Author.new(:name => "Nick Charlton", :username => "nickcharlton", :password => "48f312978084d0cda290879d2ce77927cb195557")
-  if author.save
-    status(201)
-  else
-    status(412)
-  end
- end
-
+# open a post for editing
+get '/admin/edit/:id' do
+  
+end
 
 # error handling
 not_found do
   @settings = config
   # tell the visitor that we couldn't find what they were looking for
   @error = 404
+  # make up the page title
+  @settings.store('title', "Something's Lost!")
   erb :error
 end
 
 error do
   @settings = config
+  # make up the page title
+  @settings.store('title', 'Something went wrong!')
   erb :error
 end
