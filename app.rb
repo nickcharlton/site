@@ -267,7 +267,13 @@ end
 
 # open a post for editing
 get '/admin/edit/:id' do
+  check_auth
   
+  @settings = config
+  # make up the page title
+  @settings.store('title', 'Edit Post')
+  
+  erb :'admin/edit'
 end
 
 # error handling

@@ -1,0 +1,46 @@
+		<h2>Editing Post</h2>
+		
+		<form action="/admin/post" method="post" accept-charset="utf-8">
+		<fieldset>
+			<ol>
+				<li>
+					<label for="text">Title: </label>
+					<input type="text" name="title" value="" id="post-title" class="post">
+				</li>
+				<li>
+					<label for="content">Content: </label>
+					<textarea name="content" rows="9" cols="50" class="post"></textarea>
+				</li>
+				<li>
+					<label for="tags">Tags: </label>			
+					<input type="text" name="tags" value="" placeholder="comma seperated" class="post">
+				</li>
+				<li>
+					<label for="url">URL: </label>			
+					<input type="text" name="url" value="" id="post-url" class="post">
+				</li>
+				<li>
+					<input type="hidden" name="author" value="1">
+					<button type="submit">Submit</button>
+				</li>
+			</ol>
+		</fieldset>
+		</form>
+		<hr>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				function makeURL() {
+					// grab the original input					
+					var input = $("#post-title").val();
+					// trim out special characters
+					var safe = input.replace(/[^a-zA-Z 0-9]+/g,'');
+					// replace spaces with dashes
+					var url = safe.replace(/ /g, "-").toLowerCase();
+					// set the value of post-url
+					$("#post-url").val(url);
+				}
+				// react instantly
+				$("#post-title").live('keyup', makeURL);
+			})
+		</script>

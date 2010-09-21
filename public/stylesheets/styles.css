@@ -109,6 +109,14 @@ header img:hover {
     background-color: #e6e9eb;
 }
 
+h2 img {
+    vertical-align: middle;
+    display:none;
+}
+.show {
+    display: inline;
+}
+
 footer a:link {
     color: #AFBDC0;
 }

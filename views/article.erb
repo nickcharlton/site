@@ -1,7 +1,7 @@
 <% if !@post.empty? %>
 <% for post in @post %>
 <article>
-	<h2><a href="/post/<%= post.url %>"><%= post.title %></a></h2>
+	<h2><a href="/post/<%= post.url %>"><%= post.title %></a><% if auth! then %> <a href="/admin/edit/<%= post.id %>"><img src="/images/edit_500.png" alt="Edit" width="16px" height="16px" class="edit-img"></a> <% end %></h2>
 	
 	<%= article = Maruku.new(post.content); article.to_html %>
 	
@@ -16,3 +16,13 @@
 	<h3>No content yet.</h3>
 	<hr>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		function showEdit() {
+			$(".edit-img").addClass("show");
+		}
+		
+		$("h2").hover(showEdit);
+	});
+</script>
