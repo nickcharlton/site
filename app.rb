@@ -191,8 +191,8 @@ get '/search/tag::tag' do
 end
 
 # search using a term (although; only the titles, for now)
-get '/search/*' do
-  @result = Post.find(:all, :conditions => ["title LIKE ?", "#{params['splat']}%"])
+get '/search/:term' do
+  @result = Post.find(:all, :conditions => ["title LIKE ?", "%#{params['term']}%"])
   
   @settings = config
   # make up the page title
