@@ -6,7 +6,7 @@
 	<%= article = Maruku.new(post.content); article.to_html %>
 	
 	<footer>
-		<p>Posted by <%= lookup = @author.find(post.author); lookup.name %> on <time datetime="<%= t = post.created_at; t.xmlschema %>"><%= t.strftime("%B %d, %Y") %></time>. <% if !@tags.empty? %> Tagged with <%= @tags %>. <% end %></p>
+		<p>Posted by <%= lookup = @author.find(post.author); lookup.name %> on <time datetime="<%= t = post.created_at; t.xmlschema %>"><%= t.strftime("%B") + " " + apply_ordinal(t.strftime("%d")) + ", " + t.strftime("%Y") %></time>. <% if !@tags.empty? %> Tagged with <%= @tags %>. <% end %></p>
 	</footer>
 </article>
 <hr>
