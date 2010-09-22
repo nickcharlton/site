@@ -56,6 +56,24 @@ helpers do
       redirect '/admin/login'
     end
   end
+  
+  def apply_ordinal(num)
+      case day % 100
+      when 11..13
+        return day.to_s + "th"
+      end
+
+      case day % 10
+      when 1
+        return day.to_s + "st"
+      when 2
+        return day.to_s + "nd"
+      when 3
+        return day.to_s + "rd"
+      else
+        return day.to_s + "th"
+      end
+  end
 end
 
 # initialise the tables

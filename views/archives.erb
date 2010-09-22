@@ -1,7 +1,6 @@
 	<h2>Archives</h2>
 	
 	<article>
-		<!-- this formatting is rather American, but it's simpler for the time being -->
 		<ul>
 		<% for article in @archives %>
 			<li><time datetime="<%= t = article.created_at; t.xmlschema %>"><%= t.strftime("%B %d, %Y") %></time> &mdash; <a href="/post/<%= article.url %>"><%= article.title %></a></li>
