@@ -1,7 +1,7 @@
 <% if !@post.empty? %>
 <% for post in @post %>
 <article>
-	<h2><a href="/post/<%= post.url %>"><%= post.title %></a><% if auth! then %> <a href="/admin/edit/<%= post.id %>"><img src="/images/edit_500.png" alt="Edit" width="16px" height="16px" class="edit-img"></a> <% end %></h2>
+	<h2><a href="/post/<%= post.url %>"><%= post.title %></a><% if auth! %> <a href="/admin/edit/<%= post.id %>"><img src="/images/edit_500.png" alt="Edit" width="16px" height="16px" class="edit"></a> <% end %></h2>
 	
 	<%= article = Maruku.new(post.content); article.to_html %>
 	
@@ -19,10 +19,16 @@
 
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
-		function showEdit() {
-			$(".edit-img").addClass("show");
+		// hide the edit image by default
+		$("img.edit").hide();
+		// show the edit image when you hover over the title
+		$("article h2").hover(showEditImg, hideEditImg);
+		// define show and hide functions
+		function showEditImg() {
+			$("img.edit").show();
 		}
-		
-		$("h2").hover(showEdit);
+		function hideEditImg() {
+			$("img.edit").hide();
+		}
 	});
 </script>
