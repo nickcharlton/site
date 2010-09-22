@@ -241,7 +241,7 @@ get '/admin/post' do
 end
 
 post '/admin/post' do
-  auth!
+  check_auth
   post = Post.new(:title =>  params['title'], :content => params['content'], :author => params['author'], :url => params['url'])
   # if the post saves, try adding tags
   if post.save
@@ -292,6 +292,34 @@ get '/admin/edit/:id' do
   @settings.store('title', 'Editing: ' + @post[0].title)
   
   erb :'admin/edit'
+end
+
+# handle POST of edit
+post '/admin/edit' do
+  check_auth
+  
+  # first, dump all of the original tags
+  Tag.delete_all "post_id = #{params['id']}"
+  
+  # save most of the details
+  post = Post.update(params['id'], {:title =>  params['title'], :content => params['content'], :author => params['author'], :url => params['url']})
+  
+  # (re)save the tags
+  # split them up
+  tags = params['tags'].split(/, /)
+  # add each to the database
+  for tag in tags do
+  	saved_tags = Tag.new(:name => tag, :post_id => params['id'])
+  	if saved_tags.save
+  	  # do nothing
+  	else
+  	  raise ActiveRecordError
+  	end
+  end
+  status(201)
+  redirect "/post/#{params['url']}"
+else
+  status(412)
 end
 
 # error handling
