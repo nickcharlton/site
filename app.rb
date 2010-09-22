@@ -80,12 +80,6 @@ end
 class Post < ActiveRecord::Base
 end
 class Author < ActiveRecord::Base
-  def find(id)
-    # looks up an author from their id
-    result = Author.find(id)
-    
-    return result
-  end
 end
 class Tag < ActiveRecord::Base
 end
@@ -238,12 +232,13 @@ post '/admin/auth' do
   
   # look for it in the db
   authed = Author.find(:all, :conditions => { :username => user, :password => hash })
-  puts authed.to_s
+  #puts authed.to_s
   # if we found it
   if authed.empty?
     redirect '/admin/login'
   else
     session[:authed] = true
+    session[:user_id] = authed[0].id
     
     redirect '/'
   end
@@ -343,6 +338,32 @@ post '/admin/edit' do
   end
     status(201)
     redirect "/post/#{params['url']}"
+end
+
+get "/admin/settings" do
+  check_auth
+  
+  @author = Author.find(session[:user_id])
+  
+  @settings = config
+  # make up the page title
+  @settings.store('title', 'Your Settings')
+  
+  erb :'admin/settings'
+end
+
+post '/admin/settings' do
+  check_auth
+  
+  if params['password'].empty?
+    password = params['old_password']
+  else 
+    password = params['password']
+  end
+  
+  author = Author.update(session[:user_id], {:name => params['name'], :username => params['username'], :email => params['email'], :password => password})
+  
+  redirect '/admin/settings'
 end
 
 # error handling
