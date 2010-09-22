@@ -269,9 +269,27 @@ end
 get '/admin/edit/:id' do
   check_auth
   
+  # pull out all of our which have this url string, but limit it to one.
+  @post = Post.find(:all, :conditions => { :id => params['id'] }, :limit => 1)
+  
+  # print out and throw in the tags
+  tags = Tag.find(:all, :conditions => { :post_id => @post[0].id })
+  
+  @tags = ""
+  count = 0
+  
+  for tag in tags
+    @tags = @tags + "#{tag.name}"
+    count = count + 1
+    
+    unless count > (tags.length - 1)
+      @tags = @tags + ", "
+    end
+  end
+  
   @settings = config
   # make up the page title
-  @settings.store('title', 'Edit Post')
+  @settings.store('title', 'Editing: ' + @post[0].title)
   
   erb :'admin/edit'
 end

@@ -1,23 +1,25 @@
-		<h2>Editing: <%= @post.id %></h2>
+<% for post in @post %>
+
+		<h2>Editing: <%= post.title %></h2>
 		
-		<form action="/admin/post" method="post" accept-charset="utf-8">
+		<form action="/admin/edit" method="post" accept-charset="utf-8">
 		<fieldset>
 			<ol>
 				<li>
 					<label for="text">Title: </label>
-					<input type="text" name="title" value="" id="post-title" class="post">
+					<input type="text" name="title" value="<%= post.title %>" id="post-title" class="post">
 				</li>
 				<li>
 					<label for="content">Content: </label>
-					<textarea name="content" rows="9" cols="50" class="post"></textarea>
+					<textarea name="content" rows="9" cols="50" class="post" ><%= post.content %></textarea>
 				</li>
 				<li>
 					<label for="tags">Tags: </label>			
-					<input type="text" name="tags" value="" placeholder="comma seperated" class="post">
+					<input type="text" name="tags" value="<%= @tags %>" placeholder="comma seperated" class="post">
 				</li>
 				<li>
 					<label for="url">URL: </label>			
-					<input type="text" name="url" value="" id="post-url" class="post">
+					<input type="text" name="url" value="<%= post.url %>" id="post-url" class="post">
 				</li>
 				<li>
 					<input type="hidden" name="author" value="1">
@@ -27,6 +29,8 @@
 		</fieldset>
 		</form>
 		<hr>
+		
+<% end %>
 		
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
@@ -41,6 +45,6 @@
 					$("#post-url").val(url);
 				}
 				// react instantly
-				$("#post-title").live('keyup', makeURL);
+				//$("#post-title").live('keyup', makeURL);
 			})
 		</script>
