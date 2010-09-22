@@ -316,10 +316,8 @@ post '/admin/edit' do
   	  raise ActiveRecordError
   	end
   end
-  status(201)
-  redirect "/post/#{params['url']}"
-else
-  status(412)
+    status(201)
+    redirect "/post/#{params['url']}"
 end
 
 # error handling
