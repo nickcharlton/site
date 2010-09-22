@@ -199,7 +199,14 @@ end
 # admin handling
 
 # login
+get '/login' do
+  redirect '/admin/login'
+end
 get '/admin/login' do
+  if self.auth!
+    redirect '/'
+  end
+  
   @settings = config
   # make up the page title
   @settings.store('title', 'Login')
