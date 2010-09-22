@@ -57,7 +57,7 @@ helpers do
     end
   end
   
-  def apply_ordinal(num)
+  def apply_ordinal(day)
       case day % 100
       when 11..13
         return day.to_s + "th"
