@@ -68,6 +68,10 @@ figure img {width: 100%;}
 	padding: 7px 0 7px 0;
 }
 
+article p {
+    margin: 7px 0 7px 0;
+}
+
 .small, small {
 	font-size: 13px;
 	line-height: 18px;

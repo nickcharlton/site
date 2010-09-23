@@ -158,8 +158,7 @@ get '/projects/?' do
   
   # github_repo_cache
   # (this is handled by a nightly cron job, to bring in my most recent projects)
-  # /var/www/apps/blog/shared/github_repo_cache.yaml
-  @github = YAML.load(File.read('/Users/nickcharlton/Desktop/github_repo_cache.yaml'))
+  @github = YAML.load(File.read('/var/www/apps/blog/shared/github_repo_cache.yaml'))
   
   erb :projects
 end
