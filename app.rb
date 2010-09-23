@@ -91,7 +91,7 @@ get '/' do
   # send in our settings
   @settings = config
   # make up the page title
-  @settings.store('title', "")
+  @settings.store('title', "Home")
   # pull out all of our posts
   @post = Post.find(:all, :order => 'created_at DESC', :limit => 3)
   # tell the template the author
