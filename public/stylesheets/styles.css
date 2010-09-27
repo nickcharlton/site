@@ -69,7 +69,9 @@ figure img {width: 100%;}
 }
 
 article p {
-    margin: 7px 0 7px 0;
+    line-height: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .small, small {
