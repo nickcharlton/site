@@ -2,6 +2,7 @@ require 'active_record'
 require 'yaml'
 require 'maruku'
 require 'digest/sha1'
+require 'builder'
 
 # config handling
 config = YAML.load(File.read('config.yaml'))
