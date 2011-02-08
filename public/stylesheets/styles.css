@@ -145,6 +145,11 @@ article footer a:hover {
     clear: both;
 }
 
+/* a style to allow us to centre block elements in posts */
+.centre {
+    margin:0 auto;
+}
+
 ::selection 	 {background: #e6e9eb;}
 ::-moz-selection {background: #e6e9eb;}
 
