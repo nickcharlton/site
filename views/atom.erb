@@ -13,7 +13,7 @@
  <entry>
    <id>http://nickcharlton.net/post/<%= post.url %></id>
    <link href="http://nickcharlton.net/post/<%= post.url %>"/>
-   <title><%= post.title %></title>
+   <title><%= post.title.to_xs %></title>
    <author>
      <name><%= lookup = @author.find(post.author); lookup.name %></name>
      <email><%= lookup = @author.find(post.author); lookup.email %></email>
