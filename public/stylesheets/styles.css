@@ -212,6 +212,16 @@ figcaption {
 	font-style: italic;
 }
 
+/* 
+    Annoucement Bar Styles
+*/
+header aside.announcement {
+    text-align: center;
+    font-style: italic;
+    color: #000000;
+    padding-bottom: 10px;
+}
+
 /*
 	Default 5-column, 768 px layout for iPads, netbooks, and IE
 	(All other layouts inherit styles from this layout)
