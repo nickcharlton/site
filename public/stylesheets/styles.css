@@ -28,7 +28,7 @@ footer, header, nav, section, video, object {
 a img {border: 0;}
 
 figure {position: relative;}
-figure img {width: 100%;}
+/*figure img {width: 100%;}*/
 
 
 
@@ -195,6 +195,21 @@ pre {
     margin: 10px auto;
     overflow: auto;
     font: 12px Monaco, monospace;
+}
+
+/* 
+    Figure Styles
+*/
+figure img {
+    margin: 0 auto;
+    border: 5px solid #4E5963;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 14px; /* 1px larger than <small> */
+	line-height: 18px;
+	font-style: italic;
 }
 
 /*
