@@ -1,8 +1,31 @@
 	<article>
 		<h2>Projects</h2>
-		<p><a href="http://www.codinghorror.com/blog/2009/12/version-1-sucks-but-ship-it-anyway.html">Real Programmers Ship</a>. And, that is the purpose of this page, here is a list of projects I have been working on and where you can read more about them.</p>
-		
-		<h3>Open Source (on <a href="http://github.com/nickcharlton">GitHub</a>)</h3>
+	    <p>I'm quite prolific with projects. Some of the ones below are side products of other things. Some of these have been worked on for quite a long time before being released, others can be considered more hacks.</p>
+
+        <div class="project">
+            <h3>Where's Next?</h3>
+
+            <p>Nobody really likes doing errands. How about a way to help you do them quicker?</p>
+            <p>Where's Next? takes the places you need to visit and according to where you are now tells you the quickest way to visit them.</p>
+
+            <ul>
+                <li><a href="http://wheresnextapp.com/">Where's Next? Site</a></li>
+                <li><a href="http://itunes.apple.com/gb/app/wheres-next/id454450198?mt=8">On the App Store</a></li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h3>Jacks</h3>
+
+            <p>Jacks is a web development framework. It's designed to be a starting point for responsive designs. It's intended to provide the basic elements for you, whilst you work on the rest.</p>
+
+            <ul>
+                <li><a href="http://github.com/nickcharlton/jacks">On GitHub</a></li>
+                <li><a href="http://nickcharlton.net/post/jacks-a-place-to-start-web-projects">Blog Post</a></li>
+            </ul>
+        </div>
+
+		<h3><a href="http://github.com/nickcharlton">From GitHub</a>)</h3>
 		<% for repo in @github %>
 		<ul>
 			<li><a href="<%= repo['url'] %>"><%= repo['name'] %></a> &mdash; <%= repo['description'] %></li>
