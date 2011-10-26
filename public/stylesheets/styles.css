@@ -97,6 +97,7 @@ hr {
 
 ul {
     list-style-position: inside;
+    padding: 15px;
 }
 
 a:link {
@@ -220,6 +221,25 @@ header aside.announcement {
     font-style: italic;
     color: #000000;
     padding-bottom: 10px;
+}
+
+/*
+    Projects Styles
+*/
+div.project {
+    border: 1px solid #000000;
+    padding: 15px;
+    margin: 15px 0 15px 0;
+}
+
+div.project ul {
+    text-align: center;
+    padding: 0;
+}
+
+div.project li {
+    display: inline;
+    padding: 0 5px 0 5px;
 }
 
 /*

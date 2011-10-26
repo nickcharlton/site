@@ -5,6 +5,8 @@
         <div class="project">
             <h3>Where's Next?</h3>
 
+            <p>Where's Next? is an iPhone application.</p>
+            
             <p>Nobody really likes doing errands. How about a way to help you do them quicker?</p>
             <p>Where's Next? takes the places you need to visit and according to where you are now tells you the quickest way to visit them.</p>
 
@@ -25,11 +27,11 @@
             </ul>
         </div>
 
-		<h3><a href="http://github.com/nickcharlton">From GitHub</a>)</h3>
-		<% for repo in @github %>
+		<h3><a href="http://github.com/nickcharlton">Over on GitHub...</a></h3>
 		<ul>
+        <% for repo in @github %>
 			<li><a href="<%= repo['url'] %>"><%= repo['name'] %></a> &mdash; <%= repo['description'] %></li>
-		</ul>
 		<% end %>
+        </ul>
 	</article>
 	<hr>
