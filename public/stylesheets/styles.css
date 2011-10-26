@@ -100,6 +100,10 @@ ul {
     padding: 15px;
 }
 
+li ul {
+    padding: 0 0 0 15px;    
+}
+
 a:link {
     color: #000000;
 }
