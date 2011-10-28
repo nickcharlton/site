@@ -27,6 +27,21 @@
             </ul>
         </div>
 
+		<div class="project">
+			<h3>UrbanScraper (and the Alfred Extension)</h3>
+			
+			<p>UrbanScraper is a web service for accessing definitions from Urban Dictionary. It was created to use with the Alfred Extension. It's written in Ruby using Sinatra and the Nokogiri gem for using XPath. It's hosted on <a href="http://heroku.com">Heroku</a>.</p>
+			
+			<p>The Alfred Extension uses the web service to take a term and output the definition through Growl. It's written in PHP (as it has JSON support built in).</p>
+			
+			<ul>
+				<li><a href="http://urbanscraper.herokuapp.com/">UrbanScraper</a></li>
+				<li><a href="https://github.com/nickcharlton/urbanscraper">UrbanScraper on GitHub</a></li>
+				<li><a href="/resources/urban_dictionary.alfredextension">Download the Alfred Extension</a></li>
+				<li><a href="http://nickcharlton.net/post/introducing-urban-scraper">Blog Post</a></li>
+			</ul>
+		</div>
+
 		<h3><a href="http://github.com/nickcharlton">Over on GitHub...</a></h3>
 		<ul>
         <% for repo in @github %>
