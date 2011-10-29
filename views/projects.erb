@@ -45,7 +45,7 @@
 		<h3><a href="http://github.com/nickcharlton">Over on GitHub...</a></h3>
 		<ul>
         <% for repo in @github %>
-			<li><a href="<%= repo['url'] %>"><%= repo['name'] %></a> &mdash; <%= repo['description'] %></li>
+			<li><a href="<%= repo['html_url'] %>"><%= repo['name'] %></a> &mdash; <%= repo['description'] %></li>
 		<% end %>
         </ul>
 	</article>
