@@ -87,6 +87,10 @@ blockquote {
     font-style: italic;
 }
 
+sup {
+    font-size: 12px;    
+}
+
 hr {
 	color: #4E5963;
 	background: #4E5963;
@@ -102,6 +106,11 @@ ul {
 
 li ul {
     padding: 0 0 0 15px;    
+}
+
+ol.footnotes {
+    font-size: 13px;
+    padding: 10px 20px 0 20px;
 }
 
 a:link {
