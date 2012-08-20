@@ -1,4 +1,4 @@
-.DS_Store
-favicon.ico
-*.sqlite3
-database.yaml
+*.DS_Store
+*.un~
+*.swp
+*.swo
