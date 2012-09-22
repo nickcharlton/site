@@ -68,6 +68,14 @@ main = hakyllWith config $ do
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
+    -- Pages
+    forM_ pages $ \p ->
+        match p $ do
+            route   $ setExtension ".html"
+            compile $ pageCompiler
+                >>> applyTemplateCompiler "templates/default.html"
+                >>> relativizeUrlsCompiler
+
     -- Tags
     create "tags" $
         requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
@@ -99,6 +107,8 @@ main = hakyllWith config $ do
 
     tagIdentifier :: String -> Identifier (Page String)
     tagIdentifier = fromCapture "tags/*"
+
+    pages = ["about.md", "projects.md"]
 
 makeTagList :: String
             -> [Page String]
