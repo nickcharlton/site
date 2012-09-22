@@ -25,6 +25,11 @@ main = hakyllWith config $ do
         route idRoute
         compile compressCssCompiler
 
+    -- Resources
+    match "resources/**" $ do
+        route idRoute
+        compile copyFileCompiler
+
     -- Render each and every post
     match "posts/*" $ do
         route   $ setExtension ".html"
