@@ -195,6 +195,43 @@ div#grid {
 /*
     Header
 */
+body > header {
+        h1 {
+            float: left;
+        }
+
+        nav {
+            float: right;
+            margin-top: 2em; /* 32px / 16px */
+
+            ul {
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    display: inline;
+                    padding-left: 0.625em; /* 10px / 16px */
+                    font-family: "proxima-nova", sans-serif;
+                }
+            }
+        }
+
+        hr {
+            clear: both;
+        }
+
+        a {
+            color: rgb(0, 0, 0);
+
+            &:visited {
+                color: rgb(0, 0, 0);
+            }
+
+            &:hover {
+                color: @foreground;    
+            }
+        }  
+}
 
 /*
     Bottom Bar & Navigation
