@@ -1,0 +1,311 @@
+/*
+    nickcharlton.net Styles
+*/
+
+@foreground: rgb(78, 89, 99);
+@background: rgb(175, 189, 192);
+
+/*
+    Typography
+*/
+body {
+    font: normal 100% "adelle", serif; /* ~16px */
+    width: 83.3%; /* 1000px */
+    /* media query transitions to smooth things out */
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+    -moz-transition: width .2s ease;
+    margin: 0 auto;
+    background-color: @background;
+    /* typography improvements */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "proxima-nova", sans-serif;
+}
+
+/*
+    Other
+*/
+hr {
+    color: @foreground;
+    background: @foreground;
+    border: none;
+    height: 0.0625em; /* 1px / 16px */
+}
+
+a {
+    color: rgb(0, 0, 0);
+    transition: color .2s ease-out;
+    -webkit-transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+
+    &:hover {
+        color: @foreground;
+    }
+
+    &:visited {
+        color: @foreground;
+    }
+}
+
+sup {
+    padding: 0.125em; /* 2px / 16px */
+}
+
+blockquote {
+    margin: 1.5em; /* 24px / 16px */
+    border-left: 0.3125em solid @foreground; /* 5px / 16px */
+    padding: 0.125em 0.125em 0.125em 0.3125em; /* 2 (5)px / 16px */
+}
+
+pre {
+    background: rgb(223, 228, 229);
+    width: 75%;
+    overflow: auto;
+    margin: 0.625em auto; /* 10px / 16px */
+    padding-left: 0.625em;
+    font-size: 0.875em; /* 14px / 16px */
+}
+
+figure {
+    img, embed, object, video, .embed {
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
+        border: 0.625em solid @foreground; /* 10px / 16px */
+        padding-bottom: 1.25em; /* 20px / 16px */
+        background: @foreground;
+    }
+
+    figcaption {
+        text-align: center;
+        position: relative;
+        top: -1.5625em; /* 25px / 16px */
+        color: @background;
+        font-size: 0.875em; /* 14px / 16px */
+    }
+}
+
+header, nav {
+    a {
+        text-decoration: none;
+    }
+}
+
+/* 
+  Article Specific Styles.
+*/
+article {
+    div.footnotes {
+        ol {
+            font-size: 0.875em; /* 14px / 16px */
+        }
+
+        hr {
+            margin: 0 auto 0 0; /* align left */
+            width: 10%; /* 100px / 1000px */ 
+            height: 0.071428571rem; /* 1px / 14px */
+        }
+    }
+
+    ul ul {
+        margin: 0;
+    }
+
+    ul li {
+        margin: 0.3125em; /* 5px / 16px */    
+    }
+}
+
+/*
+  Project Page
+*/
+div#grid {
+    overflow: auto;
+    width: 99%; /* 990px / 1000px */
+    margin: 0 auto;
+
+    div {
+        overflow: hidden;
+        width: 46.2%; /* guessed */
+        margin: 0.3125em; /* 5px / 16px */
+        padding: 0 0.625em; /* 10px / 16px */
+        float: left;
+        border: 0.0625em solid @foreground; /* 1px / 16px */
+
+        p {
+           margin: 0;
+        }
+
+        ul {
+            margin: 1em auto;
+            padding: 0;
+            text-align: center;
+
+            li {
+                display: inline;
+            }
+        }
+    }    
+
+    img.project_icon {
+        width: 1.78125em; /* 28.5px / 16px */   
+        margin: 0 0.3125em 0 0; /* 5px / 16px */
+        vertical-align: middle;
+    }
+}
+
+/*
+    Icon Styles.
+    Fonts from Pictos.css. Styles from Chris Coyier.
+    http://css-tricks.com/examples/IconFont/
+*/
+.icon:before {
+    font-family: "Pictos Custom";
+}
+
+.icon-replace {
+    text-indent: -9999px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    min-width: 1em;
+    font-size: 3em;
+    margin: 0.05em;
+}
+
+.icon-replace:before {
+    position: absolute;
+    left: 0; /* Firefox needs to be explicit. */
+    top: 10px;
+    text-indent: 0;
+}
+
+.icon-feed:before { content: "F"; }
+.icon-twitter:before { content: "T"; }
+.icon-email:before { content: "M"; }
+
+/*
+    Layout
+*/
+
+/*
+    Header
+*/
+
+/*
+    Bottom Bar & Navigation
+*/
+body {
+    footer {
+        overflow: auto;
+        background: @foreground;
+        color: rgb(175, 189, 192);
+        padding: 0.5%; /* 5px / 1000px */
+        margin-bottom: 1.5em; /* 24px / 16px */
+
+        a {
+            color: rgb(175, 189, 192);
+
+            &:visited {
+                color: rgb(175, 189, 192);
+            }
+
+            &:hover {
+                color: rgb(0, 0, 0);
+            }
+        }
+
+        div#blurb {
+            float: left;
+            overflow: hidden;
+            color: rgb(175, 189, 192);
+            padding-left: 0.625em; /* 10px / 16px */
+            font-size: 0.875em; /* 14px / 16px */
+
+            p {
+                margin: 0.875em 0.875em 0.875em 0; /* 14px / 16px */
+            }
+        }
+
+        nav {
+            float: right;
+            overflow: hidden;
+            padding: 0.1875em; /* 3px / 16px */
+            
+            a {
+                color: rgb(0, 0, 0);
+
+                &:visited {
+                    color: rgb(0, 0, 0);
+                }
+
+                &:hover {
+                    color: rgb(175, 189, 192);
+                }
+            }
+        }
+    }
+
+    article {
+        footer {
+            background: @background; 
+            color: rgb(0, 0, 0);
+            padding: 0;
+            margin: 0;
+
+            p {
+                margin-top: 0;
+                font-style: italic;
+            }
+
+            hr {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*
+    Media Queries
+*/
+
+@media screen and (max-width: 856px) {
+    body {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 774px) {
+    body {
+        font-size: 90%; /* 14.4px / 16px */
+
+        hr {
+            height: 0.069444444em; /* 1px / 14.4px */
+        }
+    }
+}
+
+@media screen and (max-width: 713px) {
+    body {
+        footer {
+            div#blurb {
+                float: none;
+            }
+
+            nav {
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 888px) {
+    body {
+        max-width: 888px;
+    }
+}

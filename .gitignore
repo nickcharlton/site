@@ -2,3 +2,10 @@
 *.un~
 *.swp
 *.swo
+
+# hakyll
+site
+_site/
+_cache/
+site.o
+site.hi
