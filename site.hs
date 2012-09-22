@@ -43,7 +43,7 @@ main = hakyllWith config $ do
     match "archives.html" $ route idRoute 
     create "archives.html" $ constA mempty
         >>> arr (setField "title" "Archives")
-        >>> setFieldPageList recentFirst
+        >>> setFieldPageList chronological
                 "templates/post_item.html" "posts" "posts/*"
         >>> arr applySelf
         >>> applyTemplateCompiler "templates/posts.html"
@@ -56,7 +56,7 @@ main = hakyllWith config $ do
         compile $ readPageCompiler
             >>> arr (setField "title" "Home")
             >>> requireA "tags" (setFieldA "tags" (renderTagList'))
-            >>> setFieldPageList (take 3 . recentFirst)
+            >>> setFieldPageList (take 3 . chronological)
                     "templates/post_full.html" "posts" "posts/*"
             >>> arr (copyBodyToField "description")
             >>> arr applySelf
