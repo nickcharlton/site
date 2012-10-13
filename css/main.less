@@ -339,6 +339,17 @@ body {
 }
 
 @media screen and (max-width: 713px) {
+    body > header {
+        h1 {
+           margin: 0.3125em 0 0.3125em 0; /* 5px / 16px */ 
+        }
+        nav {
+            width: 100%; /* force it to spread across the width of it's parent. */
+            float: left;
+            margin: 0 0 0.625em 0; /* 5px / 16px */
+            text-align: center;
+        }
+    }
     body {
         footer {
             div#blurb {
