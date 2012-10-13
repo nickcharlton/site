@@ -7,6 +7,9 @@ import Control.Monad (forM_)
 import Control.Arrow (arr, (>>>), (***), second)
 import Data.Monoid (mempty, mconcat)
 import qualified Data.Map as M
+import Data.List (sortBy)
+import Data.Ord (comparing)
+import Data.List (reverse)
 
 import Hakyll
 
@@ -48,7 +51,7 @@ main = hakyllWith config $ do
     match "archives.html" $ route idRoute 
     create "archives.html" $ constA mempty
         >>> arr (setField "title" "Archives")
-        >>> setFieldPageList chronological
+        >>> setFieldPageList myChronological
                 "templates/post_item.html" "posts" "posts/*"
         >>> arr applySelf
         >>> applyTemplateCompiler "templates/posts.html"
@@ -61,7 +64,7 @@ main = hakyllWith config $ do
         compile $ readPageCompiler
             >>> arr (setField "title" "Home")
             >>> requireA "tags" (setFieldA "tags" (renderTagList'))
-            >>> setFieldPageList (take 3 . chronological)
+            >>> setFieldPageList (take 3 . myChronological)
                     "templates/post_full.html" "posts" "posts/*"
             >>> arr (copyBodyToField "description")
             >>> arr applySelf
@@ -121,6 +124,9 @@ makeTagList tag posts =
         >>> applyTemplateCompiler "templates/posts.html"
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
+
+myChronological :: [Page a] -> [Page a]
+myChronological = reverse . (sortBy $ comparing $ getField "published")
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration
