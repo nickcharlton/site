@@ -1,0 +1,27 @@
+---
+title: CSS3 Bundle
+published: 2010-07-10T11:49:40Z
+tags: css3, textmate, bundle, projects
+---
+
+The default CSS bundle in TextMate doesn't include any of the new features of CSS3. I'd tried other TextMate CSS3 plugins, but in general they didn't cover enough and seemed unmaintained.
+
+So I made this.
+
+## Features
+
+* border-radius
+* box-shadow
+* Odd/Even Selectors
+* Columns (WebKit only)
+* Text Stroke (WebKit only)
+* text-shadow
+* opacity
+* display-inline
+
+## Where to Find it
+
+You can find [the source on GitHub](http://github.com/nickcharlton/CSS3-Bundle "nickcharlton's CSS3-Bundle at master - GitHub"), [a download here](http://github.com/downloads/nickcharlton/CSS3-Bundle/CSS3.tmbundle ""). And [the issues page here](http://github.com/nickcharlton/CSS3-Bundle/issues "Issues - nickcharlton/CSS3-Bundle - GitHub"), where you can suggest new features.
+
+*Contributions are very welcome, it's certainly not complete.*
+
