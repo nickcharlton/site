@@ -130,11 +130,11 @@ div#grid {
 
     div {
         overflow: hidden;
-        width: 46.2%; /* guessed */
+        width: 46%; /* guessed */
         margin: 0.3125em; /* 5px / 16px */
         padding: 0 0.625em; /* 10px / 16px */
         float: left;
-        border: 0.0625em solid @foreground; /* 1px / 16px */
+        border: 0.0625rem solid @foreground; /* 1px / 16px */
 
         p {
            margin: 0;
@@ -360,6 +360,14 @@ body {
                 float: none;
                 text-align: center;
             }
+        }
+    }
+
+    div#grid {
+        div {
+            margin: 0.4375em auto; /* 10px / 16px */
+            padding: 1em; /* 16px / 16px */
+            width: 90%;
         }
     }
 }
