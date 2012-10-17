@@ -1,6 +1,6 @@
 ---
 title: Blog Updates
-published: 2012-10-17T01:43Z
+published: 2012-10-17T01:43:00Z
 tags: blog, personal
 ---
 
@@ -14,7 +14,7 @@ It's in no-way perfect, but it's a significant improvement from my orignal
 version.
 
 Like most of my projects, it's also up on
-[GitHub](http://github.com/nickcharlton/nickcharlton.net).
+[GitHub](https://github.com/nickcharlton/nickcharlton.net).
 
 ## Posts
 
