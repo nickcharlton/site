@@ -38,3 +38,37 @@ various AI topics. I already have a few drafts relating to these in the works
 degree project &mdash; a Quadrotor platform, Simulator and associated mapping
 algorithms. It's going to be an interesting year.
 
+## A Colophon
+
+This version is based upon [Hakyll](http://jaspervdj.be/hakyll/index.html). 
+It's a static site generator written in Haskell. Before this, I tried out multiple 
+others, from [Hyde](http://hyde.github.com/) to
+[Mynt](http://mynt.mirroredwhite.com/), and the original, 
+[Jekyll](https://github.com/mojombo/jekyll). But each had issues in one sense or 
+another and didn't work all that well for me. Obviously, your requirements will 
+vary.
+
+But, the key part of Hakyll is it's use of
+[pandoc](http://johnmacfarlane.net/pandoc/). This is a document
+conversion tool (also written in Haskell) that I've since started using for
+generating documents for print. It also had the
+[Markdown](http://daringfireball.net/projects/markdown/) extensions that
+I wanted (footnotes, citations, LaTeX maths support, tables, etc.)
+
+The design itself is responsive[^responsive] &mdash; albeit, not tested absolutely
+everywhere &mdash; but not mobile first (because I'd written it desktop first),
+I'll probably fix this at some point.
+
+It uses TypeKit to provide "Proxima Nova" for headings, and "Adelle" for the
+body text. The icons are font-icons from [Pictos Server](http://pictos.cc/server).
+
+Syntax highlighting is provided in `<pre>` and `<code>` blocks using
+[Pygments](http://pygments.org/).
+Mathematics symbols are through [MathJax](http://www.mathjax.org/).
+
+It's deployed by pushing a Git repository to a VPS hosted with
+[Prgmr.com](http://prgmr.com/), which I've used for several years now.
+
+[^responsive]: People who aren't building sites this way should be shot, even
+for side projects like this.
+
