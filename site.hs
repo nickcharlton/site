@@ -100,7 +100,10 @@ main = hakyllWith config $ do
 
     -- Render RSS feed
     match "atom.xml" $ route idRoute
-    create "atom.xml" $ requireAll_ "posts/*" >>> renderAtom feedConfiguration
+    create "atom.xml" $ 
+        requireAll_ "posts/*" 
+            >>> arr (myChronological)
+            >>> renderAtom feedConfiguration
 
     -- End
     return ()
