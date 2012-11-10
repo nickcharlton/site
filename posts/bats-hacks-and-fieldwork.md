@@ -1,5 +1,5 @@
 ---
-title: Bats, Hacks & Fieldwork
+title: Bats, Hacks &amp; Fieldwork
 published: 2012-05-29T23:13:06Z
 tags: field-studies-council, hackday, bats, electronics, ios
 ---

@@ -1,5 +1,5 @@
 ---
-title: NASA Space Apps Challenge & Predict the Sky
+title: NASA Space Apps Challenge &amp; Predict the Sky
 published: 2012-05-06T11:15:16Z
 tags: nasa, space, space-apps-challenge, predict-the-sky
 ---
