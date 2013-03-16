@@ -21,7 +21,7 @@ main = hakyllWith config $ do
     match "css/main.less" $ do
         route   $ setExtension ".css"
         -- lessc can't read from stdin         
-        compile $ getResourceString >>> unixFilter "lessc" ["css/main.less", "--yui-compress"]
+        compile $ getResourceString >>> unixFilter "lessc" ["css/main.less"]
 
     -- Compress CSS
     match "css/*.css" $ do
