@@ -52,12 +52,36 @@ main = hakyllWith config $ do
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
-    -- Archives
+    -- Render each and every link post
+    match "links/*" $ do
+        route   $ setExtension ".html"
+        compile $ pageCompiler
+            --- store the post contents before we render the template
+            >>> arr (copyBodyToField "description")
+            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
+            >>> applyTemplateCompiler "templates/link.html"
+            --- now it has the template, and we use it for the index
+            >>> arr (copyBodyToField "full")
+            >>> applyTemplateCompiler "templates/default.html"
+            >>> relativizeUrlsCompiler
+
+    -- Post Archives
     match "archives.html" $ route idRoute 
     create "archives.html" $ constA mempty
         >>> arr (setField "title" "Archives")
         >>> setFieldPageList myChronological
                 "templates/post_item.html" "posts" "posts/*"
+        >>> arr applySelf
+        >>> applyTemplateCompiler "templates/posts.html"
+        >>> applyTemplateCompiler "templates/default.html"
+        >>> relativizeUrlsCompiler
+
+    -- Link Archives
+    match "links.html" $ route idRoute
+    create "links.html" $ constA mempty
+        >>> arr (setField "title" "Links")
+        >>> setFieldPageList myChronological
+                "templates/post_item.html" "posts" "links/*"
         >>> arr applySelf
         >>> applyTemplateCompiler "templates/posts.html"
         >>> applyTemplateCompiler "templates/default.html"
@@ -70,7 +94,7 @@ main = hakyllWith config $ do
             >>> arr (setField "title" "Home")
             >>> requireA "tags" (setFieldA "tags" (renderTagList'))
             >>> setFieldPageList (take 3 . myChronological)
-                    "templates/post_full.html" "posts" "posts/*"
+                    "templates/post_full.html" "posts" (regex "^(posts|links)/")
             >>> arr (copyBodyToField "description")
             >>> arr applySelf
             >>> applyTemplateCompiler "templates/default.html"
