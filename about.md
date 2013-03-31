@@ -17,7 +17,7 @@ a spare part in our own home? Fortunately, these two broad interests come
 together with a few of the [projects I'm working on][projects].
 
 I've worked with iOS quite extensively, usually build stuff with Python and I 
-rather like Haskell. I try to distill a sense of design, and style into everything 
+rather like Haskell. I try to instill a sense of design, and style into everything 
 I do. It's not just form, it's also function and we can have both.
 
 ### Also, I...
