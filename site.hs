@@ -162,6 +162,7 @@ myChronological = reverse . (sortBy $ comparing $ getField "published")
 
 config :: HakyllConfiguration
 config = defaultHakyllConfiguration
+    { deployCommand   = "rsync -avz _site/ nickcharlton.net:/var/www/site"}
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
