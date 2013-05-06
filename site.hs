@@ -93,7 +93,7 @@ main = hakyllWith config $ do
         compile $ readPageCompiler
             >>> arr (setField "title" "Home")
             >>> requireA "tags" (setFieldA "tags" (renderTagList'))
-            >>> setFieldPageList (take 3 . myChronological)
+            >>> setFieldPageList (take 5 . myChronological)
                     "templates/post_full.html" "posts" (regex "^(posts|links)/")
             >>> arr (copyBodyToField "description")
             >>> arr applySelf
