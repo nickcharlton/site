@@ -5,7 +5,7 @@ tags: maker-faire, newcastle, 3d-printing
 ---
 
 Last weekend was [Maker Faire UK][], up in Newcastle. [Stewart][], [Dan][] and I
-headed up (aided by Stewart's Dad's supurb driving skills), part of us from Exeter
+headed up (aided by Stewart's Dad's superb driving skills), part of us from Exeter
 and Dan from Nottingham. 
 
 My journey started on the 6:55 train out of Plymouth to get to Exeter for around 
@@ -45,7 +45,7 @@ much of it. It was a great crowd puller.
 Overall, we had an interesting mix of people come over to the stand. A small proportion
 hadn't heard all that much about 3D printing, had seen the RepRap going and came 
 over to see what was going on. A much larger proportion had heard of 3D printing
-and were subsquently rather impressed with what we were doing and indeed, impressed
+and were subsequently rather impressed with what we were doing and indeed, impressed
 with the price of the kit we were promoting. And a few others knew quite a bit
 (these often had RepRap's or MakerBots or one of the many others that exist) and
 were more interested in us personally; that was pretty cool. 
@@ -64,7 +64,7 @@ meeting up with [Adam][], who was in town, and a few other makers at a Weathersp
 closer to the venue. Here we ended up meeting [Oli Wood][] and a bunch of other people. 
 And had a fine time. Day 2 then followed, with slightly less, but still quite a lot
 of people. After closing time, we packed up, found something to eat and then turned
-in. We were leaving at 7, afterall.
+in. We were leaving at 7, after all.
 
 <figure>
   <img src="/resources/images/maker-faire-dancing-robots.jpg"
