@@ -14,6 +14,6 @@ about adding a layer of sensors to objects, not giving a fridge a web browser.
 And, the location stuff reminds me of [Meridian][], and some of the research I'm 
 interested in (but my stuff is attached to robots).
 
-[post]: http://canadian-fury.com//2013/04/04/expectations/
+[post]: http://www.wired.com/gadgetlab/2013/05/internet-of-things/all/
 [Meridian]: http://www.meridianapps.com/
 

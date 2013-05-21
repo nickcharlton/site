@@ -11,5 +11,5 @@ default way of thinking is all over Apple "journalism", too.
 
 It stinks. 
 
-[post]: http://canadian-fury.com//2013/04/04/expectations/
+[post]: http://tracks.ranea.org/post/47791661856/the-default-narrative
 
