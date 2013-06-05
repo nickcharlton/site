@@ -9,6 +9,7 @@ title: Projects
     <h2><img class="project_icon" src="resources/projects/wheres_next_icon.png">Where's Next?</h2>    
     <p>Get your errands in order. Location order. For iPhone.</p>
     <ul>
+      <li><a href="/projects/wheresnext.html">Project Page</a></li>
       <li><a href="http://itunes.apple.com/gb/app/wheres-next/id454450198?mt=8">App Store</a></li>
     </ul>
   </div>

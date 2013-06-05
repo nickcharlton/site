@@ -143,7 +143,7 @@ main = hakyllWith config $ do
     tagIdentifier :: String -> Identifier (Page String)
     tagIdentifier = fromCapture "tags/*"
 
-    pages = ["about.md", "projects.md"]
+    pages = ["about.md", "projects.md", "projects/*"]
 
 makeTagList :: String
             -> [Page String]
