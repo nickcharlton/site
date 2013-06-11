@@ -52,5 +52,5 @@ with [GitLab][]
 [BioOS]: https://github.com/i-DAT/Bio-OS-Android
 [IOIO]: https://github.com/ytai/ioio/wiki
 [HMRI]: https://www.sparkfun.com/products/8661
-[ioio_post]: #
+[ioio_post]: /posts/android-ioio.html
 
