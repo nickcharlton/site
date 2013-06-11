@@ -57,6 +57,10 @@ odd implementation and quite annoying).
 I never resolved the issue before shipping; as far as I understand, it's impossible 
 to fully resolve it because of Android's stupid implementation.
 
+_**Update:** Ytai Ben-Tsvi (the developer behind IOIO) emailed me to say that I should
+have been using Android's "Services" functionality, which I didn't know existed.
+This would solve all of my state issues._
+
 And finally, the code for [the whole project is up on GitHub][project] (which should
 give you the best way to see it in action).
 
