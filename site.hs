@@ -108,6 +108,12 @@ main = hakyllWith config $ do
                 >>> applyTemplateCompiler "templates/default.html"
                 >>> relativizeUrlsCompiler
 
+    -- Static Files (favicon, apple-touch-icon, etc.)
+    forM_ statics $ \p ->
+        match p $ do
+            route idRoute
+            compile copyFileCompiler
+
     -- Tags
     create "tags" $
         requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
@@ -144,6 +150,8 @@ main = hakyllWith config $ do
     tagIdentifier = fromCapture "tags/*"
 
     pages = ["about.md", "projects.md", "projects/*"]
+    -- favicon, apple-touch-icon, etc
+    statics = ["favicon.ico"]
 
 makeTagList :: String
             -> [Page String]
