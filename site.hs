@@ -151,7 +151,7 @@ main = hakyllWith config $ do
 
     pages = ["about.md", "projects.md", "projects/*"]
     -- favicon, apple-touch-icon, etc
-    statics = ["favicon.ico"]
+    statics = ["favicon.ico", "apple-touch-icon-precomposed.png"]
 
 makeTagList :: String
             -> [Page String]
