@@ -1,6 +1,6 @@
 ---
 title: Multiple Displays (and OpenGL)
-published: 2013-05-06T15:30:00Z
+published: 2013-07-06T15:30:00Z
 ---
 
 Something I've not seen anyone comment on is the reasoning behind why Apple have
