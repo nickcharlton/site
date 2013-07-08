@@ -33,10 +33,10 @@ main = hakyllWith hakyllConfig $ do
         route idRoute
         compile copyFileCompiler
 
---    -- Resources
---    match "resources/**" $ do
---        route idRoute
---        compile copyFileCompiler
+    -- Resources
+    match "resources/**" $ do
+        route idRoute
+        compile copyFileCompiler
 
 --    -- Render each and every post
 --    match "posts/*" $ do
