@@ -18,17 +18,13 @@ import Hakyll
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
     -- Compile and Compress Styles
-    match "css/main.scss" $ do
+    match "css/*.scss" $ do
         route $ setExtension "css"
         compile sassCompiler
 
-    match "css/*" $ do
-        route idRoute
-        compile compressCssCompiler
-
     -- Static Assets and Resources
-    let assets = ["fonts/*", "favicon.ico", "apple-touch-icon-precomposed.png",
-                    "resources/**"]
+    let assets = ["fonts/*", "css/*", "favicon.ico", 
+                    "apple-touch-icon-precomposed.png", "resources/**"]
 
     match (foldr1 (.||.) assets) $ do
         route idRoute
