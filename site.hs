@@ -44,16 +44,19 @@ main = hakyllWith hakyllConfig $ do
 --            >>> applyTemplateCompiler "templates/default.html"
 --            >>> relativizeUrlsCompiler
 
---    -- Post Archives
---    match "archives.html" $ route idRoute 
---    create "archives.html" $ constA mempty
---        >>> arr (setField "title" "Archives")
---        >>> setFieldPageList myChronological
---                "templates/post_item.html" "posts" "posts/*"
---        >>> arr applySelf
---        >>> applyTemplateCompiler "templates/posts.html"
---        >>> applyTemplateCompiler "templates/default.html"
---        >>> relativizeUrlsCompiler
+    -- Post Archives
+    create ["archives.html"] $ do
+        route idRoute
+        compile $ do
+            list <- postList tags "posts/*" recentFirst
+            let ctx = constField "title" "Archives" `mappend`
+                      constField "posts" list `mappend`
+                      defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/posts.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
 --    -- Link Archives
 --    match "links.html" $ route idRoute
