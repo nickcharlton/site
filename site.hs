@@ -1,16 +1,6 @@
-{-# LANGUAGE OverloadedStrings, Arrows #-}
-module Main where
+{-# LANGUAGE OverloadedStrings #-}
 
-import Prelude hiding (id)
-import Control.Category (id)
-import Control.Monad (forM_)
-import Control.Arrow (arr, (>>>), (***), second)
-import Data.Monoid (mempty, mconcat)
-import qualified Data.Map as M
-import Data.List (sortBy)
-import Data.Ord (comparing)
-import Data.List (reverse)
-
+import Data.Monoid (mappend, mconcat)
 import Hakyll
 
 -- | Entry point
@@ -30,19 +20,16 @@ main = hakyllWith hakyllConfig $ do
         route idRoute
         compile copyFileCompiler
 
---    -- Render each and every post
---    match "posts/*" $ do
---        route   $ setExtension ".html"
---        compile $ pageCompiler
---            --- store the post contents before we render the template
---           >>> arr (copyBodyToField "description")
---            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
---            >>> renderTagsField "prettytags" (fromCapture "tags/*")
---            >>> applyTemplateCompiler "templates/post.html"
---            --- now it has the template, and we use it for the index
---            >>> arr (copyBodyToField "full")
---            >>> applyTemplateCompiler "templates/default.html"
---            >>> relativizeUrlsCompiler
+    -- Build Tags
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
+    -- Render each and every post
+    match "posts/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
 --    -- Render each and every link post
 --    match "links/*" $ do
@@ -101,15 +88,21 @@ main = hakyllWith hakyllConfig $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
---    -- Tags
---    create "tags" $
---        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
+    -- Tags
+    tagsRules tags $ \tag pattern -> do
+        let title = "Tagged: " ++ tag
 
---    -- Add a tag list compiler for every tag
---    match "tags/*" $ route $ setExtension ".html"
---    metaCompile $ require_ "tags"
---        >>> arr tagsMap
---        >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
+        route idRoute
+        compile $ do
+            list <- postList tags pattern recentFirst
+            let ctx = constField "title" title `mappend`
+                        constField "posts" list `mappend`
+                        defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/posts.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
@@ -127,29 +120,22 @@ main = hakyllWith hakyllConfig $ do
 --            >>> arr (myChronological)
 --            >>> renderAtom feedConfiguration
 
---    -- End
---    return ()
---  where
---    renderTagList' :: Compiler (Tags String) String
---    renderTagList' = renderTagList tagIdentifier
-
---    tagIdentifier :: String -> Identifier (Page String)
---    tagIdentifier = fromCapture "tags/*"
-
---makeTagList :: String
---            -> [Page String]
---            -> Compiler () (Page String)
---makeTagList tag posts =
---    constA posts
---        >>> pageListCompiler recentFirst "templates/post_item.html"
---        >>> arr (copyBodyToField "posts" . fromBody)
---        >>> arr (setField "title" ("Articles tagged with " ++ tag))
---       >>> applyTemplateCompiler "templates/posts.html"
---        >>> applyTemplateCompiler "templates/default.html"
---        >>> relativizeUrlsCompiler
-
 --myChronological :: [Page a] -> [Page a]
 --myChronological = reverse . (sortBy $ comparing $ getField "published")
+
+postCtx :: Tags -> Context String
+postCtx tags = mconcat
+    [ dateField "date" "%B %e, %Y"
+    , tagsField "tags" tags
+    , defaultContext
+    ]
+
+postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
+         -> Compiler String
+postList tags pattern preprocess' = do
+    postItemTpl <- loadBody "templates/post_item.html"
+    posts       <- preprocess' =<< loadAll pattern
+    applyTemplateList postItemTpl (postCtx tags) posts
 
 sassCompiler :: Compiler (Item String)
 sassCompiler =
