@@ -27,6 +27,7 @@ main = hakyllWith hakyllConfig $ do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
@@ -117,17 +118,24 @@ main = hakyllWith hakyllConfig $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
---    -- Render RSS feed
---    match "atom.xml" $ route idRoute
---    create "atom.xml" $ 
---        requireAll_ (regex "^(posts|links)/") 
---            >>> arr (myChronological)
---            >>> renderAtom feedConfiguration
+    -- Render RSS feed
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            loadAllSnapshots "posts/*" "content"
+                >>= fmap (take 10) . recentFirst
+                >>= renderAtom (feedConfiguration "All Posts") feedCtx
 
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ dateField "date" "%B %e, %Y"
     , tagsField "tags" tags
+    , defaultContext
+    ]
+
+feedCtx :: Context String
+feedCtx = mconcat
+    [ bodyField "description"
     , defaultContext
     ]
 
