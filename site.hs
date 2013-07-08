@@ -26,13 +26,11 @@ main = hakyllWith hakyllConfig $ do
         route idRoute
         compile compressCssCompiler
 
-    -- Copy Fonts
-    match "fonts/*" $ do
-        route idRoute
-        compile copyFileCompiler
+    -- Static Assets and Resources
+    let assets = ["fonts/*", "favicon.ico", "apple-touch-icon-precomposed.png",
+                    "resources/**"]
 
-    -- Resources
-    match "resources/**" $ do
+    match (foldr1 (.||.) assets) $ do
         route idRoute
         compile copyFileCompiler
 
@@ -106,12 +104,6 @@ main = hakyllWith hakyllConfig $ do
 --                >>> applyTemplateCompiler "templates/default.html"
 --                >>> relativizeUrlsCompiler
 
---    -- Static Files (favicon, apple-touch-icon, etc.)
---    forM_ statics $ \p ->
---        match p $ do
---            route idRoute
---            compile copyFileCompiler
-
 --    -- Tags
 --    create "tags" $
 --        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
@@ -148,8 +140,6 @@ main = hakyllWith hakyllConfig $ do
 --    tagIdentifier = fromCapture "tags/*"
 
 --    pages = ["about.md", "projects.md", "projects/*"]
---    -- favicon, apple-touch-icon, etc
---    statics = ["favicon.ico", "apple-touch-icon-precomposed.png"]
 
 --makeTagList :: String
 --            -> [Page String]
