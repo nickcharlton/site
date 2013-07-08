@@ -96,13 +96,14 @@ main = hakyllWith hakyllConfig $ do
 --            >>> applyTemplateCompiler "templates/default.html"
 --            >>> relativizeUrlsCompiler
 
---    -- Pages
---    forM_ pages $ \p ->
---        match p $ do
---            route   $ setExtension ".html"
---            compile $ pageCompiler
---                >>> applyTemplateCompiler "templates/default.html"
---                >>> relativizeUrlsCompiler
+    -- Pages
+    let pages = ["about.md", "projects.md", "projects/*"]
+
+    match (foldr1 (.||.) pages) $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
 --    -- Tags
 --    create "tags" $
@@ -138,8 +139,6 @@ main = hakyllWith hakyllConfig $ do
 
 --    tagIdentifier :: String -> Identifier (Page String)
 --    tagIdentifier = fromCapture "tags/*"
-
---    pages = ["about.md", "projects.md", "projects/*"]
 
 --makeTagList :: String
 --            -> [Page String]
