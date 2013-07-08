@@ -110,11 +110,12 @@ main = hakyllWith hakyllConfig $ do
     -- Read templates
     match "templates/*" $ compile templateCompiler
 
---    -- Render the 404 page, we don't relativize URL's here.
---    match "404.html" $ do
---        route idRoute
---        compile $ pageCompiler
---            >>> applyTemplateCompiler "templates/default.html"
+    -- Render the 404 page, we don't relativize URL's here.
+    match "404.html" $ do
+        route idRoute
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
 --    -- Render RSS feed
 --    match "atom.xml" $ route idRoute
