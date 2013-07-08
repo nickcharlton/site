@@ -17,16 +17,14 @@ import Hakyll
 --
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
---    -- Compile {less}
---    match "css/main.less" $ do
---        route   $ setExtension ".css"
---        -- lessc can't read from stdin         
---        compile $ getResourceString >>> unixFilter "lessc" ["css/main.less"]
+    -- Compile and Compress Styles
+    match "css/main.scss" $ do
+        route $ setExtension "css"
+        compile sassCompiler
 
---    -- Compress CSS
---    match "css/*.css" $ do
---       route idRoute
---        compile compressCssCompiler
+    match "css/*" $ do
+        route idRoute
+        compile compressCssCompiler
 
     -- Copy Fonts
     match "fonts/*" $ do
@@ -167,6 +165,12 @@ main = hakyllWith hakyllConfig $ do
 
 --myChronological :: [Page a] -> [Page a]
 --myChronological = reverse . (sortBy $ comparing $ getField "published")
+
+sassCompiler :: Compiler (Item String)
+sassCompiler =
+    getResourceString
+        >>= withItemBody (unixFilter "sass" ["-s", "--scss"])
+        >>= return . fmap compressCss
 
 feedConfiguration :: String -> FeedConfiguration
 feedConfiguration title = FeedConfiguration
