@@ -123,9 +123,6 @@ main = hakyllWith hakyllConfig $ do
 --            >>> arr (myChronological)
 --            >>> renderAtom feedConfiguration
 
---myChronological :: [Page a] -> [Page a]
---myChronological = reverse . (sortBy $ comparing $ getField "published")
-
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ dateField "date" "%B %e, %Y"
