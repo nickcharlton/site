@@ -122,8 +122,8 @@ main = hakyllWith hakyllConfig $ do
 --        >>> arr tagsMap
 --        >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
 
---    -- Read templates
---    match "templates/*" $ compile templateCompiler
+    -- Read templates
+    match "templates/*" $ compile templateCompiler
 
 --    -- Render the 404 page, we don't relativize URL's here.
 --    match "404.html" $ do
