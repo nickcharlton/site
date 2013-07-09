@@ -3,8 +3,6 @@
 import Data.Monoid (mappend, mconcat)
 import Hakyll
 
--- | Entry point
---
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
     -- Compile and Compress Styles
@@ -166,4 +164,4 @@ feedConfiguration title = FeedConfiguration
 
 hakyllConfig :: Configuration
 hakyllConfig = defaultConfiguration
-    { deployCommand   = "rsync -avzc _site/ nickcharlton.net:/var/www/site"}
+    { deployCommand   = "rsync -avzc _site/ nickcharlton.net:/var/www/site" }
