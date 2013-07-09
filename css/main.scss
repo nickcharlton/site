@@ -2,8 +2,8 @@
     nickcharlton.net Styles
 */
 
-@foreground: rgb(78, 89, 99);
-@background: rgb(175, 189, 192);
+$foreground: rgb(78, 89, 99);
+$background: rgb(175, 189, 192);
 
 /*
     Typography
@@ -16,7 +16,7 @@ body {
     -webkit-transition: width .2s ease;
     -moz-transition: width .2s ease;
     margin: 0 auto;
-    background-color: @background;
+    background-color: $background;
     /* typography improvements */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6 {
     Other
 */
 hr {
-    color: @foreground;
-    background: @foreground;
+    color: $foreground;
+    background: $foreground;
     border: none;
     height: 0.0625em; /* 1px / 16px */
 }
@@ -43,11 +43,11 @@ a {
     -moz-transition: color .2s ease-out;
 
     &:hover {
-        color: @foreground;
+        color: $foreground;
     }
 
     &:visited {
-        color: @foreground;
+        color: $foreground;
     }
 }
 
@@ -57,7 +57,7 @@ sup {
 
 blockquote {
     margin: 1.5em; /* 24px / 16px */
-    border-left: 0.3125em solid @foreground; /* 5px / 16px */
+    border-left: 0.3125em solid $foreground; /* 5px / 16px */
     padding: 0.125em 0.125em 0.125em 0.3125em; /* 2 (5)px / 16px */
 }
 
@@ -79,16 +79,16 @@ figure {
         max-width: 90%;
         margin: 0 auto;
         display: block;
-        border: 0.625em solid @foreground; /* 10px / 16px */
+        border: 0.625em solid $foreground; /* 10px / 16px */
         padding-bottom: 1.25em; /* 20px / 16px */
-        background: @foreground;
+        background: $foreground;
     }
 
     figcaption {
         text-align: center;
         position: relative;
         top: -1.5625em; /* 25px / 16px */
-        color: @background;
+        color: $background;
         font-size: 0.875em; /* 14px / 16px */
     }
 }
@@ -134,7 +134,7 @@ div#grid {
         margin: 0.3125em; /* 5px / 16px */
         padding: 0 0.625em; /* 10px / 16px */
         float: left;
-        border: 0.0625rem solid @foreground; /* 1px / 16px */
+        border: 0.0625rem solid $foreground; /* 1px / 16px */
 
         p {
            margin: 0;
@@ -214,7 +214,7 @@ body > header {
             }
 
             &:hover {
-                color: @foreground;    
+                color: $foreground;    
             }
         }  
 }
@@ -225,7 +225,7 @@ body > header {
 body {
     footer {
         overflow: auto;
-        background: @foreground;
+        background: $foreground;
         color: rgb(175, 189, 192);
         padding: 0.5%; /* 5px / 1000px */
         margin-bottom: 1.5em; /* 24px / 16px */
@@ -275,7 +275,7 @@ body {
 
     article {
         footer {
-            background: @background; 
+            background: $background; 
             color: rgb(0, 0, 0);
             padding: 0;
             margin: 0;
@@ -294,11 +294,11 @@ body {
                color: rgb(0, 0, 0);
 
                &:visited {
-                   color: @foreground;
+                   color: $foreground;
                }
 
                &:hover {
-                   color: @foreground;
+                   color: $foreground;
                }
             }
         }
