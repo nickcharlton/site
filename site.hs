@@ -1,128 +1,113 @@
-{-# LANGUAGE OverloadedStrings, Arrows #-}
-module Main where
+{-# LANGUAGE OverloadedStrings #-}
 
-import Prelude hiding (id)
-import Control.Category (id)
-import Control.Monad (forM_)
-import Control.Arrow (arr, (>>>), (***), second)
-import Data.Monoid (mempty, mconcat)
-import qualified Data.Map as M
-import Data.List (sortBy)
-import Data.Ord (comparing)
-import Data.List (reverse)
-
+import Data.Binary (Binary)
+import Data.Typeable
+import Data.Monoid (mappend, mconcat)
 import Hakyll
 
--- | Entry point
---
 main :: IO ()
-main = hakyllWith config $ do
-    -- Compile {less}
-    match "css/main.less" $ do
-        route   $ setExtension ".css"
-        -- lessc can't read from stdin         
-        compile $ getResourceString >>> unixFilter "lessc" ["css/main.less"]
+main = hakyllWith hakyllConfig $ do
+    -- Compile and Compress Styles
+    match "css/*.scss" $ do
+        route $ setExtension "css"
+        compile sassCompiler
 
-    -- Compress CSS
-    match "css/*.css" $ do
-        route idRoute
-        compile compressCssCompiler
+    -- Static Assets and Resources
+    let assets = ["fonts/*", "css/*", "favicon.ico", 
+                    "apple-touch-icon-precomposed.png", "resources/**"]
 
-    -- Copy Fonts
-    match "fonts/*" $ do
+    match (foldr1 (.||.) assets) $ do
         route idRoute
         compile copyFileCompiler
 
-    -- Resources
-    match "resources/**" $ do
-        route idRoute
-        compile copyFileCompiler
+    -- Build Tags
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
     -- Render each and every post
     match "posts/*" $ do
-        route   $ setExtension ".html"
-        compile $ pageCompiler
-            --- store the post contents before we render the template
-            >>> arr (copyBodyToField "description")
-            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
-            >>> renderTagsField "prettytags" (fromCapture "tags/*")
-            >>> applyTemplateCompiler "templates/post.html"
-            --- now it has the template, and we use it for the index
-            >>> arr (copyBodyToField "full")
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     -- Render each and every link post
     match "links/*" $ do
-        route   $ setExtension ".html"
-        compile $ pageCompiler
-            --- store the post contents before we render the template
-            >>> arr (copyBodyToField "description")
-            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
-            >>> applyTemplateCompiler "templates/link.html"
-            --- now it has the template, and we use it for the index
-            >>> arr (copyBodyToField "full")
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/link.html" linkCtx
+            >>= saveSnapshot "links"
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     -- Post Archives
-    match "archives.html" $ route idRoute 
-    create "archives.html" $ constA mempty
-        >>> arr (setField "title" "Archives")
-        >>> setFieldPageList myChronological
-                "templates/post_item.html" "posts" "posts/*"
-        >>> arr applySelf
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+    create ["archives.html"] $ do
+        route idRoute
+        compile $ do
+            list <- postList tags "posts/*" recentFirst
+            let ctx = constField "title" "Archives" `mappend`
+                      constField "posts" list `mappend`
+                      defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/list.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
     -- Link Archives
-    match "links.html" $ route idRoute
-    create "links.html" $ constA mempty
-        >>> arr (setField "title" "Links")
-        >>> setFieldPageList myChronological
-                "templates/post_item.html" "posts" "links/*"
-        >>> arr applySelf
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+    create ["links.html"] $ do
+        route idRoute
+        compile $ do
+            list <- linkList "links/*" recentFirst
+            let ctx = constField "title" "Links" `mappend`
+                      constField "posts" list `mappend`
+                      defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/list.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
     -- Index
     match "index.html" $ do
         route idRoute
-        compile $ readPageCompiler
-            >>> arr (setField "title" "Home")
-            >>> requireA "tags" (setFieldA "tags" (renderTagList'))
-            >>> setFieldPageList (take 5 . myChronological)
-                    "templates/post_full.html" "posts" (regex "^(posts|links)/")
-            >>> arr (copyBodyToField "description")
-            >>> arr applySelf
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        compile $ do
+            posts <- fmap (take 5) . recentFirst =<< contentList
+            let indexCtx =
+                    listField "posts" (postCtx tags) (return posts) `mappend`
+                    constField "title" "Home"                `mappend`
+                    defaultContext
+
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
 
     -- Pages
-    forM_ pages $ \p ->
-        match p $ do
-            route   $ setExtension ".html"
-            compile $ pageCompiler
-                >>> applyTemplateCompiler "templates/default.html"
-                >>> relativizeUrlsCompiler
+    let pages = ["about.md", "projects.md", "projects/*"]
 
-    -- Static Files (favicon, apple-touch-icon, etc.)
-    forM_ statics $ \p ->
-        match p $ do
-            route idRoute
-            compile copyFileCompiler
+    match (foldr1 (.||.) pages) $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     -- Tags
-    create "tags" $
-        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
+    tagsRules tags $ \tag pattern -> do
+        let title = "Tagged: " ++ tag
 
-    -- Add a tag list compiler for every tag
-    match "tags/*" $ route $ setExtension ".html"
-    metaCompile $ require_ "tags"
-        >>> arr tagsMap
-        >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
+        route idRoute
+        compile $ do
+            list <- postList tags pattern recentFirst
+            let ctx = constField "title" title `mappend`
+                        constField "posts" list `mappend`
+                        defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/list.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
@@ -130,53 +115,72 @@ main = hakyllWith config $ do
     -- Render the 404 page, we don't relativize URL's here.
     match "404.html" $ do
         route idRoute
-        compile $ pageCompiler
-            >>> applyTemplateCompiler "templates/default.html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     -- Render RSS feed
-    match "atom.xml" $ route idRoute
-    create "atom.xml" $ 
-        requireAll_ (regex "^(posts|links)/") 
-            >>> arr (myChronological)
-            >>> renderAtom feedConfiguration
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            contentList
+                >>= fmap (take 10) . recentFirst
+                >>= renderAtom (feedConfiguration "All Posts") feedCtx
 
-    -- End
-    return ()
-  where
-    renderTagList' :: Compiler (Tags String) String
-    renderTagList' = renderTagList tagIdentifier
+postCtx :: Tags -> Context String
+postCtx tags = mconcat
+    [ dateField "date" "%B %e, %Y"
+    , tagsField "tags" tags
+    , defaultContext
+    ]
 
-    tagIdentifier :: String -> Identifier (Page String)
-    tagIdentifier = fromCapture "tags/*"
+linkCtx :: Context String
+linkCtx = mconcat
+    [ dateField "date" "%B %e, %Y"
+    , defaultContext
+    ]
 
-    pages = ["about.md", "projects.md", "projects/*"]
-    -- favicon, apple-touch-icon, etc
-    statics = ["favicon.ico", "apple-touch-icon-precomposed.png"]
+feedCtx :: Context String
+feedCtx = mconcat
+    [ bodyField "description"
+    , defaultContext
+    ]
 
-makeTagList :: String
-            -> [Page String]
-            -> Compiler () (Page String)
-makeTagList tag posts =
-    constA posts
-        >>> pageListCompiler recentFirst "templates/post_item.html"
-        >>> arr (copyBodyToField "posts" . fromBody)
-        >>> arr (setField "title" ("Articles tagged with " ++ tag))
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
+         -> Compiler String
+postList tags pattern preprocess' = do
+    postItemTpl <- loadBody "templates/item.html"
+    posts       <- preprocess' =<< loadAll pattern
+    applyTemplateList postItemTpl (postCtx tags) posts
 
-myChronological :: [Page a] -> [Page a]
-myChronological = reverse . (sortBy $ comparing $ getField "published")
+linkList :: Pattern -> ([Item String] -> Compiler [Item String])
+         -> Compiler String
+linkList pattern preprocess' = do
+    linkItemTpl <- loadBody "templates/item.html"
+    links       <- preprocess' =<< loadAll pattern
+    applyTemplateList linkItemTpl linkCtx links
 
-config :: HakyllConfiguration
-config = defaultHakyllConfiguration
-    { deployCommand   = "rsync -avzc _site/ nickcharlton.net:/var/www/site"}
+contentList :: (Binary a, Typeable a) => Compiler [Item a]
+contentList = do
+    a <- loadAllSnapshots "posts/*" "content"
+    b <- loadAllSnapshots "links/*" "links"
+    return (a ++ b)
 
-feedConfiguration :: FeedConfiguration
-feedConfiguration = FeedConfiguration
+sassCompiler :: Compiler (Item String)
+sassCompiler =
+    getResourceString
+        >>= withItemBody (unixFilter "sass" ["-s", "--scss"])
+        >>= return . fmap compressCss
+
+feedConfiguration :: String -> FeedConfiguration
+feedConfiguration title = FeedConfiguration
     { feedTitle       = "nickcharlton.net"
     , feedDescription = "iOS, Robotics, Python, 3D printing, and other thoughts."
     , feedAuthorName  = "Nick Charlton"
     , feedAuthorEmail = "hello@nickcharlton.net"
     , feedRoot        = "http://nickcharlton.net"
     }
+
+hakyllConfig :: Configuration
+hakyllConfig = defaultConfiguration
+    { deployCommand   = "rsync -avzc _site/ nickcharlton.net:/var/www/site" }
