@@ -1,5 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+import Data.Binary (Binary)
+import Data.Typeable
 import Data.Monoid (mappend, mconcat)
 import Hakyll
 
@@ -71,8 +73,7 @@ main = hakyllWith hakyllConfig $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- fmap (take 5) . recentFirst =<<
-                loadAllSnapshots "posts/*" "content"
+            posts <- fmap (take 5) . recentFirst =<< contentList
             let indexCtx =
                     listField "posts" (postCtx tags) (return posts) `mappend`
                     constField "title" "Home"                `mappend`
@@ -122,7 +123,7 @@ main = hakyllWith hakyllConfig $ do
     create ["atom.xml"] $ do
         route idRoute
         compile $ do
-            loadAllSnapshots "posts/*" "content"
+            contentList
                 >>= fmap (take 10) . recentFirst
                 >>= renderAtom (feedConfiguration "All Posts") feedCtx
 
@@ -158,6 +159,12 @@ linkList pattern preprocess' = do
     linkItemTpl <- loadBody "templates/item.html"
     links       <- preprocess' =<< loadAll pattern
     applyTemplateList linkItemTpl linkCtx links
+
+contentList :: (Binary a, Typeable a) => Compiler [Item a]
+contentList = do
+    a <- loadAllSnapshots "posts/*" "content"
+    b <- loadAllSnapshots "links/*" "links"
+    return (a ++ b)
 
 sassCompiler :: Compiler (Item String)
 sassCompiler =
