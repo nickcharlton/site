@@ -30,18 +30,14 @@ main = hakyllWith hakyllConfig $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
---    -- Render each and every link post
---    match "links/*" $ do
---        route   $ setExtension ".html"
---        compile $ pageCompiler
---            --- store the post contents before we render the template
---            >>> arr (copyBodyToField "description")
---            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
---            >>> applyTemplateCompiler "templates/link.html"
---            --- now it has the template, and we use it for the index
---            >>> arr (copyBodyToField "full")
---            >>> applyTemplateCompiler "templates/default.html"
---            >>> relativizeUrlsCompiler
+    -- Render each and every link post
+    match "links/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/link.html" linkCtx
+            >>= saveSnapshot "links"
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     -- Post Archives
     create ["archives.html"] $ do
@@ -131,6 +127,12 @@ postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ dateField "date" "%B %e, %Y"
     , tagsField "tags" tags
+    , defaultContext
+    ]
+
+linkCtx :: Context String
+linkCtx = mconcat
+    [ dateField "date" "%B %e, %Y"
     , defaultContext
     ]
 
