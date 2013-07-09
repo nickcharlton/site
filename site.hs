@@ -27,8 +27,8 @@ main = hakyllWith hakyllConfig $ do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
-            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -70,18 +70,21 @@ main = hakyllWith hakyllConfig $ do
 --        >>> applyTemplateCompiler "templates/default.html"
 --        >>> relativizeUrlsCompiler
 
---    -- Index
---    match "index.html" $ do
---        route idRoute
---        compile $ readPageCompiler
---            >>> arr (setField "title" "Home")
---            >>> requireA "tags" (setFieldA "tags" (renderTagList'))
---            >>> setFieldPageList (take 5 . myChronological)
---                    "templates/post_full.html" "posts" (regex "^(posts|links)/")
---            >>> arr (copyBodyToField "description")
---            >>> arr applySelf
---            >>> applyTemplateCompiler "templates/default.html"
---            >>> relativizeUrlsCompiler
+    -- Index
+    match "index.html" $ do
+        route idRoute
+        compile $ do
+            posts <- fmap (take 5) . recentFirst =<<
+                loadAllSnapshots "posts/*" "content"
+            let indexCtx =
+                    listField "posts" (postCtx tags) (return posts) `mappend`
+                    constField "title" "Home"                `mappend`
+                    defaultContext
+
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
 
     -- Pages
     let pages = ["about.md", "projects.md", "projects/*"]
