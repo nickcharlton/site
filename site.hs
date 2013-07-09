@@ -53,7 +53,7 @@ main = hakyllWith hakyllConfig $ do
                       defaultContext
 
             makeItem ""
-                >>= loadAndApplyTemplate "templates/posts.html" ctx
+                >>= loadAndApplyTemplate "templates/list.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
@@ -105,7 +105,7 @@ main = hakyllWith hakyllConfig $ do
                         defaultContext
 
             makeItem ""
-                >>= loadAndApplyTemplate "templates/posts.html" ctx
+                >>= loadAndApplyTemplate "templates/list.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
@@ -143,7 +143,7 @@ feedCtx = mconcat
 postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
          -> Compiler String
 postList tags pattern preprocess' = do
-    postItemTpl <- loadBody "templates/post_item.html"
+    postItemTpl <- loadBody "templates/item.html"
     posts       <- preprocess' =<< loadAll pattern
     applyTemplateList postItemTpl (postCtx tags) posts
 
