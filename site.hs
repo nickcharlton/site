@@ -53,16 +53,19 @@ main = hakyllWith hakyllConfig $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
---    -- Link Archives
---    match "links.html" $ route idRoute
---    create "links.html" $ constA mempty
---       >>> arr (setField "title" "Links")
---        >>> setFieldPageList myChronological
---                "templates/post_item.html" "posts" "links/*"
---        >>> arr applySelf
---        >>> applyTemplateCompiler "templates/posts.html"
---        >>> applyTemplateCompiler "templates/default.html"
---        >>> relativizeUrlsCompiler
+    -- Link Archives
+    create ["links.html"] $ do
+        route idRoute
+        compile $ do
+            list <- linkList "links/*" recentFirst
+            let ctx = constField "title" "Links" `mappend`
+                      constField "posts" list `mappend`
+                      defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/list.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
     -- Index
     match "index.html" $ do
@@ -148,6 +151,13 @@ postList tags pattern preprocess' = do
     postItemTpl <- loadBody "templates/item.html"
     posts       <- preprocess' =<< loadAll pattern
     applyTemplateList postItemTpl (postCtx tags) posts
+
+linkList :: Pattern -> ([Item String] -> Compiler [Item String])
+         -> Compiler String
+linkList pattern preprocess' = do
+    linkItemTpl <- loadBody "templates/item.html"
+    links       <- preprocess' =<< loadAll pattern
+    applyTemplateList linkItemTpl linkCtx links
 
 sassCompiler :: Compiler (Item String)
 sassCompiler =
