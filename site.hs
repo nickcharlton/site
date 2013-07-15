@@ -27,8 +27,9 @@ main = hakyllWith hakyllConfig $ do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
             >>= saveSnapshot "content"
+            >>= return . fmap demoteHeaders
+            >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -36,8 +37,9 @@ main = hakyllWith hakyllConfig $ do
     match "links/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/link.html" linkCtx
             >>= saveSnapshot "links"
+            >>= return . fmap demoteHeaders
+            >>= loadAndApplyTemplate "templates/link.html" linkCtx
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
