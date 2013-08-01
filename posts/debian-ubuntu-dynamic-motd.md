@@ -284,6 +284,7 @@ for pkg in cache.packages:
 
 print "%d updates to install." % upgrades
 print "%d are security updates." % security_upgrades
+print "" # leave a trailing blank line
 ```
 
 This is reasonably well commented, if you wished to delve into the implementation, 
@@ -354,7 +355,13 @@ message or similar. This just replicates the original functionality:
 [ -f /etc/motd.tail ] && cat /etc/motd.tail || true
 ```
 
-## `/etc/ssh/ssd_config` changes
+## Configuration
+
+All of these files (my filenames are in brackets around the section title) should
+be placed in `/etc/update-motd.d/` and then made executable 
+(`chmod +x /etc/update-motd.d/`). When you login, PAM will regenerate the `motd`
+file, which on Debian is located in `/var/run/motd`. The file `/etc/motd` is just a
+symlink to this location.
 
 Finally, to replicate the manner in which Ubuntu presents the `motd`, you need to
 set the following:
