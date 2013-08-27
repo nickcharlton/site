@@ -1,5 +1,5 @@
 ---
-title: Alfred Extension: Paste Cleanly
+title: Alfred Workflow: Paste Cleanly
 published: 2013-08-27T13:10:00Z
 tags: alfred, regex, ruby
 ---
@@ -22,7 +22,7 @@ allow me to use "Cmd + Shift + V" to paste as plain text. I figured the addition
 a little "cleaning" script based on a regex would be a nice way to implement it, so
 I did[^check].
 
-Jump to the end if you're just looking for the extension.
+Jump to the end if you're just looking for the workflow.
 
 ## Regex and Test Pattern
 
