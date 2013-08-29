@@ -7,10 +7,12 @@ tags: alfred, regex, ruby
 There is nothing more annoying than seeing, or ending up sharing URLs that look like
 this (it's split so it doesn't look completely terrible…):
 
-> http://www.nytimes.com/2013/08/25/opinion/sunday/ \
-> im-thinking-please-be-quiet.html? \
-> ref=opinion&_r=3&utm_source=buffer&utm_campaign=Buffer
-> &utm_content=buffer8fcfe&utm_medium=twitter&
+```
+http://www.nytimes.com/2013/08/25/opinion/sunday/ \
+im-thinking-please-be-quiet.html? \
+ref=opinion&_r=3&utm_source=buffer&utm_campaign=Buffer
+&utm_content=buffer8fcfe&utm_medium=twitter&
+```
 
 It's not so much the efforts of marketing people to track how their URLs spread
 around the web that annoys me, but more that it's so damn ugly and far too long. 
