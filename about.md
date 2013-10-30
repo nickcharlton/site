@@ -4,21 +4,24 @@ title: About
 
 ## About
 
-I'm a final-year Computer Science student at [Plymouth University][]. I like
-making things.
+I'm a Freelance iOS Developer. But I also work with Ruby, Python and know my way 
+around Linux sys. admin. I delight in building software which satisfying to use and 
+is accessible to all.
 
-I'm interested in what we can do with the always-connected, sensor packed
-devices we have in our pockets. How can we use that to make things better? Be
-it finding a better way to finish off some errands, see something spectacular
-in the sky or in robots that collaborate with each other to complete tasks.
+I've worked on projects which have involved geolocation and coordinate type 
+conversion, media streaming, resumable downloads and AirPlay support along with 
+hardware interaction with Android and various sensors.
 
-But also; what about making products ourselves? Why can't we manufacture
-a spare part in our own home? Fortunately, these two broad interests come
-together with a few of the [projects I'm working on][projects].
+Outside of iOS and Android, I've built lots of small web services like [moviesapi][] 
+which gives you a programmable way to access movie showings in the UK, and I'm 
+currently working on [Predict the Sky][] — a combination of a web service and set 
+of apps to tell you what you will be able to see in the sky tonight. 
 
-I've worked with iOS quite extensively, usually build stuff with Python and I 
-rather like Haskell. I try to instill a sense of design, and style into everything 
-I do. It's not just form, it's also function and we can have both.
+I'm involved with the [Young Rewired State][] centre in Plymouth, 
+[Plymouth Web Dev Meetup][], and my old Universities' [Computing Society][TermiSoc] 
+and a few other things.
+
+I'm currently on the hunt for projects for 2014. Interested? [Email me][].
 
 ### Also, I...
 
@@ -32,8 +35,6 @@ I do. It's not just form, it's also function and we can have both.
 * [Lanyrd][] for conferences &amp; hack days.
 * I keep a [CV, too][cv].
 
-[Plymouth University]: http://plym.ac.uk/
-[projects]: /projects.html
 [TermiSoc]: http://termisoc.org/
 [irc]: irc://chat.termisoc.org/termisoc
 [twitter]: https://twitter.com/nickcharlton
@@ -42,4 +43,9 @@ I do. It's not just form, it's also function and we can have both.
 [github]: https://github.com/nickcharlton
 [Lanyrd]: http://lanyrd.com/profile/nickcharlton/
 [cv]: /resources/cv_web.pdf
+[moviesapi]: https://github.com/nickcharlton/moviesapi
+[Predict the Sky]: http://predictthesky.org/
+[Young Rewired State]: http://youngrewiredstate.org/
+[Plymouth Web Dev Meetup]: http://plymouthwebdev.org/
+[Email me]: mailto:enquiries@nickcharlton.net
 
