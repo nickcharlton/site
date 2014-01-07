@@ -118,7 +118,7 @@ a little. Some of this is already in motion.
 ## Health & Fitness
 
 University seemed to put this into quite a sharp decline. I used to cycle daily
-when I was placement, but I stopped on moving back to Plymouth. Now, I don't do
+when I was on placement, but I stopped on moving back to Plymouth. Now, I don't do
 anywhere near what I'd like to be doing.
 
 I intend to start running in 2014. But I've said this (mostly to people) before. 
