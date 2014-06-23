@@ -227,7 +227,7 @@ a few more flags to get it to render correctly.
 ```python
 anim.save('animation.mp4', fps=30, 
           extra_args=['-vcodec', 'h264', 
-                      '-pix-fmt', 'yuv420p'])
+                      '-pix_fmt', 'yuv420p'])
 ```
 
 This saves an H.264 file to 'animation.mp4' in a format supported by QuickTime[^pfmt]. 
