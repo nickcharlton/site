@@ -13,7 +13,7 @@ main = hakyllWith hakyllConfig $ do
         compile sassCompiler
 
     -- Static Assets and Resources
-    let assets = ["fonts/*", "css/*", "favicon.ico", 
+    let assets = ["fonts/*", "css/*", "favicon.ico",
                     "apple-touch-icon-precomposed.png", "resources/**"]
 
     match (foldr1 (.||.) assets) $ do
