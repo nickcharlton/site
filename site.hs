@@ -58,7 +58,7 @@ main = hakyllWith hakyllConfig $ do
                 >>= relativizeUrls
 
     -- Pages
-    let pages = ["about.md", "projects.md", "projects/*"]
+    let pages = ["projects.md"]
 
     match (foldr1 (.||.) pages) $ do
         route $ setExtension "html"
