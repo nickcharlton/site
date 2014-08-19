@@ -1,6 +1,7 @@
 ---
 title: The Market for Used Mac minis
 published: 2013-08-12T13:35:00Z
+tags: link
 ---
 
 [Writing on the Macminicolo blog][post]:

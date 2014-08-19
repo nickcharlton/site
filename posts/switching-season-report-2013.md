@@ -1,6 +1,7 @@
 ---
 title: Switching Season Report, 2013 Edition
 published: 2013-08-28T07:39:00Z
+tags: link
 ---
 
 [Alex Payne looks at the alternatives to his current setup and draws some conclusions][post].

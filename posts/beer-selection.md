@@ -1,6 +1,7 @@
 ---
 title: Beer Selection
 published: 2013-03-30T21:08:06Z
+tags: link
 ---
 
 [Seth Brown applies statistics and some Python to beer selection][post].

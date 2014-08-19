@@ -1,6 +1,7 @@
 ---
 title: Building the Bomber Cam with 3D Printing and Scraps
 published: 2013-05-06T12:03:00Z
+tags: link
 ---
 
 [A 3D printed lens mounting for a WW2 slightly-radioactive bomber lens][post].

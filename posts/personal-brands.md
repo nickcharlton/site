@@ -1,6 +1,7 @@
 ---
 title: You should write about yourself more
 published: 2013-05-21T19:45:00Z
+tags: link
 ---
 
 [Tom Morris talks about writing about yourself on your blog][post].

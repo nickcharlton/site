@@ -1,6 +1,7 @@
 ---
 title: Wired writes something sensible about the Internet of Things
 published: 2013-05-21T19:51:00Z
+tags: link
 ---
 
 [Bill Wasik writes something about IoT over on Wired.][post].

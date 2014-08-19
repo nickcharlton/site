@@ -1,6 +1,7 @@
 ---
 title: On the Long Journey to Production
 published: 2013-04-02T19:01:00Z
+tags: link
 ---
 
 [Rafe Colburn talks about the extra work that is required to take a simple project and push it into production][post].

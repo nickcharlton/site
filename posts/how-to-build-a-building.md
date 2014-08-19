@@ -1,6 +1,7 @@
 ---
 title: SparkFun: How to Build a Building
 published: 2013-05-07T16:44:00Z
+tags: link
 ---
 
 [Nate Seidle of SparkFun talks about their upcoming building][post].

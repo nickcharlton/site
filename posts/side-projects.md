@@ -1,6 +1,7 @@
 ---
 title: Side Projects
 published: 2013-06-04T17:10:00Z
+tags: link
 ---
 
 Much to my chagrin about Medium in general, there's been some nice posts recently. 

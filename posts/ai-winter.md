@@ -1,6 +1,7 @@
 ---
 title: Are we approaching a new AI winter?
 published: 2013-04-08T16:35:06Z
+tags: link
 ---
 
 [Alan Winfield presents a short paper on the likelihood of a pending AI winter][post].

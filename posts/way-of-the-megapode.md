@@ -1,6 +1,7 @@
 ---
 title: The Way of the Megapode
 published: 2013-05-06T10:57:00Z
+tags: link
 ---
 
 [But She's a Girl talks about Douglas Adams, endangered species and, er, scripting][post].

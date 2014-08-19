@@ -1,6 +1,7 @@
 ---
 title: The downsides of live music
 published: 2013-05-21T20:04:00Z
+tags: link
 ---
 
 [Adam Keys on Live Music][post].

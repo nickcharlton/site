@@ -1,6 +1,7 @@
 ---
 title: 7 Agile Best Practices that You Don't Need to Follow
 published: 2013-07-07T18:43:00Z
+tags: link
 ---
 
 [Jim Bird pulls apart some of the bits of Agile][post].

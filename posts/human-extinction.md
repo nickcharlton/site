@@ -1,6 +1,7 @@
 ---
 title: On the Future of Humanity
 published: 2013-04-02T13:49:00Z
+tags: link
 ---
 
 [Ross Andersen talks about the future of humanity, touching on human extinction][post].

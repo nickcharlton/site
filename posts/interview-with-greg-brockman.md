@@ -1,6 +1,7 @@
 ---
 title: How Stripe Buids Software: Interview with Greg Brockman
 published: 2013-07-06T19:46:00Z
+tags: link
 ---
 
 [This interview with Greg Brockman of Stripe is quite interesting.][post].

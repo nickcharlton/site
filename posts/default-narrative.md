@@ -1,6 +1,7 @@
 ---
 title: The Default Narative
 published: 2013-05-21T19:58:00Z
+tags: link
 ---
 
 [Watts Martin talks about the "default narrative" which pervades journalism][post].

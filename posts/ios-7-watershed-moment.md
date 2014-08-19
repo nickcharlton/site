@@ -1,6 +1,7 @@
 ---
 title: iOS 7: Watershed Moment
 published: 2013-08-12T13:24:00Z
+tags: link
 ---
 
 [Gedeon Maheux talks about iOS 7 and new versions of apps][post]:
