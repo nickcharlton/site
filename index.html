@@ -2,6 +2,16 @@
 title: Home
 ---
 
-$for(posts)$
-  $partial("templates/post.html")$
-$endfor$
+<main>
+  <p>Some sort of vaguely interesting about text.</p>
+
+  <h2>Articles</h2>
+
+  <ul>
+    $for(posts)$
+    <li>
+      <a href="$url$">$title$</a> &mdash; $date$
+    </li>
+    $endfor$
+  </ul>
+</main>
