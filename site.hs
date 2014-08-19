@@ -58,8 +58,7 @@ main = hakyllWith hakyllConfig $ do
                 >>= relativizeUrls
 
     -- Pages
-    let pages = ["projects.md"]
-
+    let pages = ["projects.md", "style-guide.md"]
     match (foldr1 (.||.) pages) $ do
         route $ setExtension "html"
         compile $ customPandocCompiler
