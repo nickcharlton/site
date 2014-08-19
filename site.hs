@@ -8,8 +8,8 @@ import Hakyll
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
     -- Static Assets and Resources
-    let assets = ["fonts/*", "css/*", "favicon.ico",
-                    "apple-touch-icon-precomposed.png", "resources/**"]
+    let assets = ["css/*", "favicon.ico", "apple-touch-icon-precomposed.png",
+                  "resources/**"]
 
     match (foldr1 (.||.) assets) $ do
         route idRoute
