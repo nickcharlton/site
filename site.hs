@@ -7,11 +7,6 @@ import Hakyll
 
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
-    -- Compile and Compress Styles
-    match "css/*.scss" $ do
-        route $ setExtension "css"
-        compile sassCompiler
-
     -- Static Assets and Resources
     let assets = ["fonts/*", "css/*", "favicon.ico",
                     "apple-touch-icon-precomposed.png", "resources/**"]
@@ -124,12 +119,6 @@ postList tags pattern preprocess' = do
     postItemTpl <- loadBody "templates/item.html"
     posts       <- preprocess' =<< loadAll pattern
     applyTemplateList postItemTpl (postCtx tags) posts
-
-sassCompiler :: Compiler (Item String)
-sassCompiler =
-    getResourceString
-        >>= withItemBody (unixFilter "sass" ["-s", "--scss"])
-        >>= return . fmap compressCss
 
 feedConfiguration :: String -> FeedConfiguration
 feedConfiguration title = FeedConfiguration
