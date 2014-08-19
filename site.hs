@@ -122,10 +122,10 @@ postList tags pattern preprocess' = do
 
 feedConfiguration :: String -> FeedConfiguration
 feedConfiguration title = FeedConfiguration
-    { feedTitle       = "nickcharlton.net"
-    , feedDescription = "iOS, Robotics, Python, 3D printing, and other thoughts."
+    { feedTitle       = "Nick Charlton"
+    , feedDescription = "iOS, Mac and Ruby Developer. Amateur Chef."
     , feedAuthorName  = "Nick Charlton"
-    , feedAuthorEmail = "hello@nickcharlton.net"
+    , feedAuthorEmail = "nick@nickcharlton.net"
     , feedRoot        = "http://nickcharlton.net"
     }
 
