@@ -33,16 +33,6 @@ main = hakyllWith hakyllConfig $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    -- Render each and every link post
-    match "links/*" $ do
-        route $ setExtension "html"
-        compile $ pandocCompiler
-            >>= saveSnapshot "links"
-            >>= return . fmap demoteHeaders
-            >>= loadAndApplyTemplate "templates/link.html" linkCtx
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-
     -- Post Archives
     create ["archives.html"] $ do
         route idRoute
@@ -57,25 +47,11 @@ main = hakyllWith hakyllConfig $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    -- Link Archives
-    create ["links.html"] $ do
-        route idRoute
-        compile $ do
-            list <- linkList "links/*" recentFirst
-            let ctx = constField "title" "Links" `mappend`
-                      constField "posts" list `mappend`
-                      defaultContext
-
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/list.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= relativizeUrls
-
     -- Index
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- fmap (take 5) . recentFirst =<< contentList
+            posts <- fmap (take 5) . recentFirst =<< loadAllSnapshots "posts/*" "content"
             let indexCtx =
                     listField "posts" (postCtx tags) (return posts) `mappend`
                     constField "title" "Home"                `mappend`
@@ -125,7 +101,7 @@ main = hakyllWith hakyllConfig $ do
     create ["atom.xml"] $ do
         route idRoute
         compile $ do
-            contentList
+            loadAllSnapshots "posts/*" "content"
                 >>= fmap (take 10) . recentFirst
                 >>= renderAtom (feedConfiguration "All Posts") feedCtx
 
@@ -133,12 +109,6 @@ postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ dateField "date" "%B %e, %Y"
     , tagsField "tags" tags
-    , defaultContext
-    ]
-
-linkCtx :: Context String
-linkCtx = mconcat
-    [ dateField "date" "%B %e, %Y"
     , defaultContext
     ]
 
@@ -154,19 +124,6 @@ postList tags pattern preprocess' = do
     postItemTpl <- loadBody "templates/item.html"
     posts       <- preprocess' =<< loadAll pattern
     applyTemplateList postItemTpl (postCtx tags) posts
-
-linkList :: Pattern -> ([Item String] -> Compiler [Item String])
-         -> Compiler String
-linkList pattern preprocess' = do
-    linkItemTpl <- loadBody "templates/item.html"
-    links       <- preprocess' =<< loadAll pattern
-    applyTemplateList linkItemTpl linkCtx links
-
-contentList :: (Binary a, Typeable a) => Compiler [Item a]
-contentList = do
-    a <- loadAllSnapshots "posts/*" "content"
-    b <- loadAllSnapshots "links/*" "links"
-    return (a ++ b)
 
 sassCompiler :: Compiler (Item String)
 sassCompiler =
