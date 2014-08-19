@@ -3,7 +3,9 @@
 import Data.Binary (Binary)
 import Data.Typeable
 import Data.Monoid (mappend, mconcat)
+import qualified Data.Set as S
 import Hakyll
+import Text.Pandoc.Options
 
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
@@ -21,7 +23,7 @@ main = hakyllWith hakyllConfig $ do
     -- Render each and every post
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ customPandocCompiler
             >>= saveSnapshot "content"
             >>= return . fmap demoteHeaders
             >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
@@ -62,7 +64,7 @@ main = hakyllWith hakyllConfig $ do
 
     match (foldr1 (.||.) pages) $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ customPandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -88,7 +90,7 @@ main = hakyllWith hakyllConfig $ do
     -- Render the 404 page, we don't relativize URL's here.
     match "404.html" $ do
         route idRoute
-        compile $ pandocCompiler
+        compile $ customPandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -119,6 +121,16 @@ postList tags pattern preprocess' = do
     postItemTpl <- loadBody "templates/item.html"
     posts       <- preprocess' =<< loadAll pattern
     applyTemplateList postItemTpl (postCtx tags) posts
+
+customPandocCompiler :: Compiler (Item String)
+customPandocCompiler =
+    let customExtensions = [Ext_definition_lists]
+        defaultExtensions = writerExtensions defaultHakyllWriterOptions
+        newExtensions = foldr S.insert defaultExtensions customExtensions
+        writerOptions = defaultHakyllWriterOptions {
+                          writerExtensions = newExtensions
+                        }
+    in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
 feedConfiguration :: String -> FeedConfiguration
 feedConfiguration title = FeedConfiguration
