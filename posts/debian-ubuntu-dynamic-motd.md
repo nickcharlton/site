@@ -4,28 +4,28 @@ published: 2013-08-01T14:00:00Z
 tags: debian, ubuntu, sysadmin
 ---
 
-In doing some client work recently, I noticed that Ubuntu now has a dynamically 
-generated MOTD (Message of the Day) &mdash; the message shown on login, through SSH 
+In doing some client work recently, I noticed that Ubuntu now has a dynamically
+generated MOTD (Message of the Day) &mdash; the message shown on login, through SSH
 or locally.
 
-It turns out that this has existed for a quite a while. It works by a hook in PAM 
-(Linux's authentication system), that runs a set of scripts to generate the MOTD 
-which is then passed along to the client. (Before this, it was generated using a 
-cron job that ran every 10 or so minutes.) Because it is part of PAM (`pam_motd.so`, 
+It turns out that this has existed for a quite a while. It works by a hook in PAM
+(Linux's authentication system), that runs a set of scripts to generate the MOTD
+which is then passed along to the client. (Before this, it was generated using a
+cron job that ran every 10 or so minutes.) Because it is part of PAM (`pam_motd.so`,
 specifically) it also has worked with Debian since Squeeze.
 
-I had tried to do something similar before. Back in mid-2009, I [posted something 
-about configuring the "SSH Banner"][sshbanner]. I had tried to do something dynamic 
+I had tried to do something similar before. Back in mid-2009, I [posted something
+about configuring the "SSH Banner"][sshbanner]. I had tried to do something dynamic
 before posting that, but without a cronjob it wasn't possible to do and constantly
 regenerating a text file for a not-often seen login banner seemed silly.
 
-Out of the box with Ubuntu, a set of provided scripts exist in `/etc/update-motd.d/`, 
-which are run in ascending order to produce a static `/etc/motd` file. As the 
-functionality is handled by PAM, on Debian, we just need to create the directory 
-and populate with a set of scripts. 
+Out of the box with Ubuntu, a set of provided scripts exist in `/etc/update-motd.d/`,
+which are run in ascending order to produce a static `/etc/motd` file. As the
+functionality is handled by PAM, on Debian, we just need to create the directory
+and populate with a set of scripts.
 
-Like most `config.d/` style configurations, the files are executed in ascending 
-order, and so prefixing each script with 00-99 will arrange the order of the final 
+Like most `config.d/` style configurations, the files are executed in ascending
+order, and so prefixing each script with 00-99 will arrange the order of the final
 output. Also, the scripts could be in any language but these are mostly shell apart
 from where it becomes complex enough to be better off in Python.
 
@@ -42,7 +42,7 @@ Welcome to Debian 7.0 (3.2.0-3-amd64).
 
 System information as of Mon Jul 29 22:13:06 UTC 2013:
 
-System load:  0.0       Memory usage: 20.0% 
+System load:  0.0       Memory usage: 20.0%
 Usage of /:   1.6%      Swap usage:   0.0%
 Local users:  1
 
@@ -54,7 +54,7 @@ Last login: Fri Jul 26 12:05:11 2013 from localhost
 ```
 
 My goal here was to have something that could quickly tell me which machine I was
-using and some specifics of it, an understanding of the current state and any 
+using and some specifics of it, an understanding of the current state and any
 actions that should be taken. But, at the same time it should be as concise as is
 practical and, importantly be fast to execute.
 
@@ -63,8 +63,8 @@ case it will show the Chef last run, environment and roles applied. (This will a
 help remind me which boxes are using Chef before I change things which will
 automatically be reverted.)
 
-The following is broadly based upon the version provided by Canonical in Ubuntu 
-12.04, which is Copyright 2009-2010 Canonical Ltd. and licensed under the GPL. And 
+The following is broadly based upon the version provided by Canonical in Ubuntu
+12.04, which is Copyright 2009-2010 Canonical Ltd. and licensed under the GPL. And
 so this lot is also[^licensetext].
 
 ## Header (`00-header`)
@@ -114,8 +114,8 @@ printf "\n"
 
 ## System Information (`10-sysinfo`)
 
-This is slightly more complicated. Using a mix of standard utilities, `/proc` and 
-some text parsing, it's quite easy to assemble the system information section. As 
+This is slightly more complicated. Using a mix of standard utilities, `/proc` and
+some text parsing, it's quite easy to assemble the system information section. As
 I'm only targetting Debian/Ubuntu, it's quite easy to get this working.
 
 In the original implementation, Canonical use their "Landscape" product to generate
@@ -162,8 +162,8 @@ echo
 
 This is much more complicated than the other sections. Canonical achieves this in
 Ubuntu by using the same mechanism the GUI software updater works (the notifer,
-not synaptic). This implements the same requirement, but using the upstream 
-dependency that &mdash; `python-apt` &mdash; which allows us to interact with 
+not synaptic). This implements the same requirement, but using the upstream
+dependency that &mdash; `python-apt` &mdash; which allows us to interact with
 `apt`'s internals.
 
 This is quite closely based upon the version in Ubuntu, but is simplified[^aptcheck].
@@ -200,7 +200,7 @@ DISTRO = subprocess.Popen(["lsb_release", "-c", "-s"],
 
 class OpNullProgress(object):
     '''apt progress handler which supresses any output.'''
-    def update(self, percent):
+    def update(self):
         pass
     def done(self):
         pass
@@ -287,7 +287,7 @@ print "%d are security updates." % security_upgrades
 print "" # leave a trailing blank line
 ```
 
-This is reasonably well commented, if you wished to delve into the implementation, 
+This is reasonably well commented, if you wished to delve into the implementation,
 but at a higher level it:
 
 1. Opens up the `apt` cache.
@@ -301,8 +301,8 @@ commit any changes and so no state will change (and I'm pretty sure I didn't do
 anything stupid).
 
 I tested this on a Ubuntu 12.04 (Precise) install, Debian Squeeze and then Wheezy.
-That's enough for me to be confident that it works well enough, but I couldn't test 
-all possible package and so it's quite possible that the reported number will be 
+That's enough for me to be confident that it works well enough, but I couldn't test
+all possible package and so it's quite possible that the reported number will be
 incorrect.
 
 Also, Ubuntu has the ability to show distro upgrades. I couldn't work out how to
@@ -358,7 +358,7 @@ message or similar. This just replicates the original functionality:
 ## Configuration
 
 All of these files (my filenames are in brackets around the section title) should
-be placed in `/etc/update-motd.d/` and then made executable 
+be placed in `/etc/update-motd.d/` and then made executable
 (`chmod +x /etc/update-motd.d/`). When you login, PAM will regenerate the `motd`
 file, which on Debian is located in `/var/run/motd`. The file `/etc/motd` is just a
 symlink to this location.
@@ -374,7 +374,7 @@ PrintLastLog yes
 ```
 
 It seems conterintuitive, but PAM will post the `motd` anyway, so it should be
-turned off here. `PrintLastLog` gives you the last login host and time. Then, the 
+turned off here. `PrintLastLog` gives you the last login host and time. Then, the
 banner can be commented out because our dynamically generated `motd` includes the
 same information.
 
