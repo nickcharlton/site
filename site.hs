@@ -10,7 +10,8 @@ import Text.Pandoc.Options
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
     -- Static Assets and Resources
-    let assets = ["css/*", "favicon.ico", "nickcharlton.pub", "resources/**"]
+    let assets = ["css/*", "favicon.ico", "nickcharlton.pub", "images/*",
+                  "resources/**"]
     match (foldr1 (.||.) assets) $ do
         route idRoute
         compile copyFileCompiler
