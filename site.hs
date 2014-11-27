@@ -102,7 +102,8 @@ main = hakyllWith hakyllConfig $ do
 
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
-    [ dateField "date" "%B %e, %Y"
+    [ dateField "prettyDate" "%B %e, %Y"
+    , dateField "datetime" "%FT%T%z"
     , tagsField "tags" tags
     , defaultContext
     ]
@@ -136,7 +137,7 @@ feedConfiguration title = FeedConfiguration
     , feedDescription = "iOS, Mac and Ruby Developer. Amateur Chef."
     , feedAuthorName  = "Nick Charlton"
     , feedAuthorEmail = "nick@nickcharlton.net"
-    , feedRoot        = "http://nickcharlton.net"
+    , feedRoot        = "https://nickcharlton.net"
     }
 
 hakyllConfig :: Configuration
