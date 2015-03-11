@@ -26,7 +26,8 @@ user #=> <User id: 1, name: 'Nick Charlton'>
 ```
 
 The result isn't evaluated until you use the resulting object and so the
-queries will be combined for you.
+queries will be combined for you. This is because it returns an
+`ActiveRecord::Relation` object, and not the fully evaluated query.
 
 This can be a much cleaner solution to conditional filtering of records, like
 you might wish to do with a reasonably complex search interface:
