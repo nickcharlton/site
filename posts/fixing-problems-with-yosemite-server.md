@@ -52,7 +52,7 @@ By default, a new user created on an Open Directory tree isn't able to use
 Screen Sharing. This can be a bit of a problem if you've created a new admin
 user via OD and then expect to be able to login again. There's a few posts
 around explaining this, but they’re all rather old ([like this one on the Apple
-Discussion boards][apple_dicussion_thread]).
+Discussion boards][apple_discussion_thread]).
 
 After an extensive amount of digging, I cornered everything down to two
 separate steps.
