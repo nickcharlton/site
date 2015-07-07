@@ -299,6 +299,7 @@ set of plugins. I use:
 [LDAP]: http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 [boxes]: https://github.com/nickcharlton/boxes
 [Homebrew]: http://brew.sh
+[ssl_guide]: https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
 [jenkins_reverse_proxy]: https://wiki.jenkins-ci.org/display/JENKINS/Running+Jenkins+behind+Apache
 [git_plugin]: https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin
 [github_plugin]: https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin
