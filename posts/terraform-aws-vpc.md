@@ -315,6 +315,17 @@ resource "aws_route_table_association" "eu-west-1a-private" {
 }
 ```
 
+The NAT instance is a special Amazon Linux AMI which handles the routing
+correctly. It can be found on the AWS Marketplace using the `aws` command line
+tool by doing something like this:
+
+```sh
+aws ec2 describe-images --filter Name="owner-alias",Values="amazon" --filter
+Name="name",Values="amzn-ami-vpc-nat*"
+```
+
+Like all AMIs, there's specific images for each region.
+
 #### `public.tf`
 
 This file (and the next) is where I'd split the file structure into more
