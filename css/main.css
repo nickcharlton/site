@@ -29,6 +29,16 @@ a:hover, a:visited {
   color: #76002B;
 }
 
+h1 a, h2 a {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
+h1 a:visited, h2 a:visited {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
 blockquote {
   border-left: 3px solid #CB004A;
   margin: 5px;
