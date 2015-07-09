@@ -103,11 +103,12 @@ header nav ul li {
 
 body > footer {
   margin: 2em 0 2em 0;
-  font-size: 0.9em;
 }
 
 footer p {
   margin: 0;
+  color: #949494;
+  font-size: 0.75em;
 }
 
 /* Media Queries */
