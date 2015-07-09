@@ -45,11 +45,9 @@ After that, lists and tables:
 * Item
 * Item
 
-+-----------+-----------+
 | Heading 1 | Heading 2 |
-+===========+===========+
-| Data 1    | Date 2    |
-+-----------+-----------+
+|-----------|-----------|
+| Data 1    | Data 2    |
 
 Then media blocks:
 
