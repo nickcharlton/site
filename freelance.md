@@ -2,6 +2,8 @@
 title: Freelance
 ---
 
+## Freelance
+
 I've built iOS apps for discovering and watching video, introduced new people
 to iOS development, worked on CMS projects in Rails and built a lot of APIs.
 
@@ -17,7 +19,7 @@ Brandon, VP of Engineering at [SleepIO][] had this to say:
 > skills, he was a great guy to work with — personable and able to interact
 > with all members of the team, developers and non-developers alike.”
 
-I've got good availability through July and August. Think I'd be a good fit for 
+I've got good availability through July and August. Think I'd be a good fit for
 your project? Email me: [nick@nickcharlton.net][email].
 
 [The RSA]: https://www.thersa.org
