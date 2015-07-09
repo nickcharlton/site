@@ -83,7 +83,7 @@ This file is typically called `variables.tf` by convention. It's typically full
 of environment specific configuration, like which `ami` to use and which
 credentials to use.
 
-```
+```ruby
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 variable "aws_key_path" {}
@@ -126,7 +126,7 @@ and the two subnets contained within it.
 This is the file which is passed into each command, and provides the "secrets"
 and more specific values.
 
-```
+```ruby
 aws_access_key = ""
 aws_secret_key = ""
 aws_key_path = "~/.ssh/aws.pem"
@@ -140,7 +140,7 @@ aws_key_name = "aws"
 This configures the provider, note how it uses string interpolation to pull
 out the variables from previously:
 
-```
+```ruby
 provider "aws" {
     access_key = "${var.aws_access_key}"
     secret_key = "${var.aws_secret_key}"
@@ -153,7 +153,7 @@ provider "aws" {
 This is the largest of the lot and configures both the VPC, the NAT instance,
 the two subnets and the relevant security groups.
 
-```
+```ruby
 resource "aws_vpc" "default" {
     cidr_block = "${var.vpc_cidr}"
     enable_dns_hostnames = true
@@ -334,7 +334,7 @@ single `public.tf` in a larger implementation, as this is where much of the
 detail will be described. It works good enough here, as we'll just be
 implementing a single instance and security group in each subnet.
 
-```
+```ruby
 /*
   Web Servers
 */
@@ -405,7 +405,7 @@ resource "aws_eip" "web-1" {
 
 #### `private.tf`
 
-```
+```ruby
 /*
   Database Servers
 */
