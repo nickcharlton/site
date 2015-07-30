@@ -278,6 +278,30 @@ tree (`server.example.com`). This screenshot might help:
 
 Jenkins will be able to configure the rest itself.
 
+### 8. (Optional) Manage the Jenkins Process with `brew services`
+
+The default way to manage processes on OS X is using `launchctl`, but the
+syntax isn't the easiest to use. For example, restarting Jenkins (something
+you'll want to do each time it's upgrade):
+
+```sh
+sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist
+sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist
+```
+
+The alternative is to use [brew services][], which can make this much easier:
+
+```sh
+# first, install it:
+brew tap homebrew/services
+
+# then you can view the services:
+sudo brew services list
+
+# restarting:
+sudo brew services restart jenkins
+```
+
 ### Closing Steps
 
 Before configuring your first set of builds, you'll likely want to install a
@@ -301,6 +325,7 @@ set of plugins. I use:
 [Homebrew]: http://brew.sh
 [ssl_guide]: https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
 [jenkins_reverse_proxy]: https://wiki.jenkins-ci.org/display/JENKINS/Running+Jenkins+behind+Apache
+[brew services]: https://github.com/Homebrew/homebrew-services
 [git_plugin]: https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin
 [github_plugin]: https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin
 [ansicolor_plugin]: https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin
