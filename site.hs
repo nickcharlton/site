@@ -10,7 +10,7 @@ import Text.Pandoc.Options
 main :: IO ()
 main = hakyllWith hakyllConfig $ do
     -- Static Assets and Resources
-    let assets = ["css/*", "favicon.ico", "nickcharlton.pub", "images/*",
+    let assets = ["css/*", "favicon.ico", "nickcharlton.asc", "images/*",
                   "resources/**", "fonts/**"]
     match (foldr1 (.||.) assets) $ do
         route idRoute
