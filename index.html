@@ -1,5 +1,6 @@
 ---
 title: Home
+layout: default
 ---
 
 <main>
@@ -15,10 +16,10 @@ title: Home
   <h2>Articles</h2>
 
   <ul>
-    $for(posts)$
+    {% for post in site.posts %}
     <li>
-      <a href="$url$">$title$</a> &mdash; <time datetime="$datetime$">$prettyDate$</time>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
     </li>
-    $endfor$
+    {% endfor %}
   </ul>
 </main>

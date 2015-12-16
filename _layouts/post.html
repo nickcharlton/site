@@ -1,11 +1,14 @@
+---
+layout: default
+---
 <article>
   <header>
-    <h2><a href="$url$">$title$</a></h2>
+    <h2><a href="$url$">{{ page.title }}</a></h2>
   </header>
 
   <footer>
-    <p>Posted on <time datetime="$datetime$">$prettyDate$</time>. Tagged with: $tags$.</p>
+    <p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>. Tagged with: $tags$.</p>
   </footer>
 
-  $body$
+  {{ content }}
 </article>

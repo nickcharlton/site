@@ -6,31 +6,31 @@
     <meta name="description" content="iOS, Mac and Ruby Developer. Amateur Chef.">
     <meta name="viewport" content="width=device-width">
 
-    <title>$title$ &mdash; Nick Charlton</title>
+    <title>{{ page.title }} &mdash; {{ site.title }}</title>
 
     <link rel="me" href="https://github.com/nickcharlton" />
     <link rel="me" href="https://twitter.com/nickcharlton" />
     <link rel="me" href="mailto:nick@nickcharlton.net" />
-    <link rel="pgpkey" href="/nickcharlton.asc" />
+    <link rel="pgpkey" href="{{ "/nickcharlton.asc" | prepend: site.baseurl }}" />
     <link rel="openid.delegate" href="https://nickcharlton.net/" />
     <link rel="openid.server" href="https://indieauth.com/openid" />
 
     <!-- nice fonts -->
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7957472/701342/css/fonts.css" />
     <!-- sensible default styles -->
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}" />
     <!-- pretty custom styles -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
     <!-- code styles -->
-    <link rel="stylesheet" href="/css/code.css">
+    <link rel="stylesheet" href="{{ "/css/code.css" | prepend: site.baseurl }}" />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon" />
+    <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon" />
   </head>
 
   <body>
     <header>
-      <h1><a href="/">Nick Charlton</a></h1>
+      <h1><a href="{{ site.baseurl }}/">Nick Charlton</a></h1>
 
       <nav>
         <ul>
@@ -40,7 +40,7 @@
       </nav>
     </header>
 
-    $body$
+    {{ content }}
 
     <footer>
       <p>&copy; Nick Charlton 2015. <a
