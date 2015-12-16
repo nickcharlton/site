@@ -5,6 +5,12 @@ url: "https://nickcharlton.net"
 twitter_username: nickcharlton
 github_username: nickcharlton
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "post"
+
 markdown: redcarpet
 redcarpet:
   extensions: [smart]
