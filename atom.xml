@@ -1,0 +1,25 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ site.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{ site.baseurl }}/atom.xml" rel="self" />
+    <link href="{{ site.url }}{{ site.baseurl }}" />
+    <id>{{ site.url }}{{ site.baseurl }}/atom.xml</id>
+    <author>
+        <name>Nick Charlton</name>
+        <email>nick@nickcharlton.net</email>
+    </author>
+    <updated>{{ site.time | date_to_rfc822 }}</updated>
+    {% for post in site.posts %}
+    <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <link href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" />
+        <id>{{ post.url | prepend: site.baseurl | prepend: site.url }}</id>
+        <published>{{ post.date | date_to_rfc822 }}</published>
+        <updated>{{ post.date | date_to_rfc822 }}</updated>
+        <summary type="html">{{ post.content | xml_escape }}</summary>
+    </entry>
+    {% endfor %}
+</feed>
