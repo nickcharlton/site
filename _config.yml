@@ -4,3 +4,7 @@ description: iOS, Mac and Ruby Developer. Amateur Chef.
 url: "https://nickcharlton.net"
 twitter_username: nickcharlton
 github_username: nickcharlton
+
+markdown: redcarpet
+redcarpet:
+  extensions: [smart]
