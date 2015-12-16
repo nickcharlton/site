@@ -1,0 +1,18 @@
+---
+title: NASA Space Apps Challenge &amp; Predict the Sky
+published: 2012-05-06 11:15:16 +0000
+tags: nasa, space, space-apps-challenge, predict-the-sky
+---
+
+Two weekends ago I was at the [Met Office](http://metoffice.gov.uk/) for the [NASA International Space Apps Challenge](http://spaceappschallenge.org/). It was quite a fantastic weekend. Four or so teams of people worked on a set of preset challenges (suggested by the leaders of those teams in the weeks running up to the event) and the rest of us congregated around the group we were most interested in.
+
+The group I was in worked on a project which we dubbed 'Predict the Sky'. The idea was to take astronomical passovers and combine that with weather data to provide a useful indication of what you would be able to see in the night sky and it worked remarkably well. We ended up implementing a web service, iOS & Android applications and began on a web frontend. [At the end we demonstrated it using a video walkthrough of the two applications and sections of the design process](http://vimeo.com/40825160).
+
+We had a fantastic team (consisting of: [Tom Bell](https://twitter.com/bushbaby2511), [Sophie Dennis](https://twitter.com/sophiedennis), [Rob Glover](https://twitter.com/robjglover), [Emma Hibling](https://twitter.com/ehibling), [Stephen Haddad](https://twitter.com/stevehadd), [Angela Relle](https://twitter.com/angerelle) & [Adam Retter](http://adamretter.org.uk/).), who were all a pleasure to work with. Quite a few people commented on both how organised and on the amount we achieved in the time. I couldn't have had a better team of people to work with.
+
+The other teams & challenges were pretty fantastic too. The winners of the event where [Growers Nation](http://spaceappschallenge.org/challenge/growers-nation/) and [We Love Data](http://spaceappschallenge.org/challenge/welovedata-challenge/). The former aims to crowdsource crop growing information, combined with climate and soil data to give the best indication on when crops should be planted. We Love Data aimed to give a bunch of demonstrations on what could be done with data "in the real world" using a bunch of Arduino's and related hardware. They produced a rather impressive wave machine using the stream running through the "Street" in the middle in the Met Office building that would activate and push through a floating "ISS Duck" when the International Space Station would pass over. It worked rather well on the Saturday night. They also produced a clever 3D-printed pollen grain which would colour according to Met Office-provided pollen counts. The idea behind this was to provide smart, internet connected objects which wouldn't necessarily be connected to a computer. These kind of products (much like the wider [Internet of Things](http://en.wikipedia.org/wiki/Internet_of_Things) concept) have the power to open up data (like pollen counts) to those who wouldn't want a 'widget' or application to handle it on a more general purpose computer. [Dougie Kinnear, one of the team members produced a rather comprehensive write up](http://www.interactivewearables.co.uk/?p=96).
+
+Over the weekend we got impressively far through the project. But not quite enough to release it. On the iOS side (the bit I worked on) I got the stage where we just needed to wire up the network request to the view. It looks like we'll be doing some sort of workshop-like session in the next few weeks to iron out the rest and figure out where we see it in the future. 
+
+However. If you'd like to look it at now. [It's all on GitHub](https://github.com/MetOfficeSpaceApps/PredictTheSky). [Adam also wrote up what happened](http://www.adamretter.org.uk/blog/entries/nasa-space-apps.xml).
+
