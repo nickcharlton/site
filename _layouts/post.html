@@ -7,7 +7,7 @@ layout: default
   </header>
 
   <footer>
-    <p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>. Tagged with: $tags$.</p>
+    <p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>. Tagged with: {{ page.tags | array_to_sentence_string }}.</p>
   </footer>
 
   {{ content }}
