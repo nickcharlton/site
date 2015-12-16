@@ -2,11 +2,3 @@
 *.un~
 *.swp
 *.swo
-
-# hakyll
-site
-_site/
-_cache/
-_drafts/
-site.o
-site.hi
