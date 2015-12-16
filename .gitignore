@@ -2,3 +2,6 @@
 *.un~
 *.swp
 *.swo
+
+# jekyll
+_site
