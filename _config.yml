@@ -5,6 +5,7 @@ url: "https://nickcharlton.net"
 twitter_username: nickcharlton
 github_username: nickcharlton
 permalink: /posts/:slug.html
+exclude: [Gemfile, Gemfile.lock, deploy.sh]
 
 defaults:
   - scope:
