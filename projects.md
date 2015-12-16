@@ -7,30 +7,30 @@ layout: default
 
 [boxes][] ([GitHub][boxes_gh])
 
-:   Prebuilt boxes for [Vagrant][] using common patterns (Ubuntu & Debian, Chef,
-    Puppet and Ansible) that are updated every month.
+Prebuilt boxes for [Vagrant][] using common patterns (Ubuntu & Debian, Chef,
+Puppet and Ansible) that are updated every month.
 
 [keypath-ruby][]
 
-:   A Ruby library for traversing deep and/or complex data structures using
-    "keypaths", inspired by Cocoa.
+A Ruby library for traversing deep and/or complex data structures using
+"keypaths", inspired by Cocoa.
 
 [reserve-ruby][]
 
-:   A Ruby library for providing auto-expiring caching through Redis.
+A Ruby library for providing auto-expiring caching through Redis.
 
 [UrbanScraper][] ([GitHub][urbanscraper_gh])
 
-:   An API for [Urban Dictionary][] words and defintions which uses screenscraping.
+An API for [Urban Dictionary][] words and defintions which uses screenscraping.
 
 [moviesapi][] ([GitHub][moviesapi_gh])
 
-:   An API for movie listings and cinema locations in the UK which screenscrapes
-    [Find Any Film][].
+An API for movie listings and cinema locations in the UK which screenscrapes
+[Find Any Film][].
 
 [omniauth-pam][]
 
-:   An [OmniAuth][] plugin allowing for authentication through [PAM][].
+An [OmniAuth][] plugin allowing for authentication through [PAM][].
 
 [boxes]: http://boxes.nickcharlton.net
 [boxes_gh]: https://github.com/nickcharlton/boxes
