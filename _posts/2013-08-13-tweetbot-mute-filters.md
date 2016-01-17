@@ -64,17 +64,12 @@ brackets, `(?=)`.
 The next bit is to make it valid inside a URL. I cheated and used Eric Meyer's
 [URL Decoder/Encoder][encoder], but the invalid characters are below:
 
-+-----------+-------------+
 | Character | Replacement |
-+===========+=============+
+| --------- | ----------- |
 | ?         | `%3F`       |
-+-----------+-------------+
 | &#35;     | `%23`       |
-+-----------+-------------+
 | =         | `%3D`       |
-+-----------+-------------+
 | Space     | `%20`       |
-+-----------+-------------+
 
 There are obviously many tools to help do that bit.
 

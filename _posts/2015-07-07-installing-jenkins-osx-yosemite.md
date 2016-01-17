@@ -92,13 +92,10 @@ Run `brew install jenkins` as the user you'd normally use `brew` with.
 OS X handles services using `launchd` and has a few different types for where
 they should be placed:
 
-+--------------+---------+
 | Type         | Context |
-+==============+=========+
+| ------------ | ------- |
 | LaunchDaemon | System  |
-+--------------+---------+
 | LaunchAgent  | User    |
-+--------------+---------+
 
 More detail can be found in the [Daemons and Services Programming Guide][].
 

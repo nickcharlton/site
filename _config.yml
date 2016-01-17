@@ -15,4 +15,4 @@ defaults:
 
 markdown: redcarpet
 redcarpet:
-  extensions: [smart]
+  extensions: [smart, tables]
