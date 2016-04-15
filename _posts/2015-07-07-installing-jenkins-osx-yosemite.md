@@ -47,7 +47,7 @@ sudo dscl . -create /Users/jenkins
 sudo dscl . -create /Users/jenkins PrimaryGroupID 505
 sudo dscl . -create /Users/jenkins UniqueID 1026
 sudo dscl . -create /Users/jenkins UserShell /bin/bash
-sudo ddcl . -create /Users/jenkins RealName "Jenkins"
+sudo dscl . -create /Users/jenkins RealName "Jenkins"
 sudo dscl . -create /Users/jenkins NFSHomeDirectory /Users/jenkins
 sudo dscl . -passwd /Users/jenkins
 # create and set the owner of the home directory
