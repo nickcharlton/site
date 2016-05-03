@@ -10,7 +10,8 @@ The thing is, I've never seen the actual *point* of tablets. They are generally 
 
 There was an [interesting discussion on Hacker News](http://news.ycombinator.com/item?id=1077772 "Hacker News | The Healthcare System: An Apple Tablet's Biggest Opportunity") earlier today about tablets in medicine. The article itself suggested that tablets would be a great way for doctors to enter information about patients - forgetting of course that paper has worked wonderfully since pre-Nightingale and such an adaption would be an uphill struggle. Anyway, I digress.
 
-From [my rather biased perspective](http://nickcharlton.net/blog/new-macbook-pro "nickcharlton.net/blog"), I think Apple has done something interesting with the "iPad". 
+From [my rather biased perspective](https://nickcharlton.net/new-macbook-pro "nickcharlton.net/blog"), I think Apple has done something interesting with the 
+"iPad". 
 
 The interesting bit here, at least, I think, is their showing off of iWork on the device. The biggest issue with such a device is text input. Being just a large screen, there's not the ability to easily enter text. The iPhone isn't a bad, if a little small, but still a pretty good mobile keypad, the iPad is similar, although on a larger scale.
 
