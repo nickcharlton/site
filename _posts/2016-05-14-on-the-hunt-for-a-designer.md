@@ -18,7 +18,9 @@ presentation (think tables of data and graphs).
 I'm currently looking again at the [pattern][] [library][] I've been putting
 together and looking for someone to work with me on the "Dashboard". This will
 show such things as current account balances, safe to spend counts and so
-forth.
+forth. My plan is to let someone go wild building out a couple of prototypes
+which will get me over the current design hurdle, whilst keeping the project
+small but still quite fun to work on.
 
 Ideally, you'd be in the UK and interested in this as a product (basically so I
 can also give you an account). My budget is modest, but not non-existent.
