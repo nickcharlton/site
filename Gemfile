@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll', '~> 3.0'
-gem 'redcarpet', '~> 3.3'
+gem "jekyll", "~> 3.0"
+gem "redcarpet", "~> 3.3"
+gem "rake"
