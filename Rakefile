@@ -14,7 +14,7 @@ task :deploy do
   system("bundle exec jekyll build")
 
   puts "Running Rsync..."
-  system("rsync -avzc _site/ nickcharlton.net:/var/www/site")
+  system("rsync -avzc _site/ nickcharlton.net:/var/www/nickcharlton.net")
 end
 
 desc "Create a New Post"
