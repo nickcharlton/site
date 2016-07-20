@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+
+RewriteEngine on
+RewriteRule ^post/(.*) https://nickcharlton.net/posts/$1.html [NC]
+RewriteRule ^projects$ https://nickcharlton.net/projects.html [NC]
+RewriteRule ^about$ https://nickcharlton.net/about.html [NC]
+RewriteRule ^archives$ https://nickcharlton.net/archives.html [NC]
+# rules from 2014-08-20 onwards
+RewriteRule ^about.html https://nickcharlton.net [NC]
+RewriteRule ^projects/ https://nickcharlton.net/projects.html [NC]
+RewriteRule ^links/(.*) https://nickcharlton.net/posts/$1.html [NC]
