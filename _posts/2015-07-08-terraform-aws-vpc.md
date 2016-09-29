@@ -15,7 +15,7 @@ that allows you to automate your interactions with services like AWS (and
 indeed others) and record the state, giving you the ability to place your
 infrastructure in source control.
 
-In the AWS documentation, this is given as an example: "[Scenario  2][]" and
+In the AWS documentation, this is given as an example: "[Scenario 2][]" and
 this post will show how this can be replicated using Terraform. I'd recommend
 you familiarise yourself with the AWS documentation's version first and also
 get a good understanding of [Terraform from it's
