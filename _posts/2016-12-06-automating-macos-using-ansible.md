@@ -52,6 +52,7 @@ This is the base playbook. It's held in a central `ansible` repo, but here
 we're installing Homebrew (using [Jeff Geerling's Homebrew Role][hb_role]) and
 then executing the base role. The base role looks like this:
 
+{% raw %}
 ```yaml
 ---
 - name: Install base utilities
@@ -126,6 +127,7 @@ then executing the base role. The base role looks like this:
 - name: Restart Finder
   shell: killall Finder
 ```
+{% endraw %}
 
 It relies on [m-cli][] and [dockutil][] to reconfigure the dock and then relies
 on an Ansible form of some of my existing [dotfiles][] [defaults.sh][] script.

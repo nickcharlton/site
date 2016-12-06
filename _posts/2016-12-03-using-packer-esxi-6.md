@@ -100,6 +100,7 @@ host on which it runs. Here's an example using Ubuntu 16.04, with a
 
 `ubuntu-1604-base.json`:
 
+{% raw %}
 ```json
 {
   "builders": [{
@@ -155,6 +156,7 @@ host on which it runs. Here's an example using Ubuntu 16.04, with a
   }]
 }
 ```
+{% endraw %}
 
 `preseed.cfg`:
 
