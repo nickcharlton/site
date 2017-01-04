@@ -364,7 +364,7 @@ file, which on Debian is located in `/var/run/motd`. The file `/etc/motd` is jus
 symlink to this location.
 
 Finally, to replicate the manner in which Ubuntu presents the `motd`, you need to
-set the following:
+set the following in `/etc/ssh/sshd_config`:
 
 ```
 PrintMotd no
