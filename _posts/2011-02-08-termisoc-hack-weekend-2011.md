@@ -8,11 +8,12 @@ _I intend for this post to hold all of the presentations and sessions that we've
 
 ## Introduction
 
-<iframe frameborder='0' style='width:460px;height:375px;' src='http://public.iwork.com/embed/?d=Hack_Weekend_2011_58__Introduction.key&a=p1051018750&h=600&w=800&sw=458'>
+> Previously, this was an embedded iWork document, but it's been lost to 
+> history. But it's very out of date now.
 
-</iframe>
-
-This first session was intended to explain the overall plan, how I intended to approach the prior sessions, but to overall drum up some enthusiasm about what we should build.
+This first session was intended to explain the overall plan, how I intended to 
+approach the prior sessions, but to overall drum up some enthusiasm about what 
+we should build.
 
 Overall, we ended up with a set of ideas ranging from games, to Arduino projects, to more complicated stuff using open data sets, algorithms and natural language processing.
 
@@ -24,13 +25,8 @@ If you're reading this and not part of [TermiSoc](http://termisoc.org/), feel fr
 
 ## Refresh: HTML5 & The New JavaScript APIs
 
-<figure>
-
-<iframe frameborder='0' style='width:460px;height:375px;' src='http://public.iwork.com/embed/?d=Refresh_-_HTML5__38__JavaScript.key&a=p1051018750&h=600&w=800&sw=458'>
-
-</iframe>
-
-</figure>
+> Previously, this was an embedded iWork document, but it's been lost to 
+> history. But it's very out of date now.
 
 This second session was to go over some of the new HTML5 technologies which are at our disposal. It worked out as a not too bad ~40 minute talk, although, I think I could have gone into more detail in certain areas, especially where using it now is concerned.
 
@@ -42,7 +38,7 @@ The idea of this session was to introduce the concept of version control, but al
 
 As this is not something that's covered on most people's degree courses, it's relevant to all.
 
-[Here is the Guide to Git which I had written beforehand](http://nickcharlton.net/resources/guide_to_git.pdf). It was mostly put together through a series of notes I already had, and then formatted. Some sections could be incorrect, so use with caution, and [complain where necessary](mailto:hello@nickcharlton.net).
+[Here is the Guide to Git which I had written beforehand](https://nickcharlton.net/resources/guide_to_git.pdf). It was mostly put together through a series of notes I already had, and then formatted. Some sections could be incorrect, so use with caution, and [complain where necessary](mailto:hello@nickcharlton.net).
 
 This session went rather well, with people saying nice things about it afterwards. At the [Unconference](http://nickcharlton.net/post/the-digital-peninsulas-first-web-unconference), [Ben Masters of Fuel](http://www.fuel-communications.co.uk/) said that it had been useful to him. Because of this, I will likely turn it into it's own blog post soon.
 
@@ -52,13 +48,8 @@ This session was intended to be a basic introduction to [Python](http://python.o
 
 You will find the slides below and the [guide linked here](http://nickcharlton.net/resources/getting_started_with_python.pdf).
 
-<figure>
-
-<iframe frameborder='0' style='width:460px;height:375px;' src='http://public.iwork.com/embed/?d=Getting_Started_with_Python.key&a=p1051018750&h=600&w=800&sw=458'>
-
-</iframe>
-
-</figure>
+> Previously, this was an embedded iWork document, but it's been lost to 
+> history. But it's very out of date now.
 
 The next few sessions intend to expand upon where we started here, going over some of the nice build in data structures, using libraries and moving on to some web application stuff. I also intend to start talking about what we'd like to build.
 

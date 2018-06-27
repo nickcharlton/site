@@ -9,12 +9,12 @@ On Saturday, the second version of the [Digital Peninsula Unconference](http://l
 The conference overall was pretty good, although it did feel like some of the people were pitching a little bit too much. Given the mostly technical community, it would be nice to hear more about the decisions made behind projects - stuff that's useful to all.
 
 <figure>
-<a href="http://www.flickr.com/photos/nickcharlton/5722585712/" title="On Stage Tech Support by nickcharlton, on Flickr"><img src="http://farm3.static.flickr.com/2091/5722585712_953fd4b22c.jpg" width="500" height="334" alt="On Stage Tech Support"></a>
+<a href="https://www.flickr.com/photos/nickcharlton/5722585712/" title="On Stage Tech Support by nickcharlton, on Flickr"><img src="http://farm3.static.flickr.com/2091/5722585712_953fd4b22c.jpg" width="500" height="334" alt="On Stage Tech Support"></a>
 <figcaption>A little bit of on stage tech support.</figcaption>
 </figure>
 
 <figure>
-<a href="http://www.flickr.com/photos/nickcharlton/5722002007/" title="The Waving Crowd by nickcharlton, on Flickr"><img src="http://farm3.static.flickr.com/2412/5722002007_1054243cfc.jpg" width="334" height="500" alt="The Waving Crowd"></a>
+<a href="https://www.flickr.com/photos/nickcharlton/5722002007/" title="The Waving Crowd by nickcharlton, on Flickr"><img src="http://farm3.static.flickr.com/2412/5722002007_1054243cfc.jpg" width="334" height="500" alt="The Waving Crowd"></a>
 <figcaption>The Waving Crowd</figcaption>
 </figure>
 

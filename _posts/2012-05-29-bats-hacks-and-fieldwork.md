@@ -11,14 +11,14 @@ Set in the picturesque Devon countryside, a bunch of us turned up not quite know
 The hackday had been organised by [Harriet White](https://twitter.com/FolkPrincess) of the FSC, [Ant Miller](http://reithian.blogspot.co.uk/) of BBC R&D, and [John Bevan](http://about.me/johnbevan) of Mozilla. But we also had people from elsewhere in the BBC, a few associated with [Rewired State](http://rewiredstate.org/), FSC tutors on hand and designers and developers of various afflictions. We were also lucky to have a few people from the [Bristol Hackspace](http://bristol.hackspace.org.uk/), too.
 
 <figure>
-<img src="http://nickcharlton.net/resources/bats_hacks_fieldwork/pub.jpg" width="500" alt="The Tower — The Lovely Local Pub">
+<img src="https://nickcharlton.net/resources/bats_hacks_fieldwork/pub.jpg" width="500" alt="The Tower — The Lovely Local Pub">
 <figcaption>The Tower — The Lovely Local Pub.</figcaption>
 </figure>
 
 ### Bat Detection
 
 <figure>
-<img src="http://nickcharlton.net/resources/bats_hacks_fieldwork/bat_guide.jpg" width="500" alt="The FSC's Guide to British Bats">
+<img src="https://nickcharlton.net/resources/bats_hacks_fieldwork/bat_guide.jpg" width="500" alt="The FSC's Guide to British Bats">
 <figcaption>The FSC's Guide to British Bats.</figcaption>
 </figure>
 
