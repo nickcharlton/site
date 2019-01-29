@@ -58,7 +58,7 @@ After that, lists and tables:
 Then media blocks:
 
 <figure>
-  <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="A Cat Picture">
+  <img src="https://placekitten.com/408/287" alt="A Cat Picture">
   <figcaption>A Cat Picture.</figcaption>
 </figure>
 
