@@ -59,7 +59,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 3.4)
+  jekyll
   rake
   redcarpet (~> 3.4)
 
