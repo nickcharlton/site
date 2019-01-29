@@ -61,7 +61,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   rake
-  redcarpet (~> 3.4)
+  redcarpet
 
 BUNDLED WITH
    1.17.2
