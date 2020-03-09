@@ -39,7 +39,7 @@ I read this cover to cover, but you don't need to do that. I find once I have,
 it's much easier for me to pick the book up and refer to something I
 then need.
 
-### [Ultimate Go Programming Course]()
+### Ultimate Go Programming Course
 
 
 Once I've built a few simple projects, I then want to go into some more depth
