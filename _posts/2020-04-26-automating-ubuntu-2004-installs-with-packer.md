@@ -15,6 +15,7 @@ configuration:
 
 `ubuntu-2004.json`:
 
+{% raw %}
 ```json
 {
   "builders": [
@@ -53,6 +54,7 @@ configuration:
   ]
 }
 ```
+{% endraw %}
 
 `user-data`:
 
