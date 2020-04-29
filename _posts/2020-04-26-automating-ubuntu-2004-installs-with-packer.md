@@ -20,7 +20,7 @@ configuration:
 {
   "builders": [
     {
-      "name": "focal64-vmware",
+      "name": "ubuntu-2004",
       "type": "vmware-iso",
       "guest_os_type": "ubuntu-64",
       "headless": false,
@@ -31,11 +31,11 @@ configuration:
 
       "ssh_username": "ubuntu",
       "ssh_password": "ubuntu",
-      "ssh_timeout": "25m",
+      "ssh_handshake_attempts": "20",
 
-      "http_directory": "templates/ubuntu",
+      "http_directory": "http",
 
-      "memory": 2048,
+      "memory": 1024,
 
       "boot_wait": "5s",
       "boot_command": [
@@ -81,16 +81,26 @@ autoinstall:
 ```
 
 We also need the presence of the file `meta-data`: `touch meta-data` in the
-directory available to the Packer HTTP server. The password is `ubuntu`.
+directory available to the Packer HTTP server. The password is `ubuntu`. Whilst
+this uses the [VMware builder][12], the relevant configuration options exist
+among the other builders, too.
+
+[I've also created an example Github repo with the working configuration
+in][10].
 
 The [new unattended installation is well documented][4] and I started from the
 [Quick Start guide][5].
 
-There were three things that need solving on top of the basic configuration.
-The first was to ensure that there's enough memory to run the installer with.
-512MB caused a kernel panic, 2GB seems to work fine. The other two are
-enabling `SSH`, and ensuring that we have a persistent IP address after the
-installation is completed.
+There were four things that need solving on top of the basic configuration:
+
+* Ensure that there's enough memory to run the installer with. 512MB caused a
+  kernel panic, 1GB works fine,
+* Install an SSH server,
+* Allow the [SSH handshake][11] to fail for longer, because the installer has
+  it's own SSH server which will cause "Waiting for SSH..." to connect to the
+  wrong thing and the build to fail,
+* Ensure that we have a persistent IP address after the installation is
+  completed.
 
 The typical way to do this is to restore the DHCP identifier used back to the
 MAC address of the device, rather than the _device identifier_ which is now
@@ -104,14 +114,13 @@ so we need to do this ourselves after the installation is completed. We need to
 quote the `sed` line, as otherwise we [fall into a trap when loading
 `cloud-init` configuration, as it seems to think it's YAML][9].
 
-This took quite a bit of time to get working right (and this configuration
-could perhaps do with a little bit of tidying up, too). To solve issues along
+This took quite a bit of time to get working right. To solve issues along
 the way, I:
 
-* Used Alt + F2 to get a working `tty`,
+* Used Alt + F2 to get a working console when the installer failed or got stuck,
 * Read the output of `/var/log/installer/subiquity-debug.log` to get the
   network configuration correct,
-* and `/var/log/syslog` to debug the YAML parsing issues around the
+* …and `/var/log/syslog` to debug the YAML parsing issues around the
   `late-commands`.
 
 [1]: https://www.debian.org/devel/debian-installer/
@@ -123,3 +132,6 @@ the way, I:
 [7]: https://netplan.io/
 [8]: https://github.com/CanonicalLtd/subiquity/blob/95c20226fdb74eef6cd780981299a5bbbaa426d2/subiquitycore/controllers/network.py
 [9]: https://git.launchpad.net/cloud-init/tree/cloudinit/util.py#n954
+[10]: https://github.com/nickcharlton/packer-ubuntu-2004
+[11]: https://www.packer.io/docs/builders/vsphere-iso.html#ssh_handshake_attempts
+[12]: https://www.packer.io/docs/builders/vsphere-iso.html
