@@ -99,7 +99,7 @@ store = instance.getExtensionList(
 
 privateKey = new BasicSSHUserPrivateKey.DirectEntryPrivateKeySource(
   '''
-  PRIVATE_KEY_TEXT
+PRIVATE_KEY_TEXT
   '''
 )
 
@@ -117,7 +117,11 @@ store.addCredentials(domain, sshKey)
 {% endraw %}
 
 This was more difficult to figure out than the others, [with the implementation
-of `BasicSSHUserPrivateKey.java` invaluable][5].
+of `BasicSSHUserPrivateKey.java` invaluable][5]. The indentation of
+`PRIVATE_KEY_TEXT` is missing so that extraneous whitespace doesn't cause
+problems. I found that where Jenkins reads the key in itself, indentation is
+not significant (like when connecting to build nodes) but where it's reused
+elsewhere (like the [Git plugin][12]) would fail to connect to the repository.
 
 It supports multiple different types of SSH keys: entering directly (what we're
 doing here) but also reading off the disk. [We need to use `'''` to have a
@@ -237,7 +241,7 @@ store.addCredentials(domain, secretText)
 {% for credential in jenkins_ssh_credentials %}
 privateKey = new BasicSSHUserPrivateKey.DirectEntryPrivateKeySource(
   '''
-  {{ credential['private_key'] }}
+{{ credential['private_key'] }}
   '''
 )
 
@@ -266,6 +270,30 @@ store.addCredentials(domain, usernameAndPassword)
 ```
 {% endraw %}
 
+…and then how the secrets would be structured:
+
+```yaml
+---
+jenkins_secret_text_credentials:
+  - name: SECRET_TEXT
+    description: SECRET_DESCRIPTION
+    text: SECRET_TEXT
+jenkins_ssh_credentials:
+  - name: SSH_KEY
+    username: PRIVATE_KEY_USERNAME
+    private_key: |
+      -----BEGIN OPENSSH PRIVATE KEY-----
+      ...
+      -----END OPENSSH PRIVATE KEY-----
+    passphrase: PRIVATE_KEY_PASSPHRASE
+    description: SECRET_DESCRIPTION
+jenkins_username_password_credentials:
+  - name: SECRET_USERNAME
+    description: SECRET_DESCRIPTION
+    username: SECRET_USERNAME
+    password: SECRET_PASSWORD
+```
+
 [1]: https://plugins.jenkins.io/credentials/
 [2]: https://plugins.jenkins.io/ssh-credentials
 [3]: https://gist.github.com/chrisvire/383a2c7b7cfb3f55df6a
@@ -277,3 +305,4 @@ store.addCredentials(domain, usernameAndPassword)
 [9]: https://github.com/geerlingguy/ansible-role-jenkins
 [10]: https://docs.ansible.com/ansible/latest/modules/template_module.html#examples
 [11]: https://github.com/chef-cookbooks/jenkins#jenkins_credentials
+[12]: https://github.com/jenkinsci/git-plugin
