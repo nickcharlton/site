@@ -80,6 +80,11 @@ chmod 444 /etc/vmware/firewall/service.xml
 esxcli network firewall refresh
 ```
 
+If you'd like to, these changes can be persisted between reboots by modifying
+`/etc/rc.local.d/local.sh`, [as described in this VMware knowledge base
+article][knowledge_base_article]. ([Thanks to JP Toto who pointed this
+out!][persistent_tweet])
+
 ## Running Packer
 
 A Packer template for running on ESXi is very similar to one which runs
@@ -246,3 +251,5 @@ to their needs. This is pretty similar to cloud providers like [AWS EC2][] or
 [Amazon S3]: http://aws.amazon.com/s3
 [AWS EC2]: https://aws.amazon.com/ec2/
 [Digital Ocean]: https://m.do.co/c/6ff4dddb5e9d
+[knowledge_base_article]: https://kb.vmware.com/s/article/2043564
+[persistent_tweet]: https://twitter.com/jptoto/status/1262485637132943365?s=12
