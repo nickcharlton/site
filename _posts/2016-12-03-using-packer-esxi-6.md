@@ -83,7 +83,7 @@ esxcli network firewall refresh
 If you'd like to, these changes can be persisted between reboots by modifying
 `/etc/rc.local.d/local.sh`, [as described in this VMware knowledge base
 article][knowledge_base_article]. ([Thanks to JP Toto who pointed this
-out!][persistent_tweet)
+out!][persistent_tweet])
 
 ## Running Packer
 
