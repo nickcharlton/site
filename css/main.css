@@ -1,10 +1,7 @@
 body {
   font: normal 120%/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  width: 60%;
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-  color: #4A4A4A;
+  background-color: #CB004A;
+  color: rgb(24, 24, 28);
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,7 +9,8 @@ body {
 
 /* Page Elements */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 a {
@@ -96,15 +94,43 @@ figcaption, p.caption {
 }
 
 /* Layout */
+.page {
+  background-color: #FFFFFF;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  grid-column: span 10 / span 10;
+  margin: 0 1em 1em 1em;
+}
+
 header h1 {
-  text-align: center;
+  background-color: #CB004A;
+  color: #FFFFFF;
+  font-size: 1.5em;
+
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 0.2em 0.25em 0.2em;
+}
+
+header nav {
+  align-self: center;
 }
 
 header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 header nav ul li {
@@ -112,8 +138,39 @@ header nav ul li {
   margin: 0 0.5em;
 }
 
-body > footer {
-  margin: 2em 0 2em 0;
+main, article {
+  grid-column: span 10 / span 10;
+  margin: 1em;
+}
+
+article header {
+  margin: 0;
+}
+
+article footer {
+  margin: 0;
+}
+
+main header {
+  margin: 0;
+}
+
+article header h2 {
+  margin: 0;
+}
+
+main header h2 {
+  margin: 0;
+}
+
+main footer {
+  margin: 0;
+}
+
+footer {
+  grid-column: span 10 / span 10;
+  margin: 1em;
+  padding-bottom: 1em;
 }
 
 footer p {
@@ -122,9 +179,22 @@ footer p {
   font-size: 0.75em;
 }
 
-/* Media Queries */
-@media screen and (max-width: 700px) {
-  body {
-   width: 95%;
+@media only screen and (min-width: 640px) {
+  header {
+    grid-column: span 6 / span 6;
+    grid-column-start: 3;
+    margin: 0;
+  }
+
+  main, article {
+    grid-column: span 6 / span 6;
+    grid-column-start: 3;
+    margin: 1em 0 0 0;
+  }
+
+  footer {
+    grid-column: span 6 / span 6;
+    grid-column-start: 3;
+    margin: 1em 0 0 0;
   }
 }

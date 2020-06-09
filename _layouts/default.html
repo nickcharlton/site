@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Nick Charlton">
     <meta name="description" content="{% if page.excerpt != nil %}{{page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>{{ page.title }} &mdash; {{ site.title }}</title>
 
@@ -34,28 +34,32 @@
   </head>
 
   <body>
-    <header>
-      <h1><a href="{{ site.baseurl }}/">Nick Charlton</a></h1>
+    <div class="page">
+      <div class="grid">
+        <header>
+          <a href="{{ site.baseurl }}/"><h1>NC</h1></a>
 
-      <nav>
-        <ul>
-          <li><a href="/archives.html">Archives</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
+          <nav>
+            <ul>
+              <li><a href="/archives.html">Archives</a></li>
+              <li><a href="/projects.html">Projects</a></li>
+            </ul>
+          </nav>
+        </header>
 
-    {{ content }}
+        {{ content }}
 
-    <footer>
-      <p>&copy; Nick Charlton 2016. <a
-      href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">CC-BY-A-UK</a>.
-      <a href="/atom.xml">Atom Feed</a>.</p>
-      <p>
-        <a href="mailto:nick@nickcharlton.net" rel="me">Email</a>.
-        <a href="/nickcharlton.asc">GPG</a>.
-      </p>
-    </footer>
+        <footer>
+          <p>&copy; Nick Charlton 2020. <a
+          href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">CC-BY-A-UK</a>.
+          <a href="/atom.xml">Atom Feed</a>.</p>
+          <p>
+            <a href="mailto:nick@nickcharlton.net" rel="me">Email</a>.
+            <a href="/nickcharlton.asc">GPG</a>.
+          </p>
+        </footer>
+      </div>
+    </div>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108073191-1"></script>
     <script>

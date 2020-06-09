@@ -3,18 +3,23 @@ title: Archives
 layout: default
 ---
 
-<h2>Archives</h2>
+<main>
+  <header>
+    <h2>Archives</h2>
+  </header>
 
-{% for post in site.posts %}
-{% assign currentdate = post.date | date: "%Y" %}
-{% if currentdate != date %}
+  {% for post in site.posts %}
+  {% assign currentdate = post.date | date: "%Y" %}
+  {% if currentdate != date %}
   {% unless forloop.first %}</ul>{% endunless %}
-  <h3 id="year-{{post.date | date: "%Y"}}">{{ currentdate }}</h3>
-  <ul>
+<h3 id="year-{{post.date | date: "%Y"}}">{{ currentdate }}</h3>
+<ul>
   {% assign date = currentdate %}
-{% endif %}
-<li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-</li>
-{% if forloop.last %}</ul>{% endif %}
+  {% endif %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+  </li>
+  {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
+
+</main>
