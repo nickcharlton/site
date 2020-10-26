@@ -1,0 +1,38 @@
+---
+title: "Week Notes #21"
+published: 2020-10-26 17-28-43 +00:00
+tags: week-notes
+---
+
+* Back to work last week and it was a good one: started off with helping out
+  with a database migration ([DigitalOcean's managed database solution][3] is
+  pretty nice!) and then a new project starting with the second phase of a
+  project that's just Rails. It's good to be back in the land of Rails, a
+  place where I can comfortably test-drive new features in just a few hours
+  and really focus about the product we're delivering rather than the minutiae
+  of the code,
+* I somehow ended up leaving a year (to the month!) in getting back to
+  reading [_Practical Object Oriented Design in Ruby_][4], but I finished the
+  final chapter this week. It's good and well recommended,
+* After just short of two weeks using [_Rectangle_][5], I've gotten used to
+  it now and it's working great. I generally use four quadrants: Slack,
+  Drafts, Mail (although I only open this once in the morning), then often
+  Chrome (which I use for work) on one half of the screen. Occasionally I've
+  been using a two-thirds/one-third split with Chrome and Drafts for calls,
+  as Jira can't quite fit otherwise, my terminal session always fullscreen,
+* This weekend saw me tear down the greenhouse that I've had setup for the
+  last two years; it was just a plastic tent and in the sun they don't last
+  forever. I ended up picking the last two aubergines and the last cucumber
+  of the season,
+* Then frame three prints that I've been meaning to do for years: one a
+  Guinness poster which came in a rotting frame and I finally replaced, an
+  early-run of [Cameron Moll's Brooklyn Bridge letterpress print][1] and
+  finally a print of the design proof of the BR logo which came out of
+  [Wallace Henning's work on the Corporate Identity Manual][2]. It's only
+  taken me about 8 years to start doing this!
+
+[1]: https://cameronmoll.bigcartel.com/product/brooklyn-bridge-24-x16-letterpress-poster-corrected
+[2]: https://www.kickstarter.com/projects/1863728218/british-rail-corporate-identity-manual/description
+[3]: https://www.digitalocean.com/products/managed-databases/
+[4]: https://www.poodr.com
+[5]: https://rectangleapp.com
