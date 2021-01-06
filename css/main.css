@@ -190,3 +190,11 @@ footer p {
     margin: 1em 0 0 0;
   }
 }
+
+/* About page */
+img.about-avatar {
+  float: left;
+  max-width: 40%;
+  padding-top: 1em;
+  padding-right: 1em;
+}
