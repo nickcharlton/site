@@ -139,8 +139,6 @@ the 23mm hole required by the socket. I found the insulation to be much thicker
 than you'd expect (which I suppose is not surprising!), but it's easy to get
 through as it's just foam. You can broadly see the process in the photos below.
 
-[ drilling photos, pilot hole with wire, drilling, cable ]
-
 <figure>
   <img src="/resources/images/brew-fridge-pilot-hole.jpeg"
     alt="A photo showing the base of a fridge, with a pilot hole with wire
