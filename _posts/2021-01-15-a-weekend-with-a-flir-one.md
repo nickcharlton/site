@@ -38,9 +38,9 @@ various things:
 
 <figure>
   <img src="/resources/images/flir-one-mug.jpeg"
-    alt="The FLir ONE device; a dongle which attaches to the bottom of an iPhone" max-width="500px">
-  <figcaption>The Flir ONE device itself, which attaches to the bottom of an
-  iPhone</figcaption>
+    alt="A mug of tea, showing where the liquid is hot and the mug itself is
+    warmiing up" max-width="500px">
+  <figcaption>A mug of tea</figcaption>
 </figure>
 
 <figure>
