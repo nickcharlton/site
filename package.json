@@ -13,7 +13,7 @@
     "url": "https://github.com/nickcharlton/nickcharlton.net/issues"
   },
   "homepage": "https://nickcharlton.net",
-  "devDependencies": {
+  "dependencies": {
     "dictionary-en": "^3.1.0",
     "textlint": "^11.8.2",
     "textlint-rule-spelling": "^0.3.0",
