@@ -1,0 +1,14 @@
+{
+  "filters": {},
+    "rules": {
+      "spelling": {
+        "language": "en",
+        "skipPatterns": [],
+        "wordDefinitionRegexp": "/[\\w']+/g",
+        "suggestCorrections": true,
+      },
+      "write-good": {
+        "severity": "warning"
+      }
+    }
+}

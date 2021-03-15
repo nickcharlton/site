@@ -1,0 +1,11 @@
+---
+name: Proofread
+on: [push]
+
+jobs:
+  proofread:
+    name: Proofread
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: place-labs/orthograph-err@v1
