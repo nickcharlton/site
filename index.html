@@ -13,12 +13,25 @@ layout: default
     This is the place where I write up what I learn.
   </p>
 
+  <h2>Week Notes</h2>
+
+  <ul>
+    {% assign week_notes = site.posts | filter_posts: "tags", "includes 'week-notes'" %}
+    {% for post in week_notes limit:5 %}
+      <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string: "ordinal" }}</time>
+    </li>
+
+    {% endfor %}
+  </ul>
+
   <h2>Articles</h2>
 
   <ul>
-    {% for post in site.posts limit:5 %}
+    {% assign posts = site.posts | filter_posts: "tags", "excludes 'week-notes'" %}
+    {% for post in posts limit:5 %}
     <li>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <a href="{{ post.url }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string: "ordinal" }}</time>
     </li>
     {% endfor %}
   </ul>
