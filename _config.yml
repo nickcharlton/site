@@ -1,11 +1,10 @@
 title: Nick Charlton
-email: nick@nickcharlton.net
-description: iOS, Mac and Ruby Developer. Amateur Chef.
 url: "https://nickcharlton.net"
-twitter_username: nickcharlton
-github_username: nickcharlton
+description: >-
+  I'm Nick Charlton, a software developer living in London, working at
+  thoughtbot where I build digital products for clients but building various
+  other things too. This is the place where I write up what I learn.
 permalink: /posts/:slug.html
-exclude: [Gemfile, Gemfile.lock, deploy.sh]
 
 defaults:
   - scope:
