@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "rake"
-gem "redcarpet"
+gem "webrick"
 
 group :test do
   gem "rspec"

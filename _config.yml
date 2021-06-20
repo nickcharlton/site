@@ -12,7 +12,3 @@ defaults:
       path: ""
     values:
       layout: "post"
-
-markdown: redcarpet
-redcarpet:
-  extensions: [smart, tables]
