@@ -43,11 +43,9 @@ not a big deal. News isn't like that, and there's often regular stories I
 immediately mark as read. With Feedbin's Actions, I could automate marking
 stuff as read. That's wonderful.
 
-<figure>
-  <img src="/resources/images/feedbin-actions.png"
-  alt="An example of Feedbin's Actions auto-mark as read feature" max-width="500px">
-  <figcaption>An example of Feedbin's Actions auto-mark as read feature</figcaption>
-</figure>
+{% picture /resources/images/feedbin-actions.png %}
+  An example of Feedbin's Actions auto-mark as read feature
+{% endpicture %}
 
 Migrating was a bit of a challenge. I don't keep anything like RSS reader inbox
 zero. Mostly recently, I've been avoiding it too, as it hasn't been working
