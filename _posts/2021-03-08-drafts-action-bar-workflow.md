@@ -11,11 +11,10 @@ fit what I regularly do.
 
 I typically have a view that looks like this:
 
-<figure>
-  <img src="/resources/images/drafts-main-window.png"
-    alt="Drafts: A window showing the Action Bar" max-width="250px">
-  <figcaption>Draft's Main window</figcaption>
-</figure>
+{% picture url: "/resources/images/drafts-main-window.png"
+           alt: "Drafts: A window showing the Action Bar" %}
+  Draft's Main window
+{% endpicture %}
 
 I use _Flags_ to keep many notes at the top of the pile and Workspaces as a
 context (but typically show everything in the _Inbox_). As I have Drafts take

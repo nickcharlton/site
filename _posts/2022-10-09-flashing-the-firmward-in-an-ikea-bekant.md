@@ -28,11 +28,10 @@ much better to have it lower. You're going to want to do something like:
 2. Unscrew the controller from underneath,
 3. Open up the back
 
-<figure>
-  <img src="/resources/images/ikea-bekant-controller.jpeg"
-    alt="Photograph showing the start of opening up the controller" max-width="250px">
-  <figcaption>IKEA BEKANT Controller: Opening</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-controller.jpeg",
+           alt: "Photograph showing the start of opening up the controller" %}
+  IKEA BEKANT Controller: Opening
+{% endpicture %}
 
 It's quite difficult to open the back. It's glued down and made me have some
 grumpy thoughts about right to repair. I first tried to use a knife to get some
@@ -43,11 +42,10 @@ snips to break it open.
 
 You'll see something that looks like this.
 
-<figure>
-  <img src="/resources/images/ikea-bekant-controller-back-cover-removed.jpeg"
-    alt="Photograph of the back cover removed" max-width="250px">
-  <figcaption>IKEA BEKANT Controller: Back Cover Removed</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-controller-back-cover-removed.jpeg"
+           alt: "Photograph of the back cover removed" %}
+  IKEA BEKANT Controller: Back Cover Removed
+{% endpicture %}
 
 ## Configuring MPLAB
 
@@ -65,46 +63,42 @@ You'll see something that looks like this.
 You're going to need to set the pins correctly, [this diagram from the docs
 should be enough to figure it out][8]:
 
-<figure>
-  <img src="/resources/images/ikea-bekant-icsp-connection.png"
-    alt="Diagram of the pin connection between controller and PICkit" max-width="250px">
-  <figcaption>Pin connection between the controller and PICkit</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-icsp-connection.png"
+           alt: "Diagram of the pin connection between controller and PICkit"
+           %}
+  Pin connection between the controller and PICkit
+{% endpicture %}
 
-<figure>
-  <img src="/resources/images/ikea-bekant-pins-set.jpeg"
-    alt="Photograph of the pins correctly set on the controller" max-width="250px">
-  <figcaption>Connecting the pins correctly</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-pins-set.jpeg"
+           alt: "Photograph of the pins correctly set on the controller" %}
+  Connecting the pins correctly
+{% endpicture %}
 
 Then, Click "Connect" in the main UI, and the programmer will attempt to
 connect to the chip.
 
-<figure>
-  <img src="/resources/images/ikea-bekant-mplab-connecting.png"
-    alt="Screenshot of MPLAB connecting to the controller" max-width="250px">
-  <figcaption>MPLAB: Connecting</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-mplab-connecting.png"
+           alt: "Screenshot of MPLAB connecting to the controller" %}
+  MPLAB: Connecting
+{% endpicture %}
 
 I had some problems in ensuring there was a good connection. Leaning my finger
 on the connector was good enough to solve that.
 
-<figure>
-  <img src="/resources/images/ikea-bekant-leaning-on-pickit.jpeg"
-    alt="Photograph of my finger pushing against the PICkit pins to ensure a
-    good connection" max-width="250px">
-  <figcaption>My finger pushing the PICkit pins to ensure a good connection</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-leaning-on-pickit.jpeg"
+           alt: "Photograph of my finger pushing against the PICkit pins to
+            ensure a good connection" %}
+  My finger pushing the PICkit pins to ensure a good connection
+{% endpicture %}
 
 ## Reading off the current firmware
 
 Next, read off the existing firmware in case it goes horribly wrong.
 
-<figure>
-  <img src="/resources/images/ikea-bekant-mplab-reading-firmware.png"
-    alt="Screenshot of MPLAB reading the existing firmware" max-width="250px">
-  <figcaption>Screenshot of MPLAB reading the existing firmware</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-mplab-reading-firmware.png"
+           alt: "Screenshot of MPLAB reading the existing firmware" %}
+  Screenshot of MPLAB reading the existing firmware
+{% endpicture %}
 
 [You can find the firmware from mine here][7].
 
@@ -117,11 +111,10 @@ Next, read off the existing firmware in case it goes horribly wrong.
 
 It should program and then verify successfully.
 
-<figure>
-  <img src="/resources/images/ikea-bekant-mplab-flashed-firmware.png"
-    alt="Screenshot of MPLAB after flashing and verifying the firmware" max-width="250px">
-  <figcaption>MPLAB: Flashing and verify the new firmware</figcaption>
-</figure>
+{% picture url: "resources/images/ikea-bekant-mplab-flashed-firmware.png"
+    alt: "Screenshot of MPLAB after flashing and verifying the firmware" %}
+  MPLAB: Flashing and verify the new firmware
+{% endpicture %}
 
 ## Testing
 
