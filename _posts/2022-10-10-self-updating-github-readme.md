@@ -13,11 +13,11 @@ auto-update and show contributions after [reading that Simon Willison had done
 the same][3]. I was never going to remember to update these myself, but as it's
 just a GitHub repo, we can use GitHub Actions to make it possible.
 
-<figure>
-  <img src="{{ '/resources/images/github-readme.png' | absolute_url }}"
-    alt="Screenshot showing a GitHub README with contributions and blog posts" max-width="250px">
-  <figcaption>GitHub README with contributions and blog posts</figcaption>
-</figure>
+{% picture url: "resources/images/github-readme.png"
+           alt: "Screenshot showing a GitHub README with contributions and blog posts"
+%}
+  GitHub README with contributions and blog posts
+{% endpicture %}
 
 ## Fetching recent cross-GitHub activity
 
