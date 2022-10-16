@@ -43,7 +43,7 @@ not a big deal. News isn't like that, and there's often regular stories I
 immediately mark as read. With Feedbin's Actions, I could automate marking
 stuff as read. That's wonderful.
 
-{% picture /resources/images/feedbin-actions.png %}
+{% picture url: /resources/images/feedbin-actions.png %}
   An example of Feedbin's Actions auto-mark as read feature
 {% endpicture %}
 
