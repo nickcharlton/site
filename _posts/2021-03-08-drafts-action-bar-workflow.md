@@ -1,6 +1,7 @@
 ---
 title: "Making Drafts' Action Bar fit my workflow"
 published: 2021-03-08 18-01-37 +00:00
+updated_at: 2022-10-16T20:18:43+01:00
 tags: drafts
 ---
 
@@ -12,8 +13,9 @@ fit what I regularly do.
 I typically have a view that looks like this:
 
 {% picture url: "/resources/images/drafts-main-window.png"
-           alt: "Drafts: A window showing the Action Bar" %}
-  Draft's Main window
+           alt: "A screenshot showing the Drafts editor area with the Action
+                 Bar shown at the bottom" %}
+  Drafts Main window, showing the editor area with Action Bar at the bottom
 {% endpicture %}
 
 I use _Flags_ to keep many notes at the top of the pile and Workspaces as a
@@ -45,10 +47,18 @@ of actions I remember myself using to end up with a list which is:
     Draft from it; great for breaking out notes),
 12. [To Things][4] (which creates an item in [Things][5] with the title and
     description)
+13. [Move Line Up][7] (`Opt-↑`)
+14. [Move Line Down][8] (`Opt-↓`)
+15. [Indent Line][9] (`⌘-]`)
+16. [Outdent Line][10] (`⌘-[`)
 
 The ones without links are already part of Drafts. To do this, I moved the
 originals from their groups into the new one. It didn't seem worth doing
 anything else more complex.
+
+The final four I mostly use when outlining or making notes which might cover
+lots of topics but which don't need to be expanded out too much. 1-on-1s are a
+good case of these.
 
 The real power of tools like Drafts is in the way you can customise and then
 mix-and-match scripts to do stuff for you. But also, this is perhaps your
@@ -61,3 +71,7 @@ for how you use it now!
 [4]: https://actions.getdrafts.com/a/1CO
 [5]: https://culturedcode.com/things/
 [6]: https://getdrafts.com
+[7]: https://directory.getdrafts.com/a/2B3
+[8]: https://directory.getdrafts.com/a/2B4
+[9]: https://directory.getdrafts.com/a/1Bw
+[10]: https://directory.getdrafts.com/a/1By
