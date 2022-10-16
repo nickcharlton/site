@@ -1,5 +1,7 @@
 module Jekyll
   class PictureTag < Liquid::Block
+    include Filters::URLFilters
+
     QuotedString = /"[^"]*"|'[^']*'/
     QuotedFragment = /#{QuotedString}|(?:[^\s,\|'"]|#{QuotedString})+/o
     TagAttributes = /(\w[\w-]*)\s*\:\s*(#{QuotedFragment})/o
@@ -19,14 +21,15 @@ module Jekyll
 
     def render(context)
       text = super
-      url = attributes["url"]
+      @context = context
+      url = absolute_url(attributes["url"])
       alt = attributes["alt"]
       alt_tag = "alt=\"#{alt}\"" if alt
       description = text.strip
 
       <<~OUTPUT
         <figure>
-          <img src="{{ #{url} | absolute_url }}" #{alt_tag} max-width="500px" />
+          <img src="#{url}" #{alt_tag} max-width="500px" />
           <figcaption>#{description}</figcaption>
         </figure>
       OUTPUT
