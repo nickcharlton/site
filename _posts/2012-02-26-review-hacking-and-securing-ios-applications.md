@@ -1,6 +1,6 @@
 ---
 title: "Review: Hacking and Securing iOS Applications by Jonathan Zdziarski"
-tags: review, book, ios, hacking, security
+tags: review book ios hacking security
 ---
 
 I started this just after the [Path fiasco](http://nickcharlton.net/post/mobile-security). It seemed timely to brush up on my security knowledge, especially for iOS intricacies, recommended practices and understanding obvious flaws. At the same time, O'Reilly had published ["Hacking and Securing iOS Applications" by Jonathan Zdziarski](http://shop.oreilly.com/product/0636920023234.do), so I got a copy. This book provides exactly what I wanted; it's a great next-step if you've been developing for iOS or the Mac for a while. Fortunately it assumes that, which allows the book to quickly jump into examples and solutions. 

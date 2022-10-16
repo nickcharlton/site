@@ -1,6 +1,6 @@
 ---
 title: Blog Updates
-tags: blog, personal
+tags: blog personal
 ---
 
 For a project several weeks in the making, I've just pushed up the changes to

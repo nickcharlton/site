@@ -1,6 +1,6 @@
 ---
 title: Configuring Sudo on Debian
-tags: debian, sudo, security
+tags: debian sudo security
 ---
 
 Setting up sudo on Debian can seem daunting at first, but the process is really quite simple.

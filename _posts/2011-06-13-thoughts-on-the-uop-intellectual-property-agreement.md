@@ -1,6 +1,6 @@
 ---
 title: Thoughts on the UoP Intellectual Property Agreement
-tags: uop, ip
+tags: uop ip
 ---
 
 Today, the [University announced that they had entered into an Intellectual Property agreement](http://www.plymouth.ac.uk/pages/view.asp?page=36193). For 10 years. I think this is a terrible idea.

@@ -1,6 +1,6 @@
 ---
 title: Drawing and Animating Shapes with Matplotlib
-tags: python, matplotlib, animation, drawing
+tags: python matplotlib animation drawing
 ---
 
 As well a being the best Python package for drawing plots, [Matplotlib][] also has 

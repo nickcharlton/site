@@ -1,6 +1,6 @@
 ---
 title: "NSConf Mini: Developers vs. Designers"
-tags: nsconf, ideveloper, ios, conference
+tags: nsconf ideveloper ios conference
 ---
 
 On Monday, it was NSConf Mini: "Developers vs. Designers". This was a 1-day

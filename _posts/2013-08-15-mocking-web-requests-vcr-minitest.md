@@ -1,6 +1,6 @@
 ---
 title: Mocking Web Requests with VCR and MiniTest
-tags: ruby, testing, minitest, moviesapi, screenscraping
+tags: ruby testing minitest moviesapi screenscraping
 ---
 
 I just released [moviesapi][]. In [the post I introduced it][post], I mentioned 

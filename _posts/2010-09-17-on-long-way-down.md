@@ -1,6 +1,6 @@
 ---
 title: On Long Way Down
-tags: book, adventure, long-way-down
+tags: book adventure long-way-down
 ---
 
 [Long Way Down](http://www.amazon.co.uk/gp/product/0751538957?ie=UTF8&tag=nisbl-21&linkCode=as2&camp=1634&creative=19450&creativeASIN=0751538957) was a good series. Back in 2007, Ewan McGregor and Charley Boorman set out on a motorcycle trip from John O'Groats to Cape Town. I just finished reading the accompanying book, that's been on my book shelf for quite a while.

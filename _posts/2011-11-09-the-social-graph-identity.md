@@ -1,6 +1,6 @@
 ---
 title: "The Social Graph &amp; Thoughts on Identity"
-tags: social-graph, social, link, identity
+tags: social-graph social link identity
 ---
 
 [Maciej Ceglowski on "The Social Graph is Neither"](http://blog.pinboard.in/2011/11/the_social_graph_is_neither/)…

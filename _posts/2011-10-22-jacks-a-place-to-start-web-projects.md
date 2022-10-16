@@ -1,6 +1,6 @@
 ---
 title: "Jacks: A place to start web projects"
-tags: web development, jacks, responsive design
+tags: web development jacks responsive design
 ---
 
 A couple of weeks ago, I started a project which intended to pull together all of the stuff that I had learnt about responsive design. I also wanted to have a generic starting point for web projects. I came up with Jacks, a simple web "framework" which does exactly that.

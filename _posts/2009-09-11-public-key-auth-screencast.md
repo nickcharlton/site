@@ -1,6 +1,6 @@
 ---
 title: Public Key Auth Screencast
-tags: ssh, security, screencast
+tags: ssh security screencast
 ---
 
 After a request by <a href="http://twitter.com/nickcharlton/status/3884874880">Peter Upfold</a> on Twitter for ideas for a screencast, I suggested he do something on Public Key Authentication. My wish was made true as he made it up yesterday. 

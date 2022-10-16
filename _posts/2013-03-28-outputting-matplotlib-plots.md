@@ -1,6 +1,6 @@
 ---
 title: Outputting Matplotlib Plots for the Web
-tags: python, matplotlib, drawing
+tags: python matplotlib drawing
 ---
 
 For the past few days, I've been working with Matplotlib and collecting together a 

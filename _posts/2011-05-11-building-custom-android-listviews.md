@@ -1,6 +1,6 @@
 ---
 title: Building Custom Android ListViews
-tags: android, listview, java
+tags: android listview java
 ---
 
 The documentation for Android's `ListView`'s is a little sparse. The examples around on the web are also not too great. This article intends to be the one I was searching for in trying to understand how to display some more advanced data, and deal with events.

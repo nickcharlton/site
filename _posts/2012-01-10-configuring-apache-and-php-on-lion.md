@@ -1,6 +1,6 @@
 ---
 title: Configuring Apache &amp; PHP on Lion
-tags: lion, mac, apache, php
+tags: lion mac apache php
 ---
 
 There are too many terrible articles on configuring Apache and PHP on the Mac, especially for Lion. Even worse are the suggestions of using other versions, or overly complex configuration methods. 

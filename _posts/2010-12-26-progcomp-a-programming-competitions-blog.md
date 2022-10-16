@@ -1,6 +1,6 @@
 ---
 title: "ProgComp: A Programming Competitions Blog"
-tags: projects, progcomp, programming
+tags: projects progcomp programming
 ---
 
 Last week I launched [ProgComp](http://progcomp.tumblr.com/). The idea is to produce a continuing flow of curated programming competitions.

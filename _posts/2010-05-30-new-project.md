@@ -1,6 +1,6 @@
 ---
 title: New Project
-tags: blog, sinba
+tags: blog sinba
 ---
 
 After a few weeks of work, this is "Version 4", of my blog. I have a slightly different design, and a different focus which should represent changes in me.

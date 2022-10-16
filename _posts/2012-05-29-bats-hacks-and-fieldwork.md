@@ -1,6 +1,6 @@
 ---
 title: Bats, Hacks &amp; Fieldwork
-tags: field-studies-council, hackday, bats, electronics, ios
+tags: field-studies-council hackday bats electronics ios
 ---
 
 Two weekends ago, I was in Slapton at the [Field Studies Council](http://field-studies-council.org/) for their first hack day. It aimed to bring together both people in education and those in technology and see what could be done when you bashed their two heads together. And it was bloody good.

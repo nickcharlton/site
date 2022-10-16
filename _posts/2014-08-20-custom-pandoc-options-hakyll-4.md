@@ -1,6 +1,6 @@
 ---
 title: Custom Pandoc Options with Hakyll 4
-tags: pandoc, hakyll, haskell
+tags: pandoc hakyll haskell
 ---
 
 [Pandoc][] has a huge set of extensions which are not enabled by default and

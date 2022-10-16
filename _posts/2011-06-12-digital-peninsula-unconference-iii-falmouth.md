@@ -1,6 +1,6 @@
 ---
 title: Digital Peninsula Unconference III, Falmouth
-tags: photos, digpen, falmouth, unconference
+tags: photos digpen falmouth unconference
 ---
 
 Yesterday was the third iteration of the Digital Peninsula Unconference, at [University College Falmouth, Tremough](http://www.falmouth.ac.uk/).

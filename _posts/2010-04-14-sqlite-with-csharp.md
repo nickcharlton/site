@@ -1,6 +1,6 @@
 ---
 title: SQLite, ADO.NET & CSharp
-tags: dotnet, csharp, sqlite
+tags: dotnet csharp sqlite
 ---
 
 ### Introduction

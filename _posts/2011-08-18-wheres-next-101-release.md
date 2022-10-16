@@ -1,6 +1,6 @@
 ---
 title: Where's Next? 1.0.1 Release
-tags: wheresnext, app, project
+tags: wheresnext app project
 ---
 
 After a bit of an issue with the original launch, _Where's Next?_ 1.0.1 has now been approved and is [in the App Store](http://itunes.apple.com/gb/app/wheres-next/id454450198?mt=8).

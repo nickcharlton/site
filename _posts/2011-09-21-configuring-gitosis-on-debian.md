@@ -1,6 +1,6 @@
 ---
 title: Configuring Gitosis on Debian
-tags: git, gitosis, debian
+tags: git gitosis debian
 ---
 
 Gitosis is a tool for easing the hosting of Git repositories. For pushing to remote [servers], Git uses SSH. Which is great. But, what if you don't want those users to have shell accounts, and you want to be able to control who has access to repositories? Well, that's what Gitosis does.

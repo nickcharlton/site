@@ -1,6 +1,6 @@
 ---
 title: Brussels &amp; FOSDEM 2012
-tags: brussels, belgium, fosdem, conference
+tags: brussels belgium fosdem conference
 ---
 
 Last weekend, I was in Brussels for [FOSDEM](http://fosdem.org/2012/). It was an excellent weekend. I didn't go too that many sessions at FOSDEM, but the ones I did go to were pretty good and have pushed me into finding out a few more things in detail.

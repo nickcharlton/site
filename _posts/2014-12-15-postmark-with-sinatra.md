@@ -1,6 +1,6 @@
 ---
 title: Using Postmark with Sinatra
-tags: ruby, sinatra, mail, postmark
+tags: ruby sinatra mail postmark
 ---
 
 I usually use [Postmark][] for outgoing transactional email, I find this to be

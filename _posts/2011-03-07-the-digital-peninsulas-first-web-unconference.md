@@ -1,6 +1,6 @@
 ---
 title: The Digital Peninsula's First Web Unconference
-tags: digpen, termisoc, unconference, digital peninsula
+tags: digpen termisoc unconference digital peninsula
 ---
 
 On Saturday I gave a quick talk about [TermiSoc](http://termisoc.org/) at the [Unconference](http://medworm.eventbrite.com/) in the University. [Frankie](https://twitter.com/#!/frankiedolan) put together a great event, with a really good turn out, with more than 80 people showing up, from down in Cornwall, all the way up to Bristol.

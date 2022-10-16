@@ -1,6 +1,6 @@
 ---
 title: Test Environments with Vagrant and Chef
-tags: vagrant, chef, programming
+tags: vagrant chef programming
 ---
 
 I recently completed a project for an assignment which had a mess of dependencies.

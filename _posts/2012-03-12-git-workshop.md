@@ -1,6 +1,6 @@
 ---
 title: #digpen IV Git Workshop
-tags: git, workshop, digpen
+tags: git workshop digpen
 ---
 
 On Saturday, [Chris Hunt](http://thisisthechris.co.uk/) and I gave a workshop on Git at Digpen IV in Exeter. It seemed to go rather well. 

@@ -1,6 +1,6 @@
 ---
 title: Introduction to SQLite 2 with PHP 5
-tags: php, sqlite
+tags: php sqlite
 ---
 
 Where a full <acronym title="Relational Database Management System">RDBMS</acronym> is unnecessary, [SQLite](http://www.sqlite.org/) provides the perfect stand in. However, most articles are based around the Object-Orientated way of dealing with SQLite in PHP. This article provides an explanation of how to use it procedurally.

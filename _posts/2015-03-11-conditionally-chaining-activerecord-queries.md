@@ -1,6 +1,6 @@
 ---
 title: Conditionally Chaining ActiveRecord Queries
-tags: ruby, rails, activerecord
+tags: ruby rails activerecord
 ---
 
 Sometimes, [ActiveRecord][] queries can get pretty complex, especially if

@@ -1,6 +1,6 @@
 ---
 title: Digital Peninsula Unconference II, Exeter
-tags: digpen, unconference, digital peninsula
+tags: digpen unconference digital peninsula
 ---
 
 On Saturday, the second version of the [Digital Peninsula Unconference](http://lanyrd.com/2011/digpenII/) was hosted in Exeter, at the Phoenix. After being [volunteered to take some photographs](http://twitter.com/#!/teddilybear/status/68722214702301185), I spent much of the event running about taking them (that's the flaw in having only a 50mm lens available to you). I've posted them on Flickr, but below are a few of the ones I liked best.

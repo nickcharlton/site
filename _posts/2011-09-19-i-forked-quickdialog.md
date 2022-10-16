@@ -1,6 +1,6 @@
 ---
 title: I forked QuickDialog
-tags: ios, quickdialog, github, projects
+tags: ios quickdialog github projects
 ---
 
 A couple of weeks ago, [Eduardo Scoz (ESCOZ, Inc)](http://escoz.com/) released [QuickDialog](http://escoz.com/quickdialog-released/), a rather nice way of producing UITableView based dialog controls on iOS.

@@ -1,6 +1,6 @@
 ---
 title: Introducing UrbanScraper, and an Alfred Extension
-tags: alfred, ruby, web-services, urban-dictionary, urbanscraper
+tags: alfred ruby web-services urban-dictionary urbanscraper
 ---
 
 Over the last two evenings, I've been working on a little toy. Well, two. The first one is a web service for getting definitions from [Urban Dictionary](http://urbandictionary.com) and the other is an Alfred Extension to allow you to get those definitions using your keyboard.

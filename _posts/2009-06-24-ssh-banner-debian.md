@@ -1,6 +1,6 @@
 ---
 title: Configuring an SSH banner on Debian
-tags: debian, ssh
+tags: debian ssh
 ---
 
 _**Note:** I've since come up with something much better, which dynamically generates

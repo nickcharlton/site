@@ -1,6 +1,6 @@
 ---
 title: "BCS Lecture Series: Apple (The Birth of a Third Platform)"
-tags: lecture, apple, mobile
+tags: lecture apple mobile
 ---
 
 Yesterday evening, [Chris Hunt](http://twitter.com/thisisthechris) and myself went along to a talk at the BCS from Apple, entitled "The Birth of a Third Platform, Mobile Computing in HE". Overall, it was a good talk, even with the heavy Apple marketing angle.

@@ -1,6 +1,6 @@
 ---
 title: Ruby Subprocesses with stdout and stderr Streams
-tags: ruby, posix, boxes
+tags: ruby posix boxes
 ---
 
 I've been doing a few things with Ruby which involve controlling and responding to

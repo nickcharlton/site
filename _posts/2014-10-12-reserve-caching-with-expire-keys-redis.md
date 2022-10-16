@@ -1,6 +1,6 @@
 ---
 title: "Reserve: Caching with Expiring Keys and Redis"
-tags: redis, ruby, caching
+tags: redis ruby caching
 ---
 
 I've just released a new RubyGem which makes caching objects (and allowing

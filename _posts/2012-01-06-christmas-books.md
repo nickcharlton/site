@@ -1,6 +1,6 @@
 ---
 title: Christmas Books
-tags: books, design, ios, coredata, mac, careers
+tags: books design ios coredata mac careers
 ---
 
 I read quite a few things over Christmas, here's some notes on a few of them:

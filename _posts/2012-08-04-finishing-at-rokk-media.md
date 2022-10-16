@@ -1,6 +1,6 @@
 ---
 title: Finishing at Rokk Media
-tags: rokk-media, placement, university
+tags: rokk-media placement university
 ---
 
 And, so, that is the end of my placement. The conclusion of a year of working

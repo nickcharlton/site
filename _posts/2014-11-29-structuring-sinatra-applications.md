@@ -1,6 +1,6 @@
 ---
 title: Structuring Sinatra Applications
-tags: sinatra, ruby
+tags: sinatra ruby
 ---
 
 [Sinatra] is a cool little framework for building web tools in Ruby. I've been

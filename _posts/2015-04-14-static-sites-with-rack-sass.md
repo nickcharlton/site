@@ -1,6 +1,6 @@
 ---
 title: Static Sites with Rack and Sass
-tags: ruby, rack, sass
+tags: ruby rack sass
 ---
 
 [Rack][] is the (excellent) common denominator web library for Ruby. [Sass][]
