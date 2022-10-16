@@ -1,6 +1,5 @@
 ---
 title: "Review: Hacking and Securing iOS Applications by Jonathan Zdziarski"
-published: 2012-02-26 22:47:50 +0000
 tags: review, book, ios, hacking, security
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: On the Long Journey to Production
-published: 2013-04-02 19:01:00 +0000
 tags: link
 ---
 

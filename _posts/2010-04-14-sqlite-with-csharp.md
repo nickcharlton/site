@@ -1,6 +1,5 @@
 ---
 title: SQLite, ADO.NET & CSharp
-published: 2010-04-14 08:00:00 +0000
 tags: dotnet, csharp, sqlite
 ---
 

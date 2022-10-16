@@ -1,6 +1,5 @@
 ---
 title: Where's Next? Now In the App Store.
-published: 2011-08-12 05:38:29 +0000
 tags: app, iphone, projects
 ---
 

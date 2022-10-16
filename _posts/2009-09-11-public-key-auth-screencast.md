@@ -1,6 +1,5 @@
 ---
 title: Public Key Auth Screencast
-published: 2009-09-11 08:00:00 +0000
 tags: ssh, security, screencast
 ---
 

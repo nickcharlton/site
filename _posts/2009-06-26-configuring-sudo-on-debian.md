@@ -1,6 +1,5 @@
 ---
 title: Configuring Sudo on Debian
-published: 2009-06-26 08:00:00 +0000
 tags: debian, sudo, security
 ---
 

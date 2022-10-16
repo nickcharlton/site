@@ -1,6 +1,5 @@
 ---
 title: "How Stripe Buids Software: Interview with Greg Brockman"
-published: 2013-07-06 19:46:00 +0000
 tags: link
 ---
 

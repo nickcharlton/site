@@ -1,6 +1,5 @@
 ---
 title: Stuff I'm Working On &amp; Learning
-published: 2012-06-24 12:03:54 +0000
 tags: projects, learning, maths, ai, robotics, 3d-printing
 ---
 

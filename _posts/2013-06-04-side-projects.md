@@ -1,6 +1,5 @@
 ---
 title: Side Projects
-published: 2013-06-04 17:10:00 +0000
 tags: link
 ---
 

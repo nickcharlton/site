@@ -1,6 +1,5 @@
 ---
 title: On the Future of Humanity
-published: 2013-04-02 13:49:00 +0000
 tags: link
 ---
 

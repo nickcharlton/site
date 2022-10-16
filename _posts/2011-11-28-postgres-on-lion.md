@@ -1,6 +1,5 @@
 ---
 title: Postgres on Lion
-published: 2011-11-28 23:07:46 +0000
 tags: lion, mac, osx, postgres, database
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Using Postmark with Sinatra
-published: 2014-12-15 15:18:01 +0000
 tags: ruby, sinatra, mail, postmark
 ---
 

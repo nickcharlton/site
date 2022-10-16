@@ -1,6 +1,5 @@
 ---
 title: I forked QuickDialog
-published: 2011-09-19 18:58:04 +0000
 tags: ios, quickdialog, github, projects
 ---
 

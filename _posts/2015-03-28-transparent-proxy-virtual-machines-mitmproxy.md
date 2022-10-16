@@ -1,6 +1,5 @@
 ---
 title: Setting up Transparent Proxying VMs for mitmproxy
-published: 2015-03-28 22:29:31 +0000
 tags: vmware, transparent-proxy, mitmproxy
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Fixing Missing Gem Problems on OS X
-published: 2010-02-26 08:00:00 +0000
 tags: 
 ---
 

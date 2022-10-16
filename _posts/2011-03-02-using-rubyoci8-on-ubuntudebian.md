@@ -1,6 +1,5 @@
 ---
 title: Using ruby-oci8 on Ubuntu/Debian
-published: 2011-03-02 14:43:36 +0000
 tags: ruby, oracle, ruby-oci8, ubuntu, debian
 ---
 

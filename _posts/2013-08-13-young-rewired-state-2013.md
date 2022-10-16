@@ -1,6 +1,5 @@
 ---
 title: Young Rewired State 2013
-published: 2013-08-13 09:45:00 +0000
 tags: young-rewired-state
 ---
 

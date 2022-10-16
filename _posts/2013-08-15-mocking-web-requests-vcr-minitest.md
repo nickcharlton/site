@@ -1,6 +1,5 @@
 ---
 title: Mocking Web Requests with VCR and MiniTest
-published: 2013-08-15 13:10:00 +0000
 tags: ruby, testing, minitest, moviesapi, screenscraping
 ---
 

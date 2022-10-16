@@ -1,6 +1,5 @@
 ---
 title: "George Zarkadakis: Love and artificial intelligence"
-published: 2013-05-21 20:11:00 +0000
 tags: link
 ---
 

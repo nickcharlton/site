@@ -1,6 +1,5 @@
 ---
 title: "Jacks: A place to start web projects"
-published: 2011-10-22 21:37:54 +0000
 tags: web development, jacks, responsive design
 ---
 

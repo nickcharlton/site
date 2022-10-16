@@ -1,6 +1,5 @@
 ---
 title: "Debian/Ubuntu: Dynamic MOTD"
-published: 2013-08-01 14:00:00 +0000
 tags: debian, ubuntu, sysadmin
 ---
 

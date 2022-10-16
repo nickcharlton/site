@@ -1,6 +1,5 @@
 ---
 title: Switching Season Report, 2013 Edition
-published: 2013-08-28 07:39:00 +0000
 tags: link
 ---
 

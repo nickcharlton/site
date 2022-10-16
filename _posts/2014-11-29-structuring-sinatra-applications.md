@@ -1,6 +1,5 @@
 ---
 title: Structuring Sinatra Applications
-published: 2014-11-29 17:51:40 +0000
 tags: sinatra, ruby
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Using 'ab', ApacheBench to test Web Server Performance
-published: 2009-04-05 08:00:00 +0000
 tags: 
 ---
 

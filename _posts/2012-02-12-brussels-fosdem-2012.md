@@ -1,6 +1,5 @@
 ---
 title: Brussels &amp; FOSDEM 2012
-published: 2012-02-12 21:44:16 +0000
 tags: brussels, belgium, fosdem, conference
 ---
 

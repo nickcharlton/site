@@ -34,7 +34,6 @@ task :new do
   template = <<END
 ---
 title: "#{post_name}"
-published: #{post_date.strftime('%Y-%m-%d %H-%M-%S %:z')}
 tags: #{post_tags}
 ---
 END

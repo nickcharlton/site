@@ -1,6 +1,5 @@
 ---
 title: Outputting Matplotlib Plots for the Web
-published: 2013-03-28 20:44:00 +0000
 tags: python, matplotlib, drawing
 ---
 

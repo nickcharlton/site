@@ -1,6 +1,5 @@
 ---
 title: TermiSoc Hack Weekend 2011
-published: 2011-02-08 16:54:27 +0000
 tags: termisoc, hack-weekend, python, app-engine, mobile, location, arduino
 ---
 

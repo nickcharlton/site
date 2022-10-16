@@ -1,6 +1,5 @@
 ---
 title: Debugging SenTestingKit to XCTest Linker Errors in Upgraded Xcode Projects
-published: 2014-08-18 18:00:00 +0000
 tags: xcode, testing, sentestingkit, xctest, ios
 ---
 

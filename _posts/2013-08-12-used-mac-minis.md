@@ -1,6 +1,5 @@
 ---
 title: The Market for Used Mac minis
-published: 2013-08-12 13:35:00 +0000
 tags: link
 ---
 

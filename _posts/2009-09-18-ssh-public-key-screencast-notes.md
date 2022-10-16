@@ -1,6 +1,5 @@
 ---
 title: SSH Public Key Screencast Notes
-published: 2009-09-18 08:00:00 +0000
 tags: ssh, security, screencast
 ---
 

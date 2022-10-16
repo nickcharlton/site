@@ -1,6 +1,5 @@
 ---
 title: You should write about yourself more
-published: 2013-05-21 19:45:00 +0000
 tags: link
 ---
 

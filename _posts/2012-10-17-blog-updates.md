@@ -1,6 +1,5 @@
 ---
 title: Blog Updates
-published: 2012-10-17 01:43:00 +0000
 tags: blog, personal
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Test Environments with Vagrant and Chef
-published: 2013-04-04 00:46:00 +0000
 tags: vagrant, chef, programming
 ---
 

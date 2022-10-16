@@ -1,6 +1,5 @@
 ---
 title: The Default Narative
-published: 2013-05-21 19:58:00 +0000
 tags: link
 ---
 

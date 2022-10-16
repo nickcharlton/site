@@ -1,6 +1,5 @@
 ---
 title: New MacBook Pro
-published: 2009-09-12 08:00:00 +0000
 tags: macbook-pro
 ---
 

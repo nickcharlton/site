@@ -1,6 +1,5 @@
 ---
 title: Introducing UrbanScraper, and an Alfred Extension
-published: 2011-10-28 23:46:48 +0000
 tags: alfred, ruby, web-services, urban-dictionary, urbanscraper
 ---
 

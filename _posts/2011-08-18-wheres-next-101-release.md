@@ -1,6 +1,5 @@
 ---
 title: Where's Next? 1.0.1 Release
-published: 2011-08-18 21:03:58 +0000
 tags: wheresnext, app, project
 ---
 

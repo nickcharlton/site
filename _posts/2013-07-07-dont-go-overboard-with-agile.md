@@ -1,6 +1,5 @@
 ---
 title: 7 Agile Best Practices that You Don't Need to Follow
-published: 2013-07-07 18:43:00 +0000
 tags: link
 ---
 

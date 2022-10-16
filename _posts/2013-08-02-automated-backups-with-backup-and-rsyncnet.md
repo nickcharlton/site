@@ -1,6 +1,5 @@
 ---
 title: Automated Backups with backup and Rsync.net
-published: 2013-08-02 17:50:00 +0000
 tags: sysadmin, backups, ruby
 ---
 

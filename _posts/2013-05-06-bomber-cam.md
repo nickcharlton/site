@@ -1,6 +1,5 @@
 ---
 title: Building the Bomber Cam with 3D Printing and Scraps
-published: 2013-05-06 12:03:00 +0000
 tags: link
 ---
 

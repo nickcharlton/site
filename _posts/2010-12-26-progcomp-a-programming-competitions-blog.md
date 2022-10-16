@@ -1,6 +1,5 @@
 ---
 title: "ProgComp: A Programming Competitions Blog"
-published: 2010-12-26 21:47:36 +0000
 tags: projects, progcomp, programming
 ---
 

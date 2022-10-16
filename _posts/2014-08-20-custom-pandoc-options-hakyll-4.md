@@ -1,6 +1,5 @@
 ---
 title: Custom Pandoc Options with Hakyll 4
-published: 2014-08-20 09:37:00 +0000
 tags: pandoc, hakyll, haskell
 ---
 

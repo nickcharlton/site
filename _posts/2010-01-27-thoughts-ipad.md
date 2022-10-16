@@ -1,6 +1,5 @@
 ---
 title: Thoughts on the iPad
-published: 2010-01-27 08:00:00 +0000
 tags: 
 ---
 

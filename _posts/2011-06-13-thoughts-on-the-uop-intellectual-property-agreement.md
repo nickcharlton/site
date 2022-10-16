@@ -1,6 +1,5 @@
 ---
 title: Thoughts on the UoP Intellectual Property Agreement
-published: 2011-06-13 16:12:24 +0000
 tags: uop, ip
 ---
 

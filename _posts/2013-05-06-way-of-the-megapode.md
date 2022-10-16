@@ -1,6 +1,5 @@
 ---
 title: The Way of the Megapode
-published: 2013-05-06 10:57:00 +0000
 tags: link
 ---
 

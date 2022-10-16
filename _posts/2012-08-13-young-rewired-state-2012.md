@@ -1,6 +1,5 @@
 ---
 title: Young Rewired State 2012
-published: 2012-08-13 12:00:00 +0000
 tags: programming, hackdays, young-rewired-state, rewired-state
 ---
 

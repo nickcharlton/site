@@ -1,6 +1,5 @@
 ---
 title: Configuring Apache &amp; PHP on Lion
-published: 2012-01-10 15:03:29 +0000
 tags: lion, mac, apache, php
 ---
 

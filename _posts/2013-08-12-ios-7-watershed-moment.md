@@ -1,6 +1,5 @@
 ---
 title: "iOS 7: Watershed Moment"
-published: 2013-08-12 13:24:00 +0000
 tags: link
 ---
 

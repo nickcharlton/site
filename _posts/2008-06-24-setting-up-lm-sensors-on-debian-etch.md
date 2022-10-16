@@ -1,6 +1,5 @@
 ---
 title: Setting Up lm-sensors on Debian Etch
-published: 2008-06-24 08:00:00 +0000
 tags: 
 ---
 

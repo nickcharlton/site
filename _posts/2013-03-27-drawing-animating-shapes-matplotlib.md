@@ -1,6 +1,5 @@
 ---
 title: Drawing and Animating Shapes with Matplotlib
-published: 2013-03-27 16:55:00 +0000
 tags: python, matplotlib, animation, drawing
 ---
 
