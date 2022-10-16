@@ -1,6 +1,6 @@
 ---
 title: Space Apps Challenge 2013
-tags: space-apps-challenge, predictthesky
+tags: space-apps-challenge predictthesky
 ---
 
 A few weekends ago was the second [NASA Space Apps Challenge][], a hack day centred

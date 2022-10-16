@@ -1,6 +1,6 @@
 ---
 title: Installing Ubuntu 9.04 on an SD card
-tags: ubuntu, sd-card
+tags: ubuntu sd-card
 ---
 
 **Note: This article is quite old. It probably doesn't apply anymore. Your

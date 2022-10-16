@@ -1,6 +1,6 @@
 ---
 title: Using ruby-oci8 on Ubuntu/Debian
-tags: ruby, oracle, ruby-oci8, ubuntu, debian
+tags: ruby oracle ruby-oci8 ubuntu debian
 ---
 
 With this year's integrating project, we were required to write a web service to integrate Android with the University's Oracle server. After asking to use Ruby (and succeeding), I was then left with the obstacle of hooking up to the Oracle database. These a few notes on getting this working.

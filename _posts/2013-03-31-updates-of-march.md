@@ -1,6 +1,6 @@
 ---
 title: Updates of March
-tags: blog, updates
+tags: blog updates
 ---
 
 In which I document some changes I made around here…

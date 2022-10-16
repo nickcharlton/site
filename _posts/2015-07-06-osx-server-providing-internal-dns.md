@@ -1,7 +1,7 @@
 ---
 title: Providing Internal DNS with OS X Server
 published: 2015-07-06 14:20:00 +0000
-tags: osx, server, dns
+tags: osx server dns
 ---
 
 Picture the scene: You've got a hosted Mac somewhere on the internet, you

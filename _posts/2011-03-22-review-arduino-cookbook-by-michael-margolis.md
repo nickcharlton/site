@@ -1,6 +1,6 @@
 ---
 title: "Review: Arduino Cookbook by Michael Margolis"
-tags: review, arduino
+tags: review arduino
 ---
 
 For a while, I've wanted to play around with the [Arduino](http://arduino.cc/); the open source embedded hardware that's stuck it's claws into everything from the arts, to personal projects and much more. Then, [Arduino Cookbook](http://oreilly.com/catalog/9780596802486/) came up on the O'Reilly Blogger Review Program, and I couldn't say no to having a pushed look into it.

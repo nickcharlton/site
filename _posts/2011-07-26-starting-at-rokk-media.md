@@ -1,6 +1,6 @@
 ---
 title: Starting at Rokk Media
-tags: rokk-media, placement, iOS
+tags: rokk-media placement iOS
 ---
 
 Today marks the start of the second week of my placement (actually, the second day of the second week); doing iOS Development at Rokk Media on the outskirts of Exeter.

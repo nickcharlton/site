@@ -1,6 +1,6 @@
 ---
 title: Tweetbot Mute Filters
-tags: tweetbot, regex, twitter
+tags: tweetbot regex twitter
 ---
 
 The other day, [I tweeted a link to a regex-based mute filter for Tweetbot][tweet].

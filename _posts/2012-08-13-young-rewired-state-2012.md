@@ -1,6 +1,6 @@
 ---
 title: Young Rewired State 2012
-tags: programming, hackdays, young-rewired-state, rewired-state
+tags: programming hackdays young-rewired-state rewired-state
 ---
 
 Last week, I had the privilege of helping mentor seven young people as part of

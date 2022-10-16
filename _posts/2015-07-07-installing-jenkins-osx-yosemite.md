@@ -1,7 +1,7 @@
 ---
 title: Installing Jenkins on OS X Yosemite
 published: 2015-07-07 11:00:00 +0000
-tags: osx, server, jenkins, ci
+tags: osx server jenkins ci
 ---
 
 [Jenkins][] is a [continuous integration][] (CI) server written in Java. It's

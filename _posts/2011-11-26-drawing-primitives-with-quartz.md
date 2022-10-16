@@ -1,6 +1,6 @@
 ---
 title: Drawing Primitives with Quartz
-tags: drawing, graphics, quartz, iOS, macosx
+tags: drawing graphics quartz iOS macosx
 ---
 
 I've always found drawing graphics complicated. Not that because maths is involved (that's the good bit), but finding simple examples to work out what the hell is going on. Usually, the calls required are a little different, and required to ensure something actually gets drawn &mdash; Quartz is no different. This intends to serve as a few notes on using the basics of QuartzCore, the drawing tools present in iOS and on Mac OS X. 

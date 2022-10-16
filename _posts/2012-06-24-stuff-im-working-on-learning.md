@@ -1,6 +1,6 @@
 ---
 title: Stuff I'm Working On &amp; Learning
-tags: projects, learning, maths, ai, robotics, 3d-printing
+tags: projects learning maths ai robotics 3d-printing
 ---
 
 This morning, [Rafe](http://rc3.org/) [posted about the stuff he'd like to be learning](http://rc3.org/2012/06/23/stuff-i-needwant-to-spend-time-learning/). So, I thought that was a nice way to remind myself all the stuff I'm currently working on and the stuff I'm attempting to learn, in various states of completion:

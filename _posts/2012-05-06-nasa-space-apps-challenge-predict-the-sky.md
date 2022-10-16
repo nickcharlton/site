@@ -1,6 +1,6 @@
 ---
 title: NASA Space Apps Challenge &amp; Predict the Sky
-tags: nasa, space, space-apps-challenge, predict-the-sky
+tags: nasa space space-apps-challenge predict-the-sky
 ---
 
 Two weekends ago I was at the [Met Office](http://metoffice.gov.uk/) for the [NASA International Space Apps Challenge](http://spaceappschallenge.org/). It was quite a fantastic weekend. Four or so teams of people worked on a set of preset challenges (suggested by the leaders of those teams in the weeks running up to the event) and the rest of us congregated around the group we were most interested in.

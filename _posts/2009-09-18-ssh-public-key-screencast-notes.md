@@ -1,6 +1,6 @@
 ---
 title: SSH Public Key Screencast Notes
-tags: ssh, security, screencast
+tags: ssh security screencast
 ---
 
 _These are just a few quick notes to accompany [Peter Upfold's screencast](http://vimeo.com/6523718). If you haven't ready I would suggest you give it a watch before following this rather brief notes_

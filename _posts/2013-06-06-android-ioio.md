@@ -1,6 +1,6 @@
 ---
 title: Experiments with Android, a IOIO board and Heart Rate Monitoring
-tags: projects, android, ioio, heart-rate-monitor
+tags: projects android ioio heart-rate-monitor
 ---
 
 A few weeks back now, I worked on a project for [iDAT][]. I came in at the end to

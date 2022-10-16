@@ -1,6 +1,6 @@
 ---
 title: Where's Next? Now In the App Store.
-tags: app, iphone, projects
+tags: app iphone projects
 ---
 
 After many, many months of development, my first iOS project is now in the App Store. It's a utility app for sorting places into the most efficient way to get there, from the site:

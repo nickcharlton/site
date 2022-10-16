@@ -1,7 +1,7 @@
 ---
 title: Docker via Homebrew
 published: 2016-01-17 16:49:53 +0000
-tags: docker, osx, homebrew
+tags: docker osx homebrew
 ---
 
 On the site, [Docker][] recommend using the [Docker Toolbox][] to get up and

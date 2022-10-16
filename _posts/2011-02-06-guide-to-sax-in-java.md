@@ -1,6 +1,6 @@
 ---
 title: An Ultra-simple Guide to Reading XML in Java, using SAX
-tags: java, xml, sax
+tags: java xml sax
 ---
 
 For the piece of work I have been dealing with recently, I was required to implement persistence using XML in Java. I figured this would be simple. Java and XML are used all the time, right? Should be easy.

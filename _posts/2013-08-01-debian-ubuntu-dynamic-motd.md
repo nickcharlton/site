@@ -1,6 +1,6 @@
 ---
 title: "Debian/Ubuntu: Dynamic MOTD"
-tags: debian, ubuntu, sysadmin
+tags: debian ubuntu sysadmin
 ---
 
 In doing some client work recently, I noticed that Ubuntu now has a dynamically

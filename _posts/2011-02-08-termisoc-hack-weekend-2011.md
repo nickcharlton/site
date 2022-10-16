@@ -1,6 +1,6 @@
 ---
 title: TermiSoc Hack Weekend 2011
-tags: termisoc, hack-weekend, python, app-engine, mobile, location, arduino
+tags: termisoc hack-weekend python app-engine mobile location arduino
 ---
 
 _I intend for this post to hold all of the presentations and sessions that we've hosted for the TermiSoc Hack Weekend 2011. This post will expand in the future as more content is covered._

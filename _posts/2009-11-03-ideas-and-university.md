@@ -1,6 +1,6 @@
 ---
 title: Ideas and University
-tags: ideas, university, thoughts
+tags: ideas university thoughts
 ---
 
 It's been a while since I've written down a set of thoughts. Most of which occurred before I started University. What I do want to ponder here I will come to in a moment, but now I've been at University for nearly 4 months - I'm trailing on to the end of the first term. 

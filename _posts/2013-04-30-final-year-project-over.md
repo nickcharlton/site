@@ -1,6 +1,6 @@
 ---
 title: Final Year Project is Over
-tags: university, robotics
+tags: university robotics
 ---
 
 And so, my final year project was handed in. This marks the tail end of my degree

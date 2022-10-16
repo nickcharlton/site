@@ -1,6 +1,6 @@
 ---
 title: "PAM for OmniAuth: omniauth-pam"
-tags: ruby, pam, linux, authentication, omniauth
+tags: ruby pam linux authentication omniauth
 ---
 
 I have a couple of small web applications that I have built for myself (wiki, system monitoring, etc.) There didn't seem much point in adding a database for authentication, so I put together a strategy for using [PAM](http://en.wikipedia.org/wiki/Linux_PAM) and [OmniAuth](https://github.com/intridea/omniauth/).

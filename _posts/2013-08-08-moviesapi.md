@@ -1,6 +1,6 @@
 ---
 title: "moviesapi: A Simple API for UK Cinema Listings"
-tags: ruby, api, rest, young-rewired-state
+tags: ruby api rest young-rewired-state
 ---
 
 This week has been [Young Rewired State][] week. At [YRS i-DAT][] in Plymouth, we've

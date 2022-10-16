@@ -1,6 +1,6 @@
 ---
 title: "Mobile Security: I Don't Even Know Where to Begin"
-tags: security, mobile, ios
+tags: security mobile ios
 ---
 
 With the [recent Path debacle](http://mclov.in/2012/02/08/path-uploads-your-entire-address-book-to-their-servers.html), the security and privacy practices of various mobile application developers has come to light. Generally, this has focused around the use of Address Book data; here, developers are balancing violating individual privacy with easier connections - the metric of importance for such apps. On its own, this is fine — providing you have the user’s permission — the issue is in how developers are going about implementing it.

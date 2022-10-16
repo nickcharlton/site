@@ -1,6 +1,6 @@
 ---
 title: Postgres on Lion
-tags: lion, mac, osx, postgres, database
+tags: lion mac osx postgres database
 ---
 
 I've recently been picking up [PostgreSQL](http://www.postgresql.org/). It's very nice. Unfortunately, I had a few issues with it and Lion. Lion Server now uses Postgres as its default database (replacing MySQL), and consequently it looks like Apple included a bunch of tools in standard Lion, too. 

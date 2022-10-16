@@ -1,6 +1,6 @@
 ---
 title: "Alfred Workflow: Paste Cleanly"
-tags: alfred, regex, ruby
+tags: alfred regex ruby
 ---
 
 There is nothing more annoying than seeing, or ending up sharing URLs that look like

@@ -1,6 +1,6 @@
 ---
 title: Jekyll and GitHub
-tags: jekyll, github, blogging
+tags: jekyll github blogging
 ---
 
 After quite a bit of work, I have finally moved over to using GitHub pages, Jekyll and Markdown to power [nickcharlton.net](http://nickcharlton.net "nickcharlton.net").

@@ -1,6 +1,6 @@
 ---
 title: Setting up Transparent Proxying VMs for mitmproxy
-tags: vmware, transparent-proxy, mitmproxy
+tags: vmware transparent-proxy mitmproxy
 ---
 
 I seem to do a lot with Virtual Machines and this was no different. I'd started

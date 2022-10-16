@@ -1,6 +1,6 @@
 ---
 title: Automated Backups with backup and Rsync.net
-tags: sysadmin, backups, ruby
+tags: sysadmin backups ruby
 ---
 
 For the past 18 months, I've been meaning to review the way I go about doing backups.

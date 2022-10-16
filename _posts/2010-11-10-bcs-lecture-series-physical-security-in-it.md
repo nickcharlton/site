@@ -1,6 +1,6 @@
 ---
 title: "BCS Lecture Series: Physical Security in IT"
-tags: bcs, lecture, infosec, physical security
+tags: bcs lecture infosec physical security
 ---
 
 This month's lecture was delivered by [Thomas Hackner](http://www.hackner-security.com/), from the [University of Applied Sciences, Hagenberg, Upper Austria](http://www.fh-ooe.at/en/). 

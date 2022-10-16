@@ -1,7 +1,7 @@
 ---
 title: Mirroring Bazaar Repositories with Git
 published: 2015-07-21 15:57:23 +0000
-tags: git, bazaar
+tags: git bazaar
 ---
 
 [Ubuntu][] uses [bazaar][] as it's source control system, with [Launchpad][] as
