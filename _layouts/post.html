@@ -7,7 +7,13 @@ layout: default
   </header>
 
   <footer>
-    <p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>. Tagged with: {{ page.tags | array_to_sentence_string }}.</p>
+    <p>
+      Posted on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>.
+      {% if page.updated_at %}
+      Last updated on <time datetime="{{ page.updated_at | date_to_xmlschema }}">{{ page.updated_at | date: "%B %-d, %Y" }}</time>.
+      {% endif %}
+      Tagged with: {{ page.tags | array_to_sentence_string }}.
+    </p>
   </footer>
 
   {{ content }}
