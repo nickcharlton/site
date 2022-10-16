@@ -1,6 +1,5 @@
 ---
 title: "The Social Graph &amp; Thoughts on Identity"
-published: 2011-11-09 18:58:50 +0000
 tags: social-graph, social, link, identity
 ---
 

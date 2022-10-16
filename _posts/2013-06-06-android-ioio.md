@@ -1,6 +1,5 @@
 ---
 title: Experiments with Android, a IOIO board and Heart Rate Monitoring
-published: 2013-06-06 02:02:00 +0000
 tags: projects, android, ioio, heart-rate-monitor
 ---
 

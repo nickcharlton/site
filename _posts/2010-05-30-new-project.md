@@ -1,6 +1,5 @@
 ---
 title: New Project
-published: 2010-05-30 00:42:13 +0000
 tags: blog, sinba
 ---
 

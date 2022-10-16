@@ -1,6 +1,5 @@
 ---
 title: "SparkFun: How to Build a Building"
-published: 2013-05-07 16:44:00 +0000
 tags: link
 ---
 

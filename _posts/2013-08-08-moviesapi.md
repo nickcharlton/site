@@ -1,6 +1,5 @@
 ---
 title: "moviesapi: A Simple API for UK Cinema Listings"
-published: 2013-08-08 13:40:00 +0000
 tags: ruby, api, rest, young-rewired-state
 ---
 

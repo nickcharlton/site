@@ -1,6 +1,5 @@
 ---
 title: An Ultra-simple Guide to Reading XML in Java, using SAX
-published: 2011-02-06 14:17:43 +0000
 tags: java, xml, sax
 ---
 

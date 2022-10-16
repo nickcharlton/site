@@ -1,6 +1,5 @@
 ---
 title: Paul Miller on his return to the Internet
-published: 2013-05-02 21:21:00 +0000
 tags: link
 ---
 

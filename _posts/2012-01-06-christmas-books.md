@@ -1,6 +1,5 @@
 ---
 title: Christmas Books
-published: 2012-01-06 12:07:33 +0000
 tags: books, design, ios, coredata, mac, careers
 ---
 

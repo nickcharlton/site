@@ -1,6 +1,5 @@
 ---
 title: On Long Way Down
-published: 2010-09-17 00:18:39 +0000
 tags: book, adventure, long-way-down
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Configuring Gitosis on Debian
-published: 2011-09-21 22:45:32 +0000
 tags: git, gitosis, debian
 ---
 

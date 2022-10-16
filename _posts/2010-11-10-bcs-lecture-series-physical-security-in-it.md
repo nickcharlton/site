@@ -1,6 +1,5 @@
 ---
 title: "BCS Lecture Series: Physical Security in IT"
-published: 2010-11-10 00:25:21 +0000
 tags: bcs, lecture, infosec, physical security
 ---
 

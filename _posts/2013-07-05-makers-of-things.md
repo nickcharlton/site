@@ -1,6 +1,5 @@
 ---
 title: The Makers of Things
-published: 2013-07-05 14:55:00 +0000
 tags: link
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Introduction to SQLite 2 with PHP 5
-published: 2009-05-18 08:00:00 +0000
 tags: php, sqlite
 ---
 

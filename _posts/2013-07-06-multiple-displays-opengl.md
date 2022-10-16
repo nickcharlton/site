@@ -1,6 +1,5 @@
 ---
 title: Multiple Displays (and OpenGL)
-published: 2013-07-06 15:30:00 +0000
 tags: link
 ---
 

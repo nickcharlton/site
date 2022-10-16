@@ -1,6 +1,5 @@
 ---
 title: Drawing Primitives with Quartz
-published: 2011-11-26 23:13:28 +0000
 tags: drawing, graphics, quartz, iOS, macosx
 ---
 

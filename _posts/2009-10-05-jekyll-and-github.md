@@ -1,6 +1,5 @@
 ---
 title: Jekyll and GitHub
-published: 2009-10-05 08:00:00 +0000
 tags: jekyll, github, blogging
 ---
 

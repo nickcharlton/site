@@ -1,6 +1,5 @@
 ---
 title: "Alfred Workflow: Paste Cleanly"
-published: 2013-08-27 13:10:00 +0000
 tags: alfred, regex, ruby
 ---
 

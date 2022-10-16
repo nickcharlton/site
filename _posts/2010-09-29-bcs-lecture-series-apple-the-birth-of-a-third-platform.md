@@ -1,6 +1,5 @@
 ---
 title: "BCS Lecture Series: Apple (The Birth of a Third Platform)"
-published: 2010-09-29 09:24:06 +0000
 tags: lecture, apple, mobile
 ---
 

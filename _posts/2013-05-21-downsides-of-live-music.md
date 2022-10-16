@@ -1,6 +1,5 @@
 ---
 title: The downsides of live music
-published: 2013-05-21 20:04:00 +0000
 tags: link
 ---
 

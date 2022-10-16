@@ -1,6 +1,5 @@
 ---
 title: Converting a sparseimage to a dmg
-published: 2008-11-01 07:00:00 +0000
 tags: 
 ---
 

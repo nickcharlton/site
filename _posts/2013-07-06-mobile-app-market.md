@@ -1,6 +1,5 @@
 ---
 title: What's the mobile app market up to, then?
-published: 2013-07-06 19:06:00 +0000
 tags: link
 ---
 

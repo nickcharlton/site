@@ -1,6 +1,5 @@
 ---
 title: Space Apps Challenge 2013
-published: 2013-05-06 18:00:00 +0000
 tags: space-apps-challenge, predictthesky
 ---
 

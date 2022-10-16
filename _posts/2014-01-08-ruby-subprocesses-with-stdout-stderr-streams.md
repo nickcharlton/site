@@ -1,6 +1,5 @@
 ---
 title: Ruby Subprocesses with stdout and stderr Streams
-published: 2014-01-08 16:03:00 +0000
 tags: ruby, posix, boxes
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Mobile Security: I Don't Even Know Where to Begin"
-published: 2012-02-13 20:01:09 +0000
 tags: security, mobile, ios
 ---
 

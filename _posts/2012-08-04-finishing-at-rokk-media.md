@@ -1,6 +1,5 @@
 ---
 title: Finishing at Rokk Media
-published: 2012-08-04 12:00:00 +0000
 tags: rokk-media, placement, university
 ---
 

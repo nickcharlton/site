@@ -1,6 +1,5 @@
 ---
 title: Building Custom Android ListViews
-published: 2011-05-11 18:20:14 +0000
 tags: android, listview, java
 ---
 

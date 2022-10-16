@@ -1,6 +1,5 @@
 ---
 title: Conditionally Chaining ActiveRecord Queries
-published: 2015-03-11 09:22:51 +0000
 tags: ruby, rails, activerecord
 ---
 

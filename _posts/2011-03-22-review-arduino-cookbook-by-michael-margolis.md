@@ -1,6 +1,5 @@
 ---
 title: "Review: Arduino Cookbook by Michael Margolis"
-published: 2011-03-22 12:17:24 +0000
 tags: review, arduino
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Ideas and University
-published: 2009-11-03 08:00:00 +0000
 tags: ideas, university, thoughts
 ---
 

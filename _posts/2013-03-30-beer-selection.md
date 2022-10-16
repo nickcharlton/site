@@ -1,6 +1,5 @@
 ---
 title: Beer Selection
-published: 2013-03-30 21:08:06 +0000
 tags: link
 ---
 

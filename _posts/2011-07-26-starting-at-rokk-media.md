@@ -1,6 +1,5 @@
 ---
 title: Starting at Rokk Media
-published: 2011-07-26 16:19:07 +0000
 tags: rokk-media, placement, iOS
 ---
 

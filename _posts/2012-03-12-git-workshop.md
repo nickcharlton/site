@@ -1,6 +1,5 @@
 ---
 title: #digpen IV Git Workshop
-published: 2012-03-12 10:30:07 +0000
 tags: git, workshop, digpen
 ---
 

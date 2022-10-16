@@ -1,6 +1,5 @@
 ---
 title: Configuring an SSH banner on Debian
-published: 2009-06-24 08:00:00 +0000
 tags: debian, ssh
 ---
 

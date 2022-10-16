@@ -1,6 +1,5 @@
 ---
 title: Static Sites with Rack and Sass
-published: 2015-04-14 11:56:52 +0000
 tags: ruby, rack, sass
 ---
 

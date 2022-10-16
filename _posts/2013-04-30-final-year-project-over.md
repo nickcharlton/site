@@ -1,6 +1,5 @@
 ---
 title: Final Year Project is Over
-published: 2013-04-30 12:00:00 +0000
 tags: university, robotics
 ---
 

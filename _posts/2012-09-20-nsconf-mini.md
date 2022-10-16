@@ -1,6 +1,5 @@
 ---
 title: "NSConf Mini: Developers vs. Designers"
-published: 2012-09-20 12:00:00 +0000
 tags: nsconf, ideveloper, ios, conference
 ---
 

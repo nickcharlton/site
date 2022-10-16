@@ -1,6 +1,5 @@
 ---
 title: Digital Peninsula Unconference II, Exeter
-published: 2011-05-15 21:02:39 +0000
 tags: digpen, unconference, digital peninsula
 ---
 

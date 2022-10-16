@@ -1,6 +1,5 @@
 ---
 title: "Reserve: Caching with Expiring Keys and Redis"
-published: 2014-10-12 00:00:00 +0000
 tags: redis, ruby, caching
 ---
 

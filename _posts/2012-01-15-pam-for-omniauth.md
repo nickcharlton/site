@@ -1,6 +1,5 @@
 ---
 title: "PAM for OmniAuth: omniauth-pam"
-published: 2012-01-15 00:10:56 +0000
 tags: ruby, pam, linux, authentication, omniauth
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Digital Peninsula Unconference III, Falmouth
-published: 2011-06-12 19:14:35 +0000
 tags: photos, digpen, falmouth, unconference
 ---
 

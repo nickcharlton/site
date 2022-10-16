@@ -1,6 +1,5 @@
 ---
 title: Tweetbot Mute Filters
-published: 2013-08-13 13:01:00 +0000
 tags: tweetbot, regex, twitter
 ---
 

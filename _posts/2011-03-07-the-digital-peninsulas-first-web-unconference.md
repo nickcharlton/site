@@ -1,6 +1,5 @@
 ---
 title: The Digital Peninsula's First Web Unconference
-published: 2011-03-07 09:45:08 +0000
 tags: digpen, termisoc, unconference, digital peninsula
 ---
 

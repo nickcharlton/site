@@ -1,6 +1,5 @@
 ---
 title: Updates of March
-published: 2013-03-31 21:43:00 +0000
 tags: blog, updates
 ---
 
