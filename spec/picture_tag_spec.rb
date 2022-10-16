@@ -28,7 +28,7 @@ RSpec.describe Jekyll::PictureTag do
     expect(output).to eq(
       <<~OUTPUT
         <figure>
-          <img src="{{ some_url | absolute_url }}" max-width="500px" />
+          <img src="/some_url" max-width="500px" />
           <figcaption>Some description</figcaption>
         </figure>\n
       OUTPUT
@@ -47,7 +47,7 @@ RSpec.describe Jekyll::PictureTag do
     expect(output).to eq(
       <<~OUTPUT
         <figure>
-          <img src="{{ some_url | absolute_url }}" alt="Some alt text" max-width="500px" />
+          <img src="/some_url" alt="Some alt text" max-width="500px" />
           <figcaption>Some description</figcaption>
         </figure>\n
       OUTPUT
