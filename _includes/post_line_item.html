@@ -1,1 +1,5 @@
+{% if post.thoughtbot %}
+{% include thoughtbot_emblem.svg %}
+{% endif %}
+
 <a href="{{ include.post.url }}">{{ include.post.title }}</a> &mdash; <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date_to_long_string: "ordinal" }}</time>
