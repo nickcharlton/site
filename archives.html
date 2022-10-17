@@ -16,9 +16,7 @@ layout: default
 <ul>
   {% assign date = currentdate %}
   {% endif %}
-  <li>
-    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-  </li>
+  <li>{% include post_line_item.html post=post %}</li>
   {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
 

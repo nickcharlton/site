@@ -1,0 +1,29 @@
+---
+title: Tags
+layout: default
+---
+
+<main>
+  <header>
+    <h2>Tags</h2>
+  </header>
+
+  {% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+  <h4>
+    <a name="{{t | downcase | replace:" ","-" }}"></a>
+    <a href="/tags.html#{{t | downcase | replace:" ","-" }}">{{ t | downcase }}</a>
+  </h4>
+
+  <ul>
+    {% for post in posts %}
+    {% if post.tags contains t %}
+    <li>{% include post_line_item.html post=post %}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% endfor %}
+</main>
