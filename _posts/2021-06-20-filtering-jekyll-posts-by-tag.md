@@ -1,6 +1,5 @@
 ---
 title: "Filtering Jekyll Posts by Tag"
-published: 2021-06-20 15-51-02 +01:00
 tags: jekyll ruby
 ---
 

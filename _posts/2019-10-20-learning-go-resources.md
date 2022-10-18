@@ -1,6 +1,5 @@
 ---
 title: "Some resources for learning Go"
-published: 2019-10-20 13-01-02 +01:00
 tags: programming go
 ---
 

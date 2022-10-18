@@ -1,6 +1,5 @@
 ---
 title: "Kubernetes with Terraform on Google Cloud"
-published: 2018-05-07 15:39:27 +01:00
 tags: terraform kubernetes google-cloud
 ---
 

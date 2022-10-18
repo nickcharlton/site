@@ -1,6 +1,5 @@
 ---
 title: Providing Internal DNS with OS X Server
-published: 2015-07-06 14:20:00 +0000
 tags: osx server dns
 ---
 

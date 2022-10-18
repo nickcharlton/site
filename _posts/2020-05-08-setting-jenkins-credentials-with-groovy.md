@@ -1,6 +1,5 @@
 ---
 title: "Setting Jenkins Credentials with Groovy"
-published: 2020-05-08 17-37-16 +01:00
 tags: jenkins groovy
 ---
 

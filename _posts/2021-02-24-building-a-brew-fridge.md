@@ -1,6 +1,5 @@
 ---
 title: "Building a Brew Fridge"
-published: 2021-02-24 20-42-07 +00:00
 tags: project brewing
 ---
 

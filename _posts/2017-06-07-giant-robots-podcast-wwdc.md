@@ -1,6 +1,5 @@
 ---
 title: "On Giant Robots for WWDC"
-published: 2017-06-08 11-59-26 +01:00
 tags: podcast giant-robots wwdc buildphase
 ---
 

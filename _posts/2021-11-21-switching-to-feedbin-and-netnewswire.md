@@ -1,6 +1,5 @@
 ---
 title: "Switching to FeedBin and NetNewsWire"
-published: 2021-11-21 16-50-50 +00:00
 tags: rss tools
 ---
 

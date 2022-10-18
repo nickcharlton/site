@@ -1,6 +1,5 @@
 ---
 title: "Converting Unix Shell Aliases to PowerShell"
-published: 2022-02-23T14:48:01Z
 tags: powershell unix windows shell scripts
 ---
 

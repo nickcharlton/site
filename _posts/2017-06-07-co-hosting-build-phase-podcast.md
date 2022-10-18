@@ -1,6 +1,5 @@
 ---
 title: "Co-hosting Build Phase"
-published: 2017-06-07 12-22-56 +01:00
 tags: podcast build-phase thoughtbot
 ---
 

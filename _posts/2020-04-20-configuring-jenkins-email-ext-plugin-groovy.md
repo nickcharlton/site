@@ -1,6 +1,5 @@
 ---
 title: "Configuring the Jenkins email-ext plugin with Groovy"
-published: 2020-04-20 22-20-05 +01:00
 tags: jenkins groovy
 ---
 

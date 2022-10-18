@@ -1,6 +1,5 @@
 ---
 title: "Tailwind CSS with Rails 6 and Webpacker"
-published: 2019-11-10 15-59-50 +00:00
 tags: tailwind rails webpacker css
 ---
 

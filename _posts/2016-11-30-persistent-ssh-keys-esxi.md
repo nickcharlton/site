@@ -1,6 +1,5 @@
 ---
 title: "Persistent SSH Keys with ESXi 6"
-published: 2016-11-30T10:15:18-05:00
 tags: esxi ssh linux
 ---
 

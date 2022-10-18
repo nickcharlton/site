@@ -1,6 +1,5 @@
 ---
 title: "Structuring Terraform with Remote State"
-published: 2018-05-11 09-55-07 +01:00
 tags: terraform
 ---
 

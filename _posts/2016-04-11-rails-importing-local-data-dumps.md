@@ -1,6 +1,5 @@
 ---
 title: "Rails: Importing Local Data Dumps"
-published: 2016-04-11 16:06:00 +0000
 tags: rails postgres mysql
 ---
 
