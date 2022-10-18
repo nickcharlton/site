@@ -27,7 +27,7 @@ _Actions Bar_, which shows just below the note itself.
 Outside of just being an excellent editor for notes, the real power of Drafts
 is in _Actions_. I use very few in practice, but the ones I have, I find myself
 using a lot. After having this workflow for a year, I've finally gotten a good
-idea of do and made the _Actions Bar_ reflect it.
+idea of what to do and made the _Actions Bar_ reflect it.
 
 I started by creating a new group — I just called mine "Default" as it was the
 first appropriate word that came to mind — and then moved the most common set
