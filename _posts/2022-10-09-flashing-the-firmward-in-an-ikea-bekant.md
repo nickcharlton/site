@@ -1,6 +1,5 @@
 ---
 title: "Flashing the firmware in an IKEA BEKANT to add position memory"
-published: 2022-10-09 21-27-21 +01:00
 tags: project ikea desk
 ---
 

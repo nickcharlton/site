@@ -1,6 +1,5 @@
 ---
 title: "Automating Ubuntu 20.04 installs with Packer"
-published: 2020-04-26 23-02-57 +01:00
 tags: packer ubuntu
 ---
 

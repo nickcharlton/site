@@ -1,6 +1,5 @@
 ---
 title: "Automating macOS using Ansible"
-published: 2016-12-06T14:05:08-05:00
 tags: osx macos ansible configuration-management
 ---
 

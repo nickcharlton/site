@@ -1,6 +1,5 @@
 ---
 title: Fixing Problems with OS X Yosemite Server
-published: 2015-07-06 10:51:50 +0000
 tags: osx yosemite server
 ---
 

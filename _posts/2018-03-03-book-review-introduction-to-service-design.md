@@ -1,6 +1,5 @@
 ---
 title: "Book Review: How To Have Your Cake And Eat It Too: An Introduction to Service Design"
-published: 2018-03-03 23-27-41 +00:00
 tags: book service-design
 ---
 

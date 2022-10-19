@@ -1,6 +1,5 @@
 ---
 title: "Building Virtual Machines with Packer on ESXi 6"
-published: 2016-12-03T12:29:46-05:00
 tags: packer esxi virtualization
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "A weekend with a Flir ONE"
-published: 2021-01-15 11-26-37 +00:00
 tags: thermal-camera project
 ---
 

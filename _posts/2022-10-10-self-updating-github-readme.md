@@ -1,6 +1,5 @@
 ---
 title: "Self-updating GitHub README"
-published: 2022-10-10 10:00:00 +01:00
 tags: ruby github
 ---
 

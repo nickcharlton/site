@@ -1,6 +1,5 @@
 ---
 title: "Resize all Safari windows with AppleScript"
-published: 2016-05-30 12:17:12 +0000
 tags: applescript automation
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Installing Jenkins on OS X Yosemite
-published: 2015-07-07 11:00:00 +0000
 tags: osx server jenkins ci
 ---
 

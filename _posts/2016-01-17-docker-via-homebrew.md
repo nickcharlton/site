@@ -1,6 +1,5 @@
 ---
 title: Docker via Homebrew
-published: 2016-01-17 16:49:53 +0000
 tags: docker osx homebrew
 ---
 

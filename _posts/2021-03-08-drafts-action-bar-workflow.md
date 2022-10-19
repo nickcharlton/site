@@ -1,6 +1,5 @@
 ---
 title: "Making Drafts' Action Bar fit my workflow"
-published: 2021-03-08 18-01-37 +00:00
 updated_at: 2022-10-16T20:18:43+01:00
 tags: drafts
 ---

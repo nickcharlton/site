@@ -1,6 +1,5 @@
 ---
 title: "Terraform: AWS VPC with Private and Public Subnets"
-published: 2015-07-08 22:56:07 +0000
 tags: terraform amazon-web-services
 ---
 

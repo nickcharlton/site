@@ -1,6 +1,5 @@
 ---
 title: "Configuring VMware ESXi 6 on Hetzner"
-published: 2016-11-28T10:11:17 -05:00
 tags: vmware esxi hetzner
 ---
 
