@@ -1,0 +1,3 @@
+/.well-known/webfinger  https://mastodon.nickcharlton.net/.well-known/webfinger
+/.well-known/host-meta  https://mastodon.nickcharlton.net/.well-known/host-meta
+/.well-known/nodeinfo  https://mastodon.nickcharlton.net/.well-known/nodeinfo
