@@ -44,6 +44,10 @@ As and when I discover more, I'll come back to this list and update it.
 ## Software Design
 
 * Practical Object Oriented Design in Ruby
+  * perhaps the only language-specific book which I feel should make the list
+  * it's the best book I've read to really understand OO design
+  * and if you write a lot of Rails, really make you annoyed with "service"
+    objects
 * Domain-Driven Design Distilled
 
 ## The Patterns Books
