@@ -17,7 +17,8 @@ As and when I discover more, I'll come back to this list and update it.
 ## People & Process
 
 * Art of Agile Software Development
-  * It's a book about XP (extreme programming). It's how I work and think about
+  * It's a book about XP (extreme programming, a silly name but try and ignore
+    that). It's how I work and think about
     solving problems with code and teams. There's so many on the topic, but
     this is the most comprehensive overview
 * The DevOps Handbook
