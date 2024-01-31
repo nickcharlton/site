@@ -8,9 +8,10 @@ that I'm often recommending a standard set and thought that it was time to
 write them down.
 
 I've sorted them into the order I'd recommend reading them, but each section is
-a different theme. Whilst, I'd recommend reading them all, I'd expect it take
-you at least a decade. They're books for a deep career and not one to speed-run
-your way through.
+a different theme. Whilst I'd recommend reading them all, I'd expect it take
+you at least a decade and to find yourself jumping around themes as the context 
+comes to you, or the interest strikes. They're books for a deep career and not 
+one to speed-run your way through.
 
 As and when I discover more, I'll come back to this list and update it.
 
